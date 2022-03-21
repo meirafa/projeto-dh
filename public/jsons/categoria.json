@@ -1,0 +1,40 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "category": "suvs",
+      "link": "/categorias/suvs",
+      "img": "/img/carros/suv-1.png",
+      "localization": "Brasil",
+      "description": "Carros maiores, ideias para a familia toda.",
+      "value": "R$ 299.9"
+    },
+    {
+      "id": "2",
+      "category": "conversiveis",
+      "link": "/categorias/conversiveis",
+      "img": "/img/carros/conversivel-1.png",
+      "localization": "Brasil",
+      "description": "Carros que prezam pelo conforto e luxo.",
+      "value": "R$ 499.9"
+    },
+    {
+      "id": "3",
+      "category": "picapes",
+      "link": "/categorias/picapes",
+      "img": "/img/carros/picape-1.png",
+      "localization": "Brasil",
+      "description": "Carros ideais para quem curte aventura.",
+      "value": "R$ 399.9"
+    },
+    {
+      "id": "4",
+      "category": "esportivos",
+      "link": "/categorias/esportivos",
+      "img": "/img/carros/esportivo-1.png",
+      "localization": "Brasil",
+      "description": "Carros cheios de estilo, que garantem maior velocidade.",
+      "value": "R$ 399.9"
+    }
+  ]
+}

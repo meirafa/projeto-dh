@@ -1,0 +1,92 @@
+{
+  "carsList": [
+    {
+      "id": "car_01",
+      "category": "SUVs",
+      "icon": "./img/icones/suv.png",
+      "img": "./img/carros/BMWX5.jpg",
+      "title": "BMW X5",
+      "localization": "Brasil",
+      "description": "Carros maiores, ideias para a familia toda.",
+      "value": "R$ 299.9",
+      "link": "/produtos/frota_suv01"
+    },
+    {
+      "id": "car_02",
+      "category": "SUVs",
+      "icon": "./img/icones/suv.png",
+      "img": "./img/carros/Audi-Q5.jpg",
+      "title": "AUDI Q5",
+      "localization": "Brasil",
+      "description": "Carros maiores, ideias para a familia toda.",
+      "value": "R$ 299.9",
+      "link": "/produtos/frota_suv02"
+    },
+    {
+      "id": "car_03",
+      "category": "Conversiveis",
+      "icon": "./img/icones/conversivel.png",
+      "img": "./img/carros/BMWSERIE4CABRIO.png",
+      "title": "BMW SERIE 4 CABRIO",
+      "localization": "Brasil",
+      "description": "Carros que prezam pelo conforto e luxo.",
+      "value": "R$ 499.9",
+      "link": "/produtos/frota_conv01"
+    },
+    {
+      "id": "car_04",
+      "category": "Conversiveis",
+      "icon": "./img/icones/conversivel.png",
+      "img": "./img/carros/AudiTT.jpg",
+      "title": "AUDI TT ROADSTER",
+      "localization": "Brasil",
+      "description": "Carros que prezam pelo conforto e luxo.",
+      "value": "R$ 499.9",
+      "link": "/produtos/frota_conv02"
+    },
+    {
+      "id": "car_05",
+      "category": "Picapes",
+      "icon": "./img/icones/picape.png",
+      "img": "./img/carros/GMCSierra.jpg",
+      "title": "GMC SIERRA 1500 LIMITED DENALI",
+      "localization": "Brasil",
+      "description": "Carros ideais para quem curte aventura.",
+      "value": "R$ 399.9",
+      "link": "/produtos/frota_pic03"
+    },
+    {
+      "id": "car_06",
+      "category": "Picapes",
+      "icon": "./img/icones/picape.png",
+      "img": "./img/carros/JeepGladiator.jpg",
+      "title": "Jeep Gladiator",
+      "localization": "Brasil",
+      "description": "Carros ideais para quem curte aventura.",
+      "value": "R$ 399.9",
+      "link": "/produtos/frota_pic02"
+    },
+    {
+      "id": "car_07",
+      "category": "esportivos",
+      "icon": "./img/icones/esportivo.png",
+      "img": "./img/carros/Ford-GT.jpg",
+      "title": "Ford GT",
+      "localization": "Brasil",
+      "description": "Carros cheios de estilo, que garantem maior velocidade.",
+      "value": "R$ 399.9",
+      "link": "/produtos/frota_esp01"
+    },
+    {
+      "id": "car_08",
+      "category": "esportivos",
+      "icon": "./img/icones/esportivo.png",
+      "img": "./img/carros/AudiR8V10.jpg",
+      "title": "Audi R8 V10",
+      "localization": "Brasil",
+      "description": "Carros cheios de estilo, que garantem maior velocidade.",
+      "value": "R$ 399.9",
+      "link": "/produtos/frota_esp03"
+    }
+  ]
+}

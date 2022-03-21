@@ -1,0 +1,185 @@
+nav {
+  position: fixed;
+  width: 100%;
+  height: 10rem;
+  z-index: 1000;
+}
+
+.header-bg {
+  background-color: transparent;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+
+  #btn-mobile{
+    background-color: black;
+    border: none;
+    display: none;
+
+    p{
+      margin: 0;
+    }
+  }
+
+  .header-menu a:hover:after {
+    width: 100%;
+  }
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-size: 1rem;
+
+  a {
+    display: inline-block;
+    padding: 16px 0px;
+    position: relative;
+    text-decoration: none;
+    color: var(--cor-l1);
+    transition: 0.3s;
+  }
+
+  a:hover{
+    color: var(--cor-l2) ;
+  }
+
+}
+ 
+
+.header-menu a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: var(--cor-l2);
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+
+  .exit{
+    background: red;
+
+  }
+}
+
+#btn-mobile {
+  border: none;
+  display: none;
+}
+
+
+@media(max-width: 880px){
+  .header {
+    padding: 1rem 1rem;
+  }
+
+  .header-bg{
+    background-color: var(--cor-1) !important;
+  }
+  .header-menu {
+      display: block !important;
+      margin: 0 !important;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      right: 0px;
+      background: var(--cor-1);
+      z-index: 1000;
+      transition: 0.6s;
+      height: 0px;
+      visibility: hidden;
+      overflow-y: hidden;
+  }
+
+  #hmenu.active .header-menu  {
+      height: calc(100vh - 70px);
+      visibility: visible;
+      overflow-y: auto;
+
+  }
+
+  .menu-item{
+      padding: 1rem 0.5rem;
+      margin: 0 1rem;
+      // color: $white-main !important;
+      border-bottom: 2px solid var(--cor-3) ;
+      
+  }
+
+  
+
+  #user-info{
+    display: flex;
+    height: 32px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .menu-item:hover{
+      background-color: #cad1e0;
+  }
+
+  .header-menu a:hover:after {
+    width: 0% !important;
+  }
+
+
+
+  #btn-mobile{
+      display: flex !important;
+      padding: 0.5rem  ;
+      font-size: 1rem;
+      background: none;
+      cursor: pointer;
+      color: white;
+      gap: 0.5rem;
+      max-height: 50px;
+      
+      #hamburger{
+        margin-top: 5px;
+          color: white;
+          border-top: 2px solid;
+          width: 20px;
+      
+      }
+  }
+
+  #hamburger::after, #hamburger::before{
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;   
+      margin-top: 5px;
+      background: currentColor;
+      transition: 0.3s;
+      position: relative;     
+  }
+ 
+  #hmenu.active #hamburger {
+      border-top-color: transparent;
+  }
+
+  #hmenu.active #hamburger::after{
+      transform: rotate(135deg) ;
+      top: -7px;
+  }
+  #hmenu.active #hamburger::before{
+      transform: rotate(-135deg) ;
+  }
+
+}
+
+@media(max-width: 480px){
+  
+  #btn-mobile p{
+    display: none;
+  }
+}
+

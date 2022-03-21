@@ -1,0 +1,51 @@
+/*Paleta de cores:
+Laranja (cor principal) #F0572D
+Preto-cinza #31363F
+Preto #191B1D
+Branco #DFE4EA
+Paleta de cores: $orange-second: #f74615; $grey-second: #030303;
+ */
+
+:root {
+  --cor-0: #ffffff;
+  --cor-1: #DFE4EA;
+  --cor-2: #31363F;
+  --cor-3: #191B1D;
+  --cor-4: #000000;
+
+  --cor-5: #7b8088;
+
+  --cor-l1: #F0572D;
+  --cor-l2: #d36b49;
+  --cor-l3: #ffc9b6;
+  --cor-l4: #ffe4da;
+}
+
+.cor-0 {
+  color: var(--cor-0);
+}
+.cor-1 {
+  color: var(--cor-1);
+}
+.cor-2 {
+  color: var(--cor-2);
+}
+.cor-3 {
+  color: var(--cor-3);
+}
+.cor-4 {
+  color: var(--cor-4);
+}
+
+.cor-l1 {
+  color: var(--cor-l1);
+}
+.cor-l2 {
+  color: var(--cor-l2);
+}
+.cor-p3 {
+  color: var(--cor-l3);
+}
+.cor-l4 {
+  color: var(--cor-l4);
+}

@@ -1,0 +1,47 @@
+.introducao-bg {
+  background-image: url("./../../../public/img/fotos/download.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vw;
+}
+
+.form-container {
+  background-color: var(--cor-3);
+}
+
+.form-home {
+  justify-content: center;
+}
+
+/*estilizando calendario*/
+.form input[type="tel"] {
+  font: 500 14px "Roboto", sans-serif;
+  background: var(--cor-1);
+  border: none;
+  padding: 16px;
+  border-radius: 4px;
+  text-align: center;
+  width: 100px;
+
+  &:focus {
+    outline: none;
+    background: var(--cor-0);
+  }
+}
+
+.form #mui-1-label, .form #mui-2-label, .form #mui-18-label, .form #mui-19-label {
+  color: white;
+}
+
+@media (min-width: 700px) {
+  .introducao-bg{
+    height: 45vw;
+  }
+  .form-home {
+    display: flex;
+  }
+  .ant-picker-panel-container .ant-picker-panels {
+    display: grid;
+  }
+}

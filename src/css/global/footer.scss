@@ -1,0 +1,25 @@
+.footer-bg {
+  background-color: var(--cor-4);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.5rem 4rem;
+
+  a {
+    &:hover {
+      color: var(--cor-0);
+    }
+  }
+}
+
+.footer-redes {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-copy {
+  padding-top: 10px;
+}

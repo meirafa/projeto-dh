@@ -1,0 +1,51 @@
+.parceiros {
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  ul {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+  }
+
+  li {
+    display: flex;
+    border-left: 2px solid var(--cor-1);
+
+    &:first-child, &:nth-child(5) {
+      border-left: none;
+    }
+
+    &:nth-child(n + 5) {
+      border-top: 2px solid var(--cor-1);
+    }
+  }
+
+  img {
+    margin: auto;
+  }
+}
+
+@media (max-width: 820px) {
+  .parceiros {
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      &:nth-child(n + 3) {
+        border-top: 2px solid var(--cor-1);
+      }
+
+      &:nth-child(odd) {
+        border-left: none;
+      }
+    }
+  }
+}

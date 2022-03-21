@@ -1,0 +1,41 @@
+@import "css/utilidades/tipografia";
+@import "./css/utilidades/cores.css";
+
+/*Global*/
+@import "css/global/header";
+@import "css/global/footer";
+
+/* Utilidades */
+@import "css/utilidades/componentes";
+@import "css/utilidades/formulario.scss";
+
+/* Home */
+@import "./css/home/introducao.scss";
+@import "css/home/parceiros";
+@import "css/home/vantagens";
+@import "./css/home/populares.scss";
+
+/* carros */
+@import "css/carros/carros-lista";
+@import "css/carros/carro";
+@import "css/carros/frota";
+
+/* categoria */
+@import "css/categorias/carros";
+
+/*Login*/
+@import "css/login/login";
+@import "css/login/cadastro";
+
+/* Contato */
+@import "css/contato/contato";
+@import "css/contato/lojas";
+
+/* Contato */
+@import "css/orcamento/reserva";
+
+/* Termos */
+@import "css/termos/termos";
+
+/*Not found*/
+@import "css/notfound/notfound";

@@ -1,0 +1,44 @@
+{
+  "addressList": [
+    {
+      "id": "1",
+      "cidade": "Sao Paulo",
+      "estado": "SP",
+      "cep": "01449-000",
+      "endereco": "Av. Europa, 725",
+      "bairro": "Jardins"
+    },
+    {
+      "id": "2",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ",
+      "cep": "22640-100",
+      "endereco": "Av. das Américas, 645",
+      "bairro": "Barra da Tijuca"
+    },
+    {
+      "id": "3",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "cep": "30110-047",
+      "endereco": "Av. do Contorno, 7315",
+      "bairro": "Lourdes"
+    },
+    {
+      "id": "4",
+      "cidade": "Brasilia",
+      "estado": "DF",
+      "cep": "70750-502",
+      "endereco": "SEPN 509 - Loja 8",
+      "bairro": "Asa Norte"
+    },
+    {
+      "id": "5",
+      "cidade": "Florianopolis",
+      "estado": "SC",
+      "cep": "88025-255",
+      "endereco": "Rua Paschoal Apóstolo Pítsica, 4900",
+      "bairro": "Agronômica"
+    }
+  ]
+}

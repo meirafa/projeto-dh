@@ -1,0 +1,106 @@
+{
+  "suvs": [
+    {
+      "id": "frota_suv01",
+      "marca": "BMW",
+      "modelo": "X5",
+      "imagem": "/img/carros/BMWX5.jpg"
+    },
+    {
+      "id": "frota_suv02",
+      "marca": "AUDI",
+      "modelo": "Q5",
+      "imagem": "/img/carros/Audi-Q5.jpg"
+    },
+    {
+      "id": "frota_suv03",
+      "marca": "PORSCHE",
+      "modelo": "CAYENNE",
+      "imagem": "/img/carros/PorscheCayenne.jpg"
+    },
+    {
+      "id": "frota_suv04",
+      "marca": "TESLA",
+      "modelo": "MODEL X",
+      "imagem": "/img/carros/TeslaModelX-SUV.jpg"
+    }
+  ],
+  "conversiveis": [
+    {
+      "id": "frota_conv01",
+      "marca": "BMW",
+      "modelo": "SERIE 4 CABRIO",
+      "imagem": "/img/carros/BMWSERIE4CABRIO.png"
+    },
+    {
+      "id": "frota_conv02",
+      "marca": "AUDI",
+      "modelo": "TT ROADSTER",
+      "imagem": "/img/carros/AudiTT.jpg"
+    },
+    {
+      "id": "frota_conv03",
+      "marca": "PORSCHE",
+      "modelo": "718 SPYDER",
+      "imagem": "/img/carros/Porsche718Spyder.jpg"
+    },
+    {
+      "id": "frota_conv04",
+      "marca": "FORD",
+      "modelo": "MUSTANG",
+      "imagem": "/img/carros/Ford-Mustang-Convertible.jpg"
+    }
+  ],
+  "esportivos": [
+    {
+      "id": "frota_esp01",
+      "marca": "FORD",
+      "modelo": "GT",
+      "imagem": "/img/carros/Ford-GT.jpg"
+    },
+    {
+      "id": "frota_esp02",
+      "marca": "BMW",
+      "modelo": "M3 COMPETITION",
+      "imagem": "/img/carros/BMWM3Competition.jpg"
+    },
+    {
+      "id": "frota_esp03",
+      "marca": "AUDI",
+      "modelo": "R8 V10",
+      "imagem": "/img/carros/AudiR8V10.jpg"
+    },
+    {
+      "id": "frota_esp04",
+      "marca": "PORSCHE",
+      "modelo": "911 CARRERA",
+      "imagem": "/img/carros/Porsche-911-GT3.jpg"
+    }
+  ],
+  "picapes": [
+    {
+      "id": "frota_pic01",
+      "marca": "Dodge",
+      "modelo": "Ram",
+      "imagem": "/img/carros/DodgeRAM.jpg"
+    },
+    {
+      "id": "frota_pic02",
+      "marca": "Jeep",
+      "modelo": "Gladiator",
+      "imagem": "/img/carros/JeepGladiator.jpg"
+    },
+    {
+      "id": "frota_03",
+      "marca": "GMC",
+      "modelo": "SIERRA 1500 LIMITED DENALI",
+      "imagem": "/img/carros/GMCSierra.jpg"
+    },
+    {
+      "id": "frota_pic04",
+      "marca": "FORD",
+      "modelo": "F-150 Velociraptor",
+      "imagem": "/img/carros/Ford-F-150-Raptor.jpg"
+    }
+  ]
+}
