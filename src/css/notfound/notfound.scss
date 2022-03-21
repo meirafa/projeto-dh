@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    padding: 1rem 4rem;
+    padding: 0 4rem 3rem 4rem;
 
     .background-wrapper {
       overflow: hidden;
@@ -44,7 +44,7 @@
       margin: 0 10px;
       border: 2px solid var(--cor-2);
       padding: 0.5em 0.8em;
-      position: absolute;
+      position: relative;
       z-index: 1;
       color: #777777;
       text-decoration: none;
@@ -75,7 +75,7 @@
 
 @media(max-width: 880px) {
   .notfound div {
-    padding: 0 1rem;
+    padding: 0 1rem 2rem 1rem;
   }
 }
 
