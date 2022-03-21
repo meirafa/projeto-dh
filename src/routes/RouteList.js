@@ -12,7 +12,7 @@ import CarDetails from "../pages/carros/CarDetails";
 import Cadastro from "../pages/Cadastro";
 import Rodape from "../pages/components/global/Rodape";
 import Products from "../pages/components/Products";
-import {NotFound} from "../pages/NotFound";
+import PageNotFound from "../pages/PageNotFound";
 
 function RouteList() {
     return (
@@ -30,7 +30,7 @@ function RouteList() {
                         <Route path="produtos/:id" element={<CarDetails/>}/>
                         <Route path="cadastro" element={<Cadastro/>}/>
                         <Route path="categorias/:category" element={<Products/>}/>
-                        <Route path="*" element={<NotFound/>}/>
+                        <Route path="*" element={<PageNotFound/>}/>
                     </Routes>
                     <Rodape/>
                 </HelmetProvider>
