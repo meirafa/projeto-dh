@@ -17,7 +17,7 @@ function InputSelect() {
         <>
             <Select
                 showSearch
-                style={{minWidth: 200}}
+                style={{minWidth: 250}}
                 placeholder="Selecionar Cidade"
                 optionFilterProp="children"
                 filterOption={(input, option) =>
