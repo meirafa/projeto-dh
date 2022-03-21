@@ -31,19 +31,19 @@ function Contato() {
                             <div className="contato-formulario" aria-label="Formulário">
                                 <form className="form" action="/contato">
                                     <div>
-                                        <label for="nome">Nome</label>
+                                        <label htmlFor="nome">Nome</label>
                                         <input type="text" id="nome" name="nome" placeholder="Seu nome"/>
                                     </div>
                                     <div>
-                                        <label for="telefone">Telefone</label>
+                                        <label htmlFor="telefone">Telefone</label>
                                         <input type="text" id="telefone" name="telefone" placeholder="(21) 9999-9999"/>
                                     </div>
                                     <div className="col-2">
-                                        <label for="email">Email</label>
+                                        <label htmlFor="email">Email</label>
                                         <input type="email" id="email" name="email" placeholder="contato@email.com"/>
                                     </div>
                                     <div className="col-2">
-                                        <label for="mensagem">Mensagem</label>
+                                        <label htmlFor="mensagem">Mensagem</label>
                                         <textarea rows="5" id="mensagem" name="mensagem"
                                                   placeholder="O que você precisa?"></textarea>
                                     </div>

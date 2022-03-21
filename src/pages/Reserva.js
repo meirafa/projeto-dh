@@ -45,16 +45,16 @@ export default Reserva;
         <h2 className="font-text-2 cor-1">Alugueis:</h2>
 
         <input type="radio" name="tipo" value="bikcraft" id="bikcraft"/>
-        <label for="bikcraft">Categorias:</label>
+        <label htmlFor="bikcraft">Categorias:</label>
 
         <input type="radio" name="tipo" value="seguro" id="seguro"/>
-        <label for="seguro">Entrega:</label>
+        <label htmlFor="seguro">Entrega:</label>
 
         <div className="reserva-conteudo" id="reserva-bikcraft">
             <h2 className="font-text-2 cor-1">Escolha a sua</h2>
 
             <input type="radio" name="produto" value="suv" id="suv"/>
-            <label for="suv">SUVs <span>R$ 299.9</span></label>
+            <label htmlFor="suv">SUVs <span>R$ 299.9</span></label>
             <div className="reserva-detalhes">
                 <ul className="font-text-2 cor-3">
                     <li><img src="/img/icones/eletrica.svg" alt=""/> Motor Elétrico</li>
@@ -66,7 +66,7 @@ export default Reserva;
             </div>
 
             <input type="radio" name="produto" value="conversivel" id="conversivel"/>
-            <label for="conversivel">Conversiveis<span>R$ 499.9</span></label>
+            <label htmlFor="conversivel">Conversiveis<span>R$ 499.9</span></label>
             <div className="reserva-detalhes">
                 <ul className="font-text-2 cor-3">
                     <li><img src="/img/icones/eletrica.svg" alt=""/> Motor Elétrico</li>
@@ -78,7 +78,7 @@ export default Reserva;
             </div>
 
             <input type="radio" name="produto" value="picape" id="picape"/>
-            <label for="picape">Picapes <span>R$ 399.9</span></label>
+            <label htmlFor="picape">Picapes <span>R$ 399.9</span></label>
             <div className="reserva-detalhes">
                 <ul className="font-text-2 cor-3">
                     <li><img src="/img/icones/eletrica.svg" alt=""/> Motor Elétrico</li>
@@ -107,10 +107,10 @@ export default Reserva;
             <h2 className="font-text-2 cor-1">Modalidade de entrega:</h2>
 
             <input type="radio" name="produto" value="prata" id="prata"/>
-            <label for="prata">Entrega na residencia <span>R$ 199.9</span></label>
+            <label htmlFor="prata">Entrega na residencia <span>R$ 199.9</span></label>
 
             <input type="radio" name="produto" value="ouro" id="ouro"/>
-            <label for="ouro">Entrega com motorista <span>R$ 299.9</span></label>
+            <label htmlFor="ouro">Entrega com motorista <span>R$ 299.9</span></label>
         </div>
     </div>
     <div className="reserva-dados form">
