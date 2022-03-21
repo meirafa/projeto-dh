@@ -22,7 +22,7 @@ function RouteList() {
                     <Cabecalho/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
-                        <Route path="categorias" element={<Frota/>}/>
+                        <Route path="categorias" element={<Products/>}/>
                         <Route path="contato" element={<Contato/>}/>
                         <Route path="reserva" element={<Reserva/>}/>
                         <Route path="login" element={<Login/>}/>
