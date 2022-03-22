@@ -153,20 +153,20 @@ function CarDetails() {
 
                         <Row>
                             <Col xs={20} md={12} lg={8}>
-                                <h1>Normas:</h1>
-                                <p>Garantimos o modelo proposto. Somente a cor ou a potência do motor podem variar, mas
+                                <h3 className="font-h3">Normas</h3>
+                                <p className="text-1">Garantimos o modelo proposto. Somente a cor ou a potência do motor podem variar, mas
                                     enviaremos todas as especificações para confirmar o pedido. O preço o aluguel inclui
                                     milhas de 150 km por dia.</p>
                             </Col>
                             <Col xs={20} md={12} lg={8}>
-                                <h1>Segurança:</h1>
-                                <p>O carro pode ser entregue a seu pedido em qualquer lugar do Brasil. O custo da
+                                <h3 className="font-h3">Segurança</h3>
+                                <p className="text-1">O carro pode ser entregue a seu pedido em qualquer lugar do Brasil. O custo da
                                     entrega
                                     depende da distância.</p>
                             </Col>
                             <Col xs={20} md={12} lg={8}>
-                                <h1>Cancelamento:</h1>
-                                <p>30 dias ou mais antes do dia do início do aluguel - multa de 20% do valor total
+                                <h3 className="font-h3">Cancelamento</h3>
+                                <p className="text-1">30 dias ou mais antes do dia do início do aluguel - multa de 20% do valor total
                                     14 dias ou menos antes do início do aluguel - multa de 40% do valor total
                                     7 dias antes do início do aluguel - multa de 60% do valor total
                                     3 dias antes ou menos do início do aluguel - multa de 100% do valor total
