@@ -1,6 +1,6 @@
 import TitleBgBlack from "./titles/TitleBgBlack";
 import React from "react";
-import {Select} from 'antd';
+import Select from 'antd/lib/select';
 import {useNavigate, useParams} from "react-router";
 import {useApis} from "../../hooks/useApi";
 import Marca from "./Marca";

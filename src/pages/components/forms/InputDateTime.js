@@ -3,8 +3,9 @@ import 'antd/dist/antd.css';
 import moment from 'moment';
 import 'moment/locale/pt-br';
 import locale from 'antd/lib/locale/pt_BR';
-import {DatePicker, TimePicker} from 'antd';
-import ConfigProvider from "antd/es/config-provider";
+import DatePicker from 'antd/lib/date-picker';
+import TimePicker from 'antd/lib/time-picker';
+import ConfigProvider from "antd/lib/config-provider";
 import {useWidth} from "../../../hooks/useWidth";
 import DateResponsive from "../forms/DateResponsive";
 

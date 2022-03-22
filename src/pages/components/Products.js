@@ -1,6 +1,6 @@
 import TitleBgBlack from "./titles/TitleBgBlack";
 import React from "react";
-import {Tabs} from 'antd';
+import Tabs from 'antd/lib/tabs';
 import ListProductsFilterCategory from "./cards/product/ListProductsFilterCategory";
 import {useParams, useNavigate} from "react-router";
 import {useApis} from "../../hooks/useApi";

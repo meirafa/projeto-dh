@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import {Select} from 'antd';
+import Select from 'antd/lib/select';
 import {useApis} from "../../../hooks/useApi";
 
 const {Option} = Select;

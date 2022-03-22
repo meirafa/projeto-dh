@@ -4,6 +4,7 @@ import TitleBgBlack from "./components/titles/TitleBgBlack";
 // import InputReservation from "./components/forms/InputReservation";
 import Reservation from "./components/Reservation";
 import CityFilter from "./components/CityFilter";
+import React from "react";
 
 function Reserva() {
     const title = { span: "informações da sua reserva", title: "reserva" }

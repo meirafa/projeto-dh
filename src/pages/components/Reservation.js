@@ -1,5 +1,6 @@
-import InputReservation from "./forms/InputReservation";
+import InputReservation from "./forms/InputDateTime";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const Reservation = () => {
 

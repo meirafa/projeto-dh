@@ -4,10 +4,10 @@ import ListCategory from "../components/cards/ListCategory";
 import TitleBgBlack from "../components/titles/TitleBgBlack";
 import Vantagem from "../components/Vantagem";
 import 'antd/dist/antd.css';
-import {Image} from 'antd';
+import Image from 'antd/lib/image';
 import React from "react";
 import {useSpecificCar} from "../../hooks/useSpecificCar";
-import InputReservation from '../components/forms/InputReservation'; 
+import InputReservation from '../components/forms/InputDateTime';
 import Reservation from '../components/Reservation';
 
 function CarDetails() {

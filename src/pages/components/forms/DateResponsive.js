@@ -1,4 +1,4 @@
-import {DatePicker} from 'antd';
+import DatePicker from 'antd/lib/date-picker';
 import React from 'react';
 import moment from "moment";
 
