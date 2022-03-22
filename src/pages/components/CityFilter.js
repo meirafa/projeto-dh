@@ -1,12 +1,12 @@
 import TitleBgBlack from "./titles/TitleBgBlack";
 import React from "react";
-import { Tabs, Select } from 'antd';
-import ListProductsFilterCity from "./cards/product/ListProductsFilterCity";
-import { useParams, useNavigate } from "react-router";
-import { useApis } from "../../hooks/useApi";
+import {Select} from 'antd';
+import {useParams, useNavigate} from "react-router";
+import {useApis} from "../../hooks/useApi";
 import Marca from "./Marca";
+import ListProductsFilterCity from "./cards/product/ListProductsFilterCity";
 
-const { TabPane } = Tabs;
+const {Option} = Select;
 
 const cities = [
     {
@@ -30,14 +30,11 @@ const cities = [
 
 
 function CityFilter() {
-    let { city = 'all' } = useParams();
+
+    let {city = 'all'} = useParams();
     const navigate = useNavigate();
 
-    const [cityResult, isLoading] = useApis('/jsons/bd_frota_specs.json');
-    const cars = cityResult?.frotaList || [];
-
-
-    const title = { span: "conheça nossa frota", title: "frota" };
+    const title = {span: "conheça nossa frota", title: "frota"};
 
     // Bloco filtro por InputSelect
     const [addressResult, isLoad] = useApis('/jsons/bd_frota_specs.json');
@@ -47,9 +44,12 @@ function CityFilter() {
     //carregando
     if (isLoad) return 'Loading';
 
+    function enviandoValor(value) {
+        navigate(`/reserva/${value}`)
+    }
+
     return (
         <>
-            {!!isLoading ? 'Carregando...' : null}
 
             <section className="bg-black">
                 <div className="container">
@@ -57,7 +57,7 @@ function CityFilter() {
 
                     <Select
                         showSearch
-                        style={{ minWidth: 250 }}
+                        style={{minWidth: 250}}
                         placeholder="Selecionar Cidade"
                         optionFilterProp="children"
                         filterOption={(input, option) =>
@@ -67,16 +67,30 @@ function CityFilter() {
                             optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
                         }
                         size="large"
+                        onSelect={enviandoValor}
                     >
                         {
                             address.map((addItem, key) => {
-                                return (<React.Fragment key={key}>
-
-                                    <Option value={addItem.category}>{addItem.city}</Option>
-                                </React.Fragment>)
+                                return <Option value={addItem.city} key={key}>{addItem.city}</Option>
                             })
                         }
                     </Select>
+
+                    <div className="produtos">
+                        {address.map(addItem => {
+                            addItem.items.map((item, key) => {
+                                return (
+                                    <div className="produtos" key={key}>
+                                        console.log(item)
+                                        {/*<ListProductsFilterCity*/}
+                                        {/*    city={city}*/}
+                                        {/*    city={item.key === 'all' ? null : item.key}*/}
+                                        {/*/>*/}
+                                    </div>
+                                )
+                            });
+                        })}
+                    </div>
 
                     {/*  <Tabs defaultActiveKey={city} onChange={(key) => {
                         navigate(`/reserva/${key}`)
@@ -99,7 +113,7 @@ function CityFilter() {
                 </div>
             </section>
 
-            <Marca />
+            <Marca/>
         </>
     )
 }

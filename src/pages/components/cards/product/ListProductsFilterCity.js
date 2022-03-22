@@ -16,7 +16,6 @@ function ListProductsFilterCity({cat, cars}) {
                 })
             }
         })
-
     )
 }
 
