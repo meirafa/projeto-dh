@@ -36,6 +36,8 @@ function Products() {
     const [categoryResult, isLoading] = useApis('/jsons/bd_frota_specs.json');
     const cars = categoryResult?.frotaList || [];
 
+    
+
     const title = {span: "conheça nossa frota", title: "frota"};
 
     return (

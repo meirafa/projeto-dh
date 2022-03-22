@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from "react-router-dom";
 
 function ListAllProducts(props) {
-    const {categoria, marca, modelo, imagem, descricao, link, localizacao} = props;
+    const {categoria, marca, modelo, imagem, descricao, link, localizacao, city} = props;
 
     return (
         <>

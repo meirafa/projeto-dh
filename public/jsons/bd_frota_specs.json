@@ -2,6 +2,7 @@
   "frotaList": [
     {
       "category": "suvs",
+      "city": "Sao Paulo",
       "items": [
         {
           "id": "frota_suv01",
@@ -19,7 +20,8 @@
           "localizacao": "Brasil",
           "descricao": "Carros maiores, ideias para a familia toda.",
           "valor": "R$ 299.9",
-          "link": "/produtos/frota_suv01"
+          "link": "/produtos/frota_suv01",
+          "city": "Sao Paulo"
         },
         {
           "id": "frota_suv02",
@@ -79,6 +81,7 @@
     },
     {
       "category": "conversiveis",
+      "city":"Rio de Janeiro",
       "items": [
         {
           "id": "frota_conv01",
@@ -156,6 +159,7 @@
     },
     {
       "category": "esportivos",
+      "city": "Belo Horizonte",
       "items": [
         {
           "id": "frota_esp01",
@@ -233,6 +237,7 @@
     },
     {
       "category": "picapes",
+      "city": "Brasilia",
       "items": [
         {
           "id": "frota_pic01",
