@@ -1,13 +1,11 @@
 import {Link, useParams} from 'react-router-dom';
 import {Helmet} from "react-helmet-async";
 import ListCategory from "../components/cards/ListCategory";
-import TitleBgBlack from "../components/titles/TitleBgBlack";
 import Vantagem from "../components/Vantagem";
 import 'antd/dist/antd.css';
 import Image from 'antd/lib/image';
 import React from "react";
 import {useSpecificCar} from "../../hooks/useSpecificCar";
-import InputReservation from '../components/forms/InputDateTime';
 import Reservation from '../components/Reservation';
 import RateStars from "../components/RateStars";
 import Row from "antd/lib/grid/row";
@@ -99,51 +97,36 @@ function CarDetails() {
                                         </li>
                                         <li><p className="font-text-1 cor-1">Tração</p>  <span>{car?.tracao}</span></li>
                                     </ul>
-
-                                    {/*<h2 className="font-text-2 cor-0">Informações</h2>*/}
-                                    {/*<ul className="carro-informacoes">*/}
-                                    {/*    <li>*/}
-                                    {/*        <img src="../img/icones/motor.png" alt=""/>*/}
-                                    {/*        <h3 className="font-h4 cor-0">Aceleração</h3>*/}
-                                    {/*        <p className="font-text-1 cor-1">Permite você viajar distâncias*/}
-                                    {/*            inimaginaveis*/}
-                                    {/*            com a*/}
-                                    {/*            sua*/}
-                                    {/*            bike.</p>*/}
-                                    {/*    </li>*/}
-                                    {/*    <li>*/}
-                                    {/*        <img src="../img/icones/velocidade.svg" alt=""/>*/}
-                                    {/*        <h3 className="font-h4 cor-0">40 km/h</h3>*/}
-                                    {/*        <p className="font-text-1 cor-1">A mais rápida carro elétrica disponível*/}
-                                    {/*            hoje no*/}
-                                    {/*            mercado.</p>*/}
-                                    {/*    </li>*/}
-                                    {/*    <li>*/}
-                                    {/*        <img src="../img/icones/rastreador.svg" alt=""/>*/}
-                                    {/*        <h3 className="font-h4 cor-0">Rastreador</h3>*/}
-                                    {/*        <p className="font-text-1 cor-1">Rastreador e sistema anti-furto para*/}
-                                    {/*            garantir o*/}
-                                    {/*            seu*/}
-                                    {/*            sossego.</p>*/}
-                                    {/*    </li>*/}
-                                    {/*    <li>*/}
-                                    {/*        <img src="../img/icones/carbono.svg" alt=""/>*/}
-                                    {/*        <h3 className="font-h4 cor-0">Fibra de Carbono</h3>*/}
-                                    {/*        <p className="font-text-1 cor-1">Maior proteção possível para a sua*/}
-                                    {/*            digitalbooking*/}
-                                    {/*            com*/}
-                                    {/*            fibra*/}
-                                    {/*            de*/}
-                                    {/*            carbono.</p>*/}
-                                    {/*    </li>*/}
-                                    {/*</ul>*/}
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                <article className="container">
+                    <div className="lojas">
+                        <h2 className="font-h1">lojas locais<span className="cor-l1">.</span></h2>
+                        <div className="lojas-item">
+                            <img src={car?.mapa}
+                                 alt="mapa"/>
+                            <div className="lojas-conteudo">
+                                <h3 className="font-h2">{car?.cidade}</h3>
+                                <div className="lojas-dados font-text-1 cor-3">
+                                    <p>{car?.endereco} - {car?.bairro}</p>
+                                    <p>{car?.cidade} - {car?.estado}</p>
+                                    <p>CEP: {car?.cep}</p>
+                                </div>
+                                {/*<div className="lojas-dados font-text-1 cor-3">*/}
+                                {/*    <a href="mailto:sp@digitalbooking.com">sp@digitalbooking.com</a>*/}
+                                {/*    <a href="tel:+551199999999">+55 11 9999-9999</a>*/}
+                                {/*</div>*/}
+                                <p className="lojas-tempo font-text-1"><img src="/img/icones/horario.svg" alt=""/>08-18h
+                                    de
+                                    seg à dom</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
                 {/* Bloco de Reserva aqui */}
 
                 <Reservation/>
@@ -154,19 +137,22 @@ function CarDetails() {
                         <Row>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3">Normas</h3>
-                                <p className="text-1">Garantimos o modelo proposto. Somente a cor ou a potência do motor podem variar, mas
+                                <p className="text-1">Garantimos o modelo proposto. Somente a cor ou a potência do motor
+                                    podem variar, mas
                                     enviaremos todas as especificações para confirmar o pedido. O preço o aluguel inclui
                                     milhas de 150 km por dia.</p>
                             </Col>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3">Segurança</h3>
-                                <p className="text-1">O carro pode ser entregue a seu pedido em qualquer lugar do Brasil. O custo da
+                                <p className="text-1">O carro pode ser entregue a seu pedido em qualquer lugar do
+                                    Brasil. O custo da
                                     entrega
                                     depende da distância.</p>
                             </Col>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3">Cancelamento</h3>
-                                <p className="text-1">30 dias ou mais antes do dia do início do aluguel - multa de 20% do valor total
+                                <p className="text-1">30 dias ou mais antes do dia do início do aluguel - multa de 20%
+                                    do valor total
                                     14 dias ou menos antes do início do aluguel - multa de 40% do valor total
                                     7 dias antes do início do aluguel - multa de 60% do valor total
                                     3 dias antes ou menos do início do aluguel - multa de 100% do valor total

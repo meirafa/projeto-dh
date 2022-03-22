@@ -1,7 +1,4 @@
 .lojas {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 40px;
 
   h2 {
     grid-column: 1/-1;
@@ -17,13 +14,16 @@
   border-radius: 4px;
   background: var(--cor-0);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
 }
 
 .lojas-conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px 16px;
-  padding: 32px;
+  gap: 16px;
+  //padding: 32px;
 }
 
 .lojas-conteudo h3,
@@ -54,6 +54,10 @@
     }
   }
   .lojas-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .lojas-item{
     grid-template-columns: 1fr;
   }
 }

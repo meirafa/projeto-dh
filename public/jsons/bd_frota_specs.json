@@ -21,7 +21,12 @@
           "descricao": "Carros maiores, ideias para a familia toda.",
           "valor": "R$ 299.9",
           "link": "/produtos/frota_suv01",
-          "city": "Sao Paulo"
+          "cidade": "Sao Paulo",
+          "estado": "SP",
+          "cep": "01449-000",
+          "endereco": "Av. Europa, 725",
+          "bairro": "Jardins",
+          "mapa": "/img/lojas/sp.jpg"
         },
         {
           "id": "frota_suv02",
@@ -39,7 +44,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros maiores, ideias para a familia toda.",
           "valor": "R$ 299.9",
-          "link": "/produtos/frota_suv02"
+          "link": "/produtos/frota_suv02",
+          "cidade": "Sao Paulo",
+          "estado": "SP",
+          "cep": "01449-000",
+          "endereco": "Av. Europa, 725",
+          "bairro": "Jardins",
+          "mapa": "/img/lojas/sp.jpg"
         },
         {
           "id": "frota_suv03",
@@ -57,7 +68,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros maiores, ideias para a familia toda.",
           "valor": "R$ 299.9",
-          "link": "/produtos/frota_suv03"
+          "link": "/produtos/frota_suv03",
+          "cidade": "Sao Paulo",
+          "estado": "SP",
+          "cep": "01449-000",
+          "endereco": "Av. Europa, 725",
+          "bairro": "Jardins",
+          "mapa": "/img/lojas/sp.jpg"
         },
         {
           "id": "frota_suv04",
@@ -75,7 +92,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros maiores, ideias para a familia toda.",
           "valor": "R$ 299.9",
-          "link": "/produtos/frota_suv04"
+          "link": "/produtos/frota_suv04",
+          "cidade": "Sao Paulo",
+          "estado": "SP",
+          "cep": "01449-000",
+          "endereco": "Av. Europa, 725",
+          "bairro": "Jardins",
+          "mapa": "/img/lojas/sp.jpg"
         }
       ]
     },
@@ -99,7 +122,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros que prezam pelo conforto e luxo, para uma experiência na direção incomparável, e sensação de liberdade.",
           "valor": "R$ 499.9",
-          "link": "/produtos/frota_conv01"
+          "link": "/produtos/frota_conv01",
+          "cidade": "Rio de Janeiro",
+          "estado": "RJ",
+          "cep": "22640-100",
+          "endereco": "Av. das Américas, 645",
+          "bairro": "Barra da Tijuca",
+          "mapa": "/img/lojas/rj.jpg"
         },
         {
           "id": "frota_conv02",
@@ -117,7 +146,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros que prezam pelo conforto e luxo, para uma experiência na direção incomparável, e sensação de liberdade.",
           "valor": "R$ 499.9",
-          "link": "/produtos/frota_conv02"
+          "link": "/produtos/frota_conv02",
+          "cidade": "Rio de Janeiro",
+          "estado": "RJ",
+          "cep": "22640-100",
+          "endereco": "Av. das Américas, 645",
+          "bairro": "Barra da Tijuca",
+          "mapa": "/img/lojas/rj.jpg"
         },
         {
           "id": "frota_conv03",
@@ -135,7 +170,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros que prezam pelo conforto e luxo, para uma experiência na direção incomparável, e sensação de liberdade.",
           "valor": "R$ 499.9",
-          "link": "/produtos/frota_conv03"
+          "link": "/produtos/frota_conv03",
+          "cidade": "Rio de Janeiro",
+          "estado": "RJ",
+          "cep": "22640-100",
+          "endereco": "Av. das Américas, 645",
+          "bairro": "Barra da Tijuca",
+          "mapa": "/img/lojas/rj.jpg"
         },
         {
           "id": "frota_conv04",
@@ -153,7 +194,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros que prezam pelo conforto e luxo, para uma experiência na direção incomparável, e sensação de liberdade.",
           "valor": "R$ 499.9",
-          "link": "/produtos/frota_conv04"
+          "link": "/produtos/frota_conv04",
+          "cidade": "Rio de Janeiro",
+          "estado": "RJ",
+          "cep": "22640-100",
+          "endereco": "Av. das Américas, 645",
+          "bairro": "Barra da Tijuca",
+          "mapa": "/img/lojas/rj.jpg"
         }
       ]
     },
@@ -177,7 +224,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros cheios de estilo, que garantem maior velocidade.",
           "valor": "R$ 399.9",
-          "link": "/produtos/frota_esp01"
+          "link": "/produtos/frota_esp01",
+          "cidade": "Belo Horizonte",
+          "estado": "MG",
+          "cep": "30110-047",
+          "endereco": "Av. do Contorno, 7315",
+          "bairro": "Lourdes",
+          "mapa": "/img/lojas/sp.jpg"
         },
         {
           "id": "frota_esp02",
@@ -195,7 +248,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros cheios de estilo, que garantem maior velocidade.",
           "valor": "R$ 399.9",
-          "link": "/produtos/frota_esp02"
+          "link": "/produtos/frota_esp02",
+          "cidade": "Belo Horizonte",
+          "estado": "MG",
+          "cep": "30110-047",
+          "endereco": "Av. do Contorno, 7315",
+          "bairro": "Lourdes",
+          "mapa": "/img/lojas/sp.jpg"
         },
         {
           "id": "frota_esp03",
@@ -213,7 +272,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros cheios de estilo, que garantem maior velocidade.",
           "valor": "R$ 399.9",
-          "link": "/produtos/frota_esp03"
+          "link": "/produtos/frota_esp03",
+          "cidade": "Belo Horizonte",
+          "estado": "MG",
+          "cep": "30110-047",
+          "endereco": "Av. do Contorno, 7315",
+          "bairro": "Lourdes",
+          "mapa": "/img/lojas/sp.jpg"
         },
         {
           "id": "frota_esp04",
@@ -231,7 +296,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros cheios de estilo, que garantem maior velocidade.",
           "valor": "R$ 399.9",
-          "link": "/produtos/frota_esp04"
+          "link": "/produtos/frota_esp04",
+          "cidade": "Belo Horizonte",
+          "estado": "MG",
+          "cep": "30110-047",
+          "endereco": "Av. do Contorno, 7315",
+          "bairro": "Lourdes",
+          "mapa": "/img/lojas/sp.jpg"
         }
       ]
     },
@@ -255,7 +326,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros ideais para quem curte aventura.",
           "valor": "R$ 399.9",
-          "link": "/produtos/frota_pic01"
+          "link": "/produtos/frota_pic01",
+          "cidade": "Brasilia",
+          "estado": "DF",
+          "cep": "70750-502",
+          "endereco": "SEPN 509 - Loja 8",
+          "bairro": "Asa Norte",
+          "mapa": "/img/lojas/rj.jpg"
         },
         {
           "id": "frota_pic02",
@@ -273,7 +350,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros ideais para quem curte aventura.",
           "valor": "R$ 399.9",
-          "link": "/produtos/frota_pic02"
+          "link": "/produtos/frota_pic02",
+          "cidade": "Brasilia",
+          "estado": "DF",
+          "cep": "70750-502",
+          "endereco": "SEPN 509 - Loja 8",
+          "bairro": "Asa Norte",
+          "mapa": "/img/lojas/rj.jpg"
         },
         {
           "id": "frota_pic03",
@@ -291,7 +374,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros ideais para quem curte aventura.",
           "valor": "R$ 399.9",
-          "link": "/produtos/frota_pic03"
+          "link": "/produtos/frota_pic03",
+          "cidade": "Brasilia",
+          "estado": "DF",
+          "cep": "70750-502",
+          "endereco": "SEPN 509 - Loja 8",
+          "bairro": "Asa Norte",
+          "mapa": "/img/lojas/rj.jpg"
         },
         {
           "id": "frota_pic04",
@@ -309,7 +398,13 @@
           "localizacao": "Brasil",
           "descricao": "Carros ideais para quem curte aventura.",
           "valor": "R$ 399.9",
-          "link": "/produtos/frota_pic04"
+          "link": "/produtos/frota_pic04",
+          "cidade": "Brasilia",
+          "estado": "DF",
+          "cep": "70750-502",
+          "endereco": "SEPN 509 - Loja 8",
+          "bairro": "Asa Norte",
+          "mapa": "/img/lojas/rj.jpg"
         }
       ]
     }

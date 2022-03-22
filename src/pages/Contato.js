@@ -45,7 +45,7 @@ function Contato() {
                                     <div className="col-2">
                                         <label htmlFor="mensagem">Mensagem</label>
                                         <textarea rows="5" id="mensagem" name="mensagem"
-                                                  placeholder="O que você precisa?"></textarea>
+                                                  placeholder="O que você precisa?"/>
                                     </div>
                                     <button className="botao col-2">Enviar Mensagem</button>
                                 </form>
@@ -53,50 +53,6 @@ function Contato() {
                         </div>
                     </div>
                 </section>
-
-
-                <div className="container">
-                    <div className="lojas">
-                        <h2 className="font-h1">lojas locais<span className="cor-l1">.</span></h2>
-                        <div className="lojas-item">
-                            <img src="/img/lojas/rj.jpg"
-                                 alt="mapa marcando o endereço em Rua Ali Perto, 25 - Rio de Janeiro - RJ"/>
-                            <div className="lojas-conteudo">
-                                <h3 className="font-h2">Rio de Janeiro</h3>
-                                <div className="lojas-dados font-text-1 cor-3">
-                                    <p>Rua Ali Perto, 25</p>
-                                    <p>Rio de Janeiro - RJ</p>
-                                </div>
-                                <div className="lojas-dados font-text-1 cor-3">
-                                    <a href="mailto:rj@digitalbooking.com">rj@digitalbooking.com</a>
-                                    <a href="tel:+552199999999">+55 21 9999-9999</a>
-                                </div>
-                                <p className="lojas-tempo font-text-1"><img src="/img/icones/horario.svg" alt=""/>08-18h
-                                    de
-                                    seg à dom</p>
-                            </div>
-                        </div>
-
-                        <div className="lojas-item">
-                            <img src="/img/lojas/sp.jpg"
-                                 alt="mapa marcando o endereço em Rua Ali Perto, 25 - São Paulo - SP"/>
-                            <div className="lojas-conteudo">
-                                <h3 className="font-h2">São Paulo</h3>
-                                <div className="lojas-dados font-text-1 cor-3">
-                                    <p>Rua Ali Perto, 25</p>
-                                    <p>São Paulo - SP</p>
-                                </div>
-                                <div className="lojas-dados font-text-1 cor-3">
-                                    <a href="mailto:sp@digitalbooking.com">sp@digitalbooking.com</a>
-                                    <a href="tel:+551199999999">+55 11 9999-9999</a>
-                                </div>
-                                <p className="lojas-tempo font-text-1"><img src="/img/icones/horario.svg" alt=""/>08-18h
-                                    de
-                                    seg à dom</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </main>
         </>
     )
