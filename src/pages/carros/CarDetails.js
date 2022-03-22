@@ -10,8 +10,12 @@ import {useSpecificCar} from "../../hooks/useSpecificCar";
 import InputReservation from '../components/forms/InputDateTime';
 import Reservation from '../components/Reservation';
 import RateStars from "../components/RateStars";
+import Row from "antd/lib/grid/row";
+import Col from "antd/lib/grid/col";
+import TitleBgWhite from "../components/titles/TitleBgWhite";
 
 function CarDetails() {
+    const tituloPolitica = {span: "condições de aluguel", title: "política"}
 
     const [visible, setVisible] = React.useState(false);
     const {id} = useParams();
@@ -24,7 +28,7 @@ function CarDetails() {
     return (
         <>
             <Helmet>
-                <title>DB | Categoria {/* > */}  &gt; Carro</title>
+                <title>DB | Luxury Cars</title>
             </Helmet>
 
             <main>
@@ -143,6 +147,39 @@ function CarDetails() {
                 {/* Bloco de Reserva aqui */}
 
                 <Reservation/>
+                <article>
+                    <div className="container">
+                        <TitleBgWhite {...tituloPolitica}/>
+
+                        <Row>
+                            <Col xs={20} md={12} lg={8}>
+                                <h1>Normas:</h1>
+                                <p>Garantimos o modelo proposto. Somente a cor ou a potência do motor podem variar, mas
+                                    enviaremos todas as especificações para confirmar o pedido. O preço o aluguel inclui
+                                    milhas de 150 km por dia.</p>
+                            </Col>
+                            <Col xs={20} md={12} lg={8}>
+                                <h1>Segurança:</h1>
+                                <p>O carro pode ser entregue a seu pedido em qualquer lugar do Brasil. O custo da
+                                    entrega
+                                    depende da distância.</p>
+                            </Col>
+                            <Col xs={20} md={12} lg={8}>
+                                <h1>Cancelamento:</h1>
+                                <p>30 dias ou mais antes do dia do início do aluguel - multa de 20% do valor total
+                                    14 dias ou menos antes do início do aluguel - multa de 40% do valor total
+                                    7 dias antes do início do aluguel - multa de 60% do valor total
+                                    3 dias antes ou menos do início do aluguel - multa de 100% do valor total
+                                    Se você não comparecer na hora e data combinadas e/ou fornecer toda a documentação
+                                    necessária e/ou fornecer um cartão de crédito em nome do motorista principal com
+                                    fundos
+                                    suficientes disponíveis para o depósito do carro, 100 % multa do valor total.</p>
+                            </Col>
+                        </Row>
+                    </div>
+                </article>
+
+                <Vantagem/>
 
                 <article className="carros-lista">
                     <div className="container">
@@ -153,7 +190,6 @@ function CarDetails() {
                         </ul>
                     </div>
                 </article>
-                <Vantagem/>
             </main>
         </>
     )
