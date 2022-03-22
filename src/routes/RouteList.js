@@ -13,6 +13,7 @@ import Cadastro from "../pages/Cadastro";
 import Rodape from "../pages/components/global/Rodape";
 import Products from "../pages/components/Products";
 import PageNotFound from "../pages/PageNotFound";
+import CityFilter from '../pages/components/CityFilter';
 
 function RouteList() {
     return (
@@ -22,7 +23,7 @@ function RouteList() {
                     <Cabecalho/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
-                        <Route path="categorias" element={<Frota/>}/>
+                        <Route path="categorias" element={<Products/>}/>
                         <Route path="contato" element={<Contato/>}/>
                         <Route path="reserva" element={<Reserva/>}/>
                         <Route path="login" element={<Login/>}/>
@@ -30,6 +31,10 @@ function RouteList() {
                         <Route path="produtos/:id" element={<CarDetails/>}/>
                         <Route path="cadastro" element={<Cadastro/>}/>
                         <Route path="categorias/:category" element={<Products/>}/>
+
+                        {/* Teste com o CityFilter */}
+                        <Route path="reserva/:city" element={<CityFilter/>}/>
+
                         <Route path="*" element={<PageNotFound/>}/>
                     </Routes>
                     <Rodape/>
