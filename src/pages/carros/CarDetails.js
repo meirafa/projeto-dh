@@ -9,6 +9,7 @@ import React from "react";
 import {useSpecificCar} from "../../hooks/useSpecificCar";
 import InputReservation from '../components/forms/InputDateTime';
 import Reservation from '../components/Reservation';
+import RateStars from "../components/RateStars";
 
 function CarDetails() {
 
@@ -69,10 +70,13 @@ function CarDetails() {
                                             <Image src="../img/carros/conversivel-3.jpg"/>
                                         </Image.PreviewGroup>
                                     </div>
-
                                 </div>
+
                                 <div className="carro-conteudo">
                                     <p className="font-h3 cor-1">{car?.descricao}</p>
+
+                                    <RateStars/>
+
                                     <div className="carro-comprar">
                                         <Link className="botao" to="/reserva">Alugar Agora</Link>
                                     </div>
