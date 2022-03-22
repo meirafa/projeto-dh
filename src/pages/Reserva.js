@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import TitleBgBlack from "./components/titles/TitleBgBlack";
 // import InputReservation from "./components/forms/InputReservation";
 import Reservation from "./components/Reservation";
+import CityFilter from "./components/CityFilter";
 
 function Reserva() {
     const title = { span: "informações da sua reserva", title: "reserva" }
@@ -21,18 +22,7 @@ function Reserva() {
                 </section>
 
                 <Reservation/>
-                {/* <div className="reserve-box  ">
-                    <div className="reserve-cal">
-                        <InputReservation />
-                    </div>
-
-                    <div className="reserve-btn">
-                        <p>Faça já sua reserva</p>
-                        <button className="botao">Reservar</button>
-                    </div>
-
-                    <span className="termos-link"><Link to="/termos">Nossos Termos</Link></span>
-                </div> */}
+                <CityFilter/>
             </main>
         </>
     )
