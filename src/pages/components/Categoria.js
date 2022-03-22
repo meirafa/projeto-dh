@@ -1,5 +1,6 @@
 import ListCategory from "./cards/ListCategory";
 import TitleBgWhite from "./titles/TitleBgWhite";
+import CityFilter from "./../components/CityFilter"
 
 function Categoria() {
     const title = {span: "As suas novas emoções começam aqui", title: "categorias"}
@@ -9,6 +10,7 @@ function Categoria() {
                 <TitleBgWhite {...title}/>
                 <ul>
                     <ListCategory/>
+                    
                 </ul>
             </div>
         </article>

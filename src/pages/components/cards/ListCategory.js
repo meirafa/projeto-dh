@@ -1,6 +1,8 @@
 import React from 'react'
 import {useApis} from '../../../hooks/useApi';
 import {Link} from "react-router-dom";
+import CityFilter from "./../../components/CityFilter";
+
 
 function ListCategory() {
     const [categoriesResult, isLoading] = useApis('/jsons/categoria.json');
@@ -24,8 +26,12 @@ function ListCategory() {
                             </Link>
                         </li>
                     </React.Fragment>
+                    
                 })
+                
             }
+            
+            
         </>
     )
 }

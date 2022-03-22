@@ -6,12 +6,12 @@
       "link": "/categorias/suvs",
       "img": "/img/carros/suv-1.png",
       "localization": "Brasil",
-      "description": "Carros maiores, ideias para a familia toda.",
+      "description": "Carros maiores, com belo design e imponência.",
       "value": "R$ 299.9"
     },
     {
       "id": "2",
-      "category": "conversiveis",
+      "category": "conversíveis",
       "link": "/categorias/conversiveis",
       "img": "/img/carros/conversivel-1.png",
       "localization": "Brasil",

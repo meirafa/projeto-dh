@@ -7,7 +7,7 @@
       "img": "./img/carros/BMWX5.jpg",
       "title": "BMW X5",
       "localization": "Brasil",
-      "description": "Carros maiores, ideias para a familia toda.",
+      "description": "Carros maiores, com belo design e imponência",
       "value": "R$ 299.9",
       "link": "/produtos/frota_suv01"
     },
@@ -18,7 +18,7 @@
       "img": "./img/carros/Audi-Q5.jpg",
       "title": "AUDI Q5",
       "localization": "Brasil",
-      "description": "Carros maiores, ideias para a familia toda.",
+      "description": "Carros maiores, com belo design e imponência",
       "value": "R$ 299.9",
       "link": "/produtos/frota_suv02"
     },
@@ -29,7 +29,7 @@
       "img": "./img/carros/BMWSERIE4CABRIO.jpg",
       "title": "BMW SERIE 4 CABRIO",
       "localization": "Brasil",
-      "description": "Carros que prezam pelo conforto e luxo.",
+      "description": "Luxo e velocidade.",
       "value": "R$ 499.9",
       "link": "/produtos/frota_conv01"
     },
@@ -40,7 +40,7 @@
       "img": "./img/carros/AudiTT.jpg",
       "title": "AUDI TT ROADSTER",
       "localization": "Brasil",
-      "description": "Carros que prezam pelo conforto e luxo.",
+      "description": "Luxo e velocidade.",
       "value": "R$ 499.9",
       "link": "/produtos/frota_conv02"
     },
@@ -51,7 +51,7 @@
       "img": "./img/carros/GMCSierra.jpg",
       "title": "GMC SIERRA 1500 LIMITED DENALI",
       "localization": "Brasil",
-      "description": "Carros ideais para quem curte aventura.",
+      "description": "Pra quando a viagem exige força",
       "value": "R$ 399.9",
       "link": "/produtos/frota_pic03"
     },
@@ -62,7 +62,7 @@
       "img": "./img/carros/JeepGladiator.jpg",
       "title": "Jeep Gladiator",
       "localization": "Brasil",
-      "description": "Carros ideais para quem curte aventura.",
+      "description": "Pra quando a viagem exige força",
       "value": "R$ 399.9",
       "link": "/produtos/frota_pic02"
     },
@@ -73,7 +73,7 @@
       "img": "./img/carros/Ford-GT.jpg",
       "title": "Ford GT",
       "localization": "Brasil",
-      "description": "Carros cheios de estilo, que garantem maior velocidade.",
+      "description": "Pilote o melhor que a engenharia pode fazer",
       "value": "R$ 399.9",
       "link": "/produtos/frota_esp01"
     },
@@ -84,7 +84,7 @@
       "img": "./img/carros/AudiR8V10.jpg",
       "title": "Audi R8 V10",
       "localization": "Brasil",
-      "description": "Carros cheios de estilo, que garantem maior velocidade.",
+      "description": "Pilote o melhor que a engenharia pode fazer",
       "value": "R$ 399.9",
       "link": "/produtos/frota_esp03"
     }

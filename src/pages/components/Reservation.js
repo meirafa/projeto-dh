@@ -1,4 +1,4 @@
-import InputReservation from "./forms/InputDateTime";
+import InputReservation from "./forms/InputReservation";
 import {Link} from "react-router-dom";
 import React from "react";
 

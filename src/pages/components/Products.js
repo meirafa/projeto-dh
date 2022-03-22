@@ -5,6 +5,7 @@ import ListProductsFilterCategory from "./cards/product/ListProductsFilterCatego
 import {useParams, useNavigate} from "react-router";
 import {useApis} from "../../hooks/useApi";
 import Marca from "./Marca";
+import CityFilter from "./CityFilter";
 
 const {TabPane} = Tabs;
 
@@ -67,6 +68,7 @@ function Products() {
                     </Tabs>
                 </div>
             </section>
+            {/* <CityFilter/> */}
 
             <Marca/>
         </>
