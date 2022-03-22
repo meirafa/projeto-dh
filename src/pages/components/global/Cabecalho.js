@@ -2,7 +2,7 @@ import { Outlet, Link, NavLink } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 function Cabecalho() {
-    const [navSize, setnavSize] = useState("10rem");
+    const [navSize, setnavSize] = useState("5rem");
     const [navColor, setnavColor] = useState("transparent");
     const listenScrollEvent = () => {
         window.scrollY > 10 ? setnavColor("#DFE4EA") : setnavColor("transparent");

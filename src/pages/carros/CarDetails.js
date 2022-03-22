@@ -30,10 +30,25 @@ function CarDetails() {
                 <section className="bg-black">
                     <div className="bg-image">
                         <div className="container">
-                            <div className="titulo">
-                                <p className="font-h3 cor-1">{car?.categoria}</p>
-                                <h1 className="font-h1 cor-0">{car?.marca} {car?.modelo}<span className="cor-l1">.</span>
-                                </h1>
+                            <div className="titulo title-details">
+                                <div>
+                                    <p className="font-h3 cor-1">{car?.categoria}</p>
+                                    <h1 className="font-h1 cor-0">{car?.marca} {car?.modelo}<span
+                                        className="cor-l1">.</span>
+                                    </h1>
+                                </div>
+                                <div className="title-seta">
+                                    <Link to="/">
+                                        <svg height="2.8em" width="2.8em" viewBox="0 0 2 1" preserveAspectRatio="none">
+                                            <polyline
+                                                fill="none"
+                                                stroke="#f0572d"
+                                                strokeWidth="0.1"
+                                                points="0.9,0.1 0.1,0.5 0.9,0.9"
+                                            />
+                                        </svg>
+                                    </Link>
+                                </div>
                             </div>
 
                             <div className="carro">

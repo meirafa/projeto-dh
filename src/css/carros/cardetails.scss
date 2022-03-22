@@ -1,0 +1,28 @@
+.title-details {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  .title-seta {
+    text-align: end;
+
+    a {
+      margin: 0 10px;
+      padding: 0.5em 0.8em;
+      text-decoration: none;
+      transition: 150ms;
+      cursor: pointer;
+
+      svg > polyline {
+        transition: 150ms;
+      }
+
+      &:hover {
+        color: var(--cor-0);
+
+        svg > polyline {
+          stroke: var(--cor-0);
+        }
+      }
+    }
+  }
+}
