@@ -1,37 +1,17 @@
 import TitleBgBlack from "./titles/TitleBgBlack";
 import React from "react";
 import {Select} from 'antd';
-import {useParams, useNavigate} from "react-router";
+import {useNavigate, useParams} from "react-router";
 import {useApis} from "../../hooks/useApi";
 import Marca from "./Marca";
 import ListProductsFilterCity from "./cards/product/ListProductsFilterCity";
+import ListAllProducts from "./cards/product/ListAllProducts";
 
 const {Option} = Select;
 
-const cities = [
-    {
-        key: 'all',
-        title: 'Todos os Locais'
-    },
-    {
-        key: 'Sao Paulo',
-        title: 'São Paulo'
-    }, {
-        key: 'Rio de Janeiro',
-        title: 'Rio'
-    }, {
-        key: 'Belo Horizonte',
-        title: 'BH'
-    }, {
-        key: 'Brasilia',
-        title: 'Brasilia'
-    },
-];
-
-
 function CityFilter() {
-
     let {city = 'all'} = useParams();
+
     const navigate = useNavigate();
 
     const title = {span: "conheça nossa frota", title: "frota"};
@@ -41,15 +21,14 @@ function CityFilter() {
 
     //resultado pode ser nulo ou vazio ate carregar
     const address = addressResult?.frotaList || [];
-    //carregando
-    if (isLoad) return 'Loading';
 
     function enviandoValor(value) {
-        navigate(`/reserva/${value}`)
+        navigate(`/reserva/${value}`);
     }
 
     return (
         <>
+            {!!isLoad ? 'Carregando...' : null}
 
             <section className="bg-black">
                 <div className="container">
@@ -75,41 +54,23 @@ function CityFilter() {
                             })
                         }
                     </Select>
-
                     <div className="produtos">
-                        {address.map(addItem => {
-                            addItem.items.map((item, key) => {
+                        {address.map((addItems, key) => {
+                            if (addItems.city === city) {
                                 return (
-                                    <div className="produtos" key={key}>
-                                        console.log(item)
-                                        {/*<ListProductsFilterCity*/}
-                                        {/*    city={city}*/}
-                                        {/*    city={item.key === 'all' ? null : item.key}*/}
-                                        {/*/>*/}
-                                    </div>
+                                    <ListProductsFilterCity
+                                        address={addItems.items}
+                                        key={key}/>
                                 )
-                            });
+                            } else if (city === 'all') {
+                                return addItems.items.map((carItem) => {
+                                    return (
+                                        <ListAllProducts {...carItem} key={carItem.id}/>
+                                    )
+                                })
+                            }
                         })}
                     </div>
-
-                    {/*  <Tabs defaultActiveKey={city} onChange={(key) => {
-                        navigate(`/reserva/${key}`)
-                    }}>
-                        {cities.map(item => {
-                            return <TabPane
-                                tab={<span>{item.title}</span>}
-                                key={item.key}
-                            >
-
-                                <div className="produtos">
-                                    <ListProductsFilterCity
-                                        cars={cars}
-                                        cat={item.key === 'all' ? null : item.key}
-                                    />
-                                </div>
-                            </TabPane>
-                        })}
-                    </Tabs> */}
                 </div>
             </section>
 
