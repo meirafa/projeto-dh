@@ -3,7 +3,7 @@ import {useApis} from '../../../hooks/useApi';
 import {Link} from "react-router-dom";
 
 function CardsAnimation() {
-    const [carsResult, isLoading] = useApis('/jsons/popular.json');
+    const [carsResult, isLoading] = useApis('/jsons/apiCars.json');
 
     //resultado pode ser nulo ou vazio ate carregar
     const cars = carsResult?.carsList || [];

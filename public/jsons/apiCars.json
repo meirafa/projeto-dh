@@ -1,0 +1,608 @@
+{
+  "carsList": [
+    {
+      "id": "001",
+      "model": "X5",
+      "brand": "BMW",
+      "description": "Carros maiores, com belo design e conforto",
+      "category": {
+        "title": "SUVs",
+        "description": "Carros maiores, com belo design e imponência.",
+        "urlImage": "/img/carros/suv-1.png",
+        "link": "/categorias/suvs"
+      },
+      "city": {
+        "name": "Sao Paulo - SP",
+        "address": "Av. Europa, 725 - Jardins",
+        "cep": "01449-000"
+      },
+      "attribute": {
+        "power": "394cv",
+        "seats": "5",
+        "acceleration": "5,6s",
+        "transmission": "automatico 8 marchas",
+        "gas": "hibrido",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/BMWX5.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": "../img/carros/conversivel-1.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": "../img/carros/conversivel-3.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": "../img/carros/conversivel-1.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": "../img/carros/conversivel-3.jpg"
+        }
+      ],
+      "value": "R$ 299.9"
+    },
+    {
+      "id": "002",
+      "model": "Q5",
+      "brand": "AUDI",
+      "description": "Carros maiores, com belo design e conforto",
+      "category": {
+        "title": "SUVs",
+        "description": "Carros maiores, com belo design e imponência.",
+        "urlImage": "/img/carros/suv-1.png",
+        "link": "/categorias/suvs"
+      },
+      "city": {
+        "name": "Sao Paulo - SP",
+        "address": "Av. Europa, 725 - Jardins",
+        "cep": "01449-000"
+      },
+      "attribute": {
+        "power": "249cv",
+        "seats": "5",
+        "acceleration": "6,3s",
+        "transmission": "automatico 7 marchas",
+        "gas": "gasolina",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/Audi-Q5.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 299.9"
+    },
+    {
+      "id": "003",
+      "model": "CAYENNE",
+      "brand": "PORSCHE",
+      "description": "Carros maiores, com belo design e conforto",
+      "category": {
+        "title": "SUVs",
+        "description": "Carros maiores, com belo design e imponência.",
+        "urlImage": "/img/carros/suv-1.png",
+        "link": "/categorias/suvs"
+      },
+      "city": {
+        "name": "Sao Paulo - SP",
+        "address": "Av. Europa, 725 - Jardins",
+        "cep": "01449-000"
+      },
+      "attribute": {
+        "power": "462cv",
+        "seats": "5",
+        "acceleration": "5.0s",
+        "transmission": "automatico 8 marchas",
+        "gas": "hibrido",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/PorscheCayenne.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 299.9"
+    },
+    {
+      "id": "004",
+      "model": "MODEL X",
+      "brand": "TESLA",
+      "description": "Carros maiores, com belo design e conforto",
+      "category": {
+        "title": "SUVs",
+        "description": "Carros maiores, com belo design e imponência.",
+        "urlImage": "/img/carros/suv-1.png",
+        "link": "/categorias/suvs"
+      },
+      "city": {
+        "name": "Sao Paulo - SP",
+        "address": "Av. Europa, 725 - Jardins",
+        "cep": "01449-000"
+      },
+      "attribute": {
+        "power": "670cv",
+        "seats": "7",
+        "acceleration": "3.9s",
+        "transmission": "automatico 8 marchas",
+        "gas": "eletrico",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/TeslaModelX-SUV.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 299.9"
+    },
+    {
+      "id": "005",
+      "model": "SERIE 4 CABRIO",
+      "brand": "BMW",
+      "description": "Carros com estilo e sensação de liberdade inigualáveis.",
+      "category": {
+        "title": "conversíveis",
+        "description": "Carros que prezam pelo conforto e luxo.",
+        "urlImage": "/img/carros/conversivel-1.png",
+        "link": "/categorias/conversiveis"
+      },
+      "city": {
+        "name": "Rio de Janeiro - RJ",
+        "address": "Av. das Américas, 645 - Barra da Tijuca",
+        "cep": "22640-100"
+      },
+      "attribute": {
+        "power": "258cv",
+        "seats": "4",
+        "acceleration": "6,2s",
+        "transmission": "automatico 8 marchas",
+        "gas": "gasolina",
+        "tcs": "traseira",
+        "doors": "2"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/BMWSERIE4CABRIO.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 499.9"
+    },
+    {
+      "id": "006",
+      "model": "TT ROADSTER",
+      "brand": "AUDI",
+      "description": "Carros com estilo e sensação de liberdade inigualáveis.",
+      "category": {
+        "title": "conversíveis",
+        "description": "Carros que prezam pelo conforto e luxo.",
+        "urlImage": "/img/carros/conversivel-1.png",
+        "link": "/categorias/conversiveis"
+      },
+      "city": {
+        "name": "Rio de Janeiro - RJ",
+        "address": "Av. das Américas, 645 - Barra da Tijuca",
+        "cep": "22640-100"
+      },
+      "attribute": {
+        "power": "230cv",
+        "seats": "2",
+        "acceleration": "6,1s",
+        "transmission": "automatico 6 marchas",
+        "gas": "gasolina",
+        "tcs": "dianteira",
+        "doors": "2"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/AudiTT.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 499.9"
+    },
+    {
+      "id": "007",
+      "model": "718 SPYDER",
+      "brand": "PORSCHE",
+      "description": "Carros com estilo e sensação de liberdade inigualáveis.",
+      "category": {
+        "title": "conversíveis",
+        "description": "Carros que prezam pelo conforto e luxo.",
+        "urlImage": "/img/carros/conversivel-1.png",
+        "link": "/categorias/conversiveis"
+      },
+      "city": {
+        "name": "Rio de Janeiro - RJ",
+        "address": "Av. das Américas, 645 - Barra da Tijuca",
+        "cep": "22640-100"
+      },
+      "attribute": {
+        "power": "420cv",
+        "seats": "2",
+        "acceleration": "3,7s",
+        "transmission": "automatico 7 marchas",
+        "gas": "gasolina",
+        "tcs": "traseira",
+        "doors": "2"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/Porsche718Spyder.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 499.9"
+    },
+    {
+      "id": "008",
+      "model": "MUSTANG",
+      "brand": "FORD",
+      "description": "Carros com estilo e sensação de liberdade inigualáveis.",
+      "category": {
+        "title": "conversíveis",
+        "description": "Carros que prezam pelo conforto e luxo.",
+        "urlImage": "/img/carros/conversivel-1.png",
+        "link": "/categorias/conversiveis"
+      },
+      "city": {
+        "name": "Belo Horizonte - MG",
+        "address": "Av. do Contorno, 7315 - Lourdes",
+        "cep": "30110-047"
+      },
+      "attribute": {
+        "power": "483cv",
+        "seats": "4",
+        "acceleration": "4,3s",
+        "transmission": "manual 6 marchas",
+        "gas": "gasolina",
+        "tcs": "traseira",
+        "doors": "2"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/Ford-Mustang-Convertible.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 499.9"
+    },
+    {
+      "id": "009",
+      "model": "Ram",
+      "brand": "Dodge",
+      "description": "Carros maiores, com belo design e imponência",
+      "category": {
+        "title": "picapes",
+        "description": "Carros ideais para quem curte aventura.",
+        "urlImage": "/img/carros/picape-1.png",
+        "link": "/categorias/picapes"
+      },
+      "city": {
+        "name": "Belo Horizonte - MG",
+        "address": "Av. do Contorno, 7315 - Lourdes",
+        "cep": "30110-047"
+      },
+      "attribute": {
+        "power": "330cv",
+        "seats": "5",
+        "acceleration": "11.0s",
+        "transmission": "automatico 6 marchas",
+        "gas": "diesel",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/DodgeRAM.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 399.9"
+    },
+    {
+      "id": "010",
+      "model": "Gladiator",
+      "brand": "Jeep",
+      "description": "Carros maiores, com belo design e imponência",
+      "category": {
+        "title": "picapes",
+        "description": "Carros ideais para quem curte aventura.",
+        "urlImage": "/img/carros/picape-1.png",
+        "link": "/categorias/picapes"
+      },
+      "city": {
+        "name": "Belo Horizonte - MG",
+        "address": "Av. do Contorno, 7315 - Lourdes",
+        "cep": "30110-047"
+      },
+      "attribute": {
+        "power": "285cv",
+        "seats": "5",
+        "acceleration": "8,6s",
+        "transmission": "automatico 8 marchas",
+        "gas": "gasolina",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/JeepGladiator.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 399.9"
+    },
+    {
+      "id": "011",
+      "model": "SIERRA 1500 LIMITED DENALI",
+      "brand": "GMC",
+      "description": "Carros maiores, com belo design e imponência",
+      "category": {
+        "title": "picapes",
+        "description": "Carros ideais para quem curte aventura.",
+        "urlImage": "/img/carros/picape-1.png",
+        "link": "/categorias/picapes"
+      },
+      "city": {
+        "name": "Brasilia - DF",
+        "address": "SEPN 509, Loja 8 - Asa Norte",
+        "cep": "70750-502"
+      },
+      "attribute": {
+        "power": "420cv",
+        "seats": "5",
+        "acceleration": "5,5s",
+        "transmission": "automatico 8 marchas",
+        "gas": "diesel",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/GMCSierra.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 399.9"
+    },
+    {
+      "id": "012",
+      "model": "F-150 Velociraptor",
+      "brand": "FORD",
+      "description": "Carros maiores, com belo design e imponência",
+      "category": {
+        "title": "picapes",
+        "description": "Carros ideais para quem curte aventura.",
+        "urlImage": "/img/carros/picape-1.png",
+        "link": "/categorias/picapes"
+      },
+      "city": {
+        "name": "Brasilia - DF",
+        "address": "SEPN 509, Loja 8 - Asa Norte",
+        "cep": "70750-502"
+      },
+      "attribute": {
+        "power": "450cv",
+        "seats": "5",
+        "acceleration": "5,6s",
+        "transmission": "automatico 10 marchas",
+        "gas": "gasolina",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "PRINCIPAL",
+          "urlImage": "/img/carros/Ford-F-150-Raptor.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 399.9"
+    },
+    {
+      "id": "013",
+      "model": "GT",
+      "brand": "FORD",
+      "description": "Pilote o melhor que a engenharia pode fazer",
+      "category": {
+        "title": "esportivos",
+        "description": "Carros cheios de estilo, que garantem maior velocidade.",
+        "urlImage": "/img/carros/esportivo-1.png",
+        "link": "/categorias/esportivos"
+      },
+      "city": {
+        "name": "Brasilia - DF",
+        "address": "SEPN 509, Loja 8 - Asa Norte",
+        "cep": "70750-502"
+      },
+      "attribute": {
+        "power": "660cv",
+        "seats": "2",
+        "acceleration": "3,1s",
+        "transmission": "automatico 7 marchas",
+        "gas": "gasolina",
+        "tcs": "traseira",
+        "doors": "2"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/Ford-GT.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 399.9"
+    },
+    {
+      "id": "014",
+      "model": "M3 COMPETITION",
+      "brand": "BMW",
+      "description": "Pilote o melhor que a engenharia pode fazer",
+      "category": {
+        "title": "esportivos",
+        "description": "Carros cheios de estilo, que garantem maior velocidade.",
+        "urlImage": "/img/carros/esportivo-1.png",
+        "link": "/categorias/esportivos"
+      },
+      "city": {
+        "name": "Florianopolis - SC",
+        "address": "Rua Paschoal Apóstolo Pítsica, 4900 - Agronômica",
+        "cep": "88025-255"
+      },
+      "attribute": {
+        "power": "510cv",
+        "seats": "4",
+        "acceleration": "3,9s",
+        "transmission": "automatico 8 marchas",
+        "gas": "gasolina",
+        "tcs": "traseira",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/BMWM3Competition.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 399.9"
+    },
+    {
+      "id": "015",
+      "model": "R8 V10",
+      "brand": "AUDI",
+      "description": "Pilote o melhor que a engenharia pode fazer",
+      "category": {
+        "title": "esportivos",
+        "description": "Carros cheios de estilo, que garantem maior velocidade.",
+        "urlImage": "/img/carros/esportivo-1.png",
+        "link": "/categorias/esportivos"
+      },
+      "city": {
+        "name": "Florianopolis - SC",
+        "address": "Rua Paschoal Apóstolo Pítsica, 4900 - Agronômica",
+        "cep": "88025-255"
+      },
+      "attribute": {
+        "power": "610cv",
+        "seats": "2",
+        "acceleration": "3,2s",
+        "transmission": "automatico 7 marchas",
+        "gas": "gasolina",
+        "tcs": "4x4",
+        "doors": "4"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/AudiR8V10.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 399.9"
+    },
+    {
+      "id": "016",
+      "model": "911 CARRERA",
+      "brand": "PORSCH",
+      "description": "Pilote o melhor que a engenharia pode fazer",
+      "category": {
+        "title": "esportivos",
+        "description": "Carros cheios de estilo, que garantem maior velocidade.",
+        "urlImage": "/img/carros/esportivo-1.png",
+        "link": "/categorias/esportivos"
+      },
+      "city": {
+        "name": "Florianopolis - SC",
+        "address": "Rua Paschoal Apóstolo Pítsica, 4900 - Agronômica",
+        "cep": "88025-255"
+      },
+      "attribute": {
+        "power": "480cv",
+        "seats": "2",
+        "acceleration": "3,7s",
+        "transmission": "automatico 8 marchas",
+        "gas": "gasolina",
+        "tcs": "traseira",
+        "doors": "2"
+      },
+      "images": [
+        {
+          "title": "principal",
+          "urlImage": "/img/carros/Porsche-911-GT3.jpg"
+        },
+        {
+          "title": "",
+          "urlImage": ""
+        }
+      ],
+      "value": "R$ 399.9"
+    }
+  ]
+}

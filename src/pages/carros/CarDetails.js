@@ -5,23 +5,22 @@ import Vantagem from "../components/Vantagem";
 import 'antd/dist/antd.css';
 import Image from 'antd/lib/image';
 import React from "react";
-import {useSpecificCar} from "../../hooks/useSpecificCar";
+import {useSpecificCarId} from "../../hooks/useSpecificCarId";
 import Reservation from '../components/Reservation';
 import RateStars from "../components/RateStars";
 import Row from "antd/lib/grid/row";
 import Col from "antd/lib/grid/col";
 import TitleBgWhite from "../components/titles/TitleBgWhite";
+import PageNotFound from "../PageNotFound";
 
 function CarDetails() {
     const tituloPolitica = {span: "condições de aluguel", title: "política"}
 
     const [visible, setVisible] = React.useState(false);
     const {id} = useParams();
+    const {car, isLoading} = useSpecificCarId(id);
 
-
-    const {car, isLoading} = useSpecificCar(id);
-
-    if (!car && !isLoading) return '404';
+    if (!car && !isLoading) return <PageNotFound/>;
 
     return (
         <>
@@ -35,8 +34,8 @@ function CarDetails() {
                         <div className="container">
                             <div className="titulo title-details">
                                 <div>
-                                    <p className="font-h3 cor-1">{car?.categoria}</p>
-                                    <h1 className="font-h1 cor-0">{car?.marca} {car?.modelo}<span
+                                    <p className="font-h3 cor-1">{car?.category.title}</p>
+                                    <h1 className="font-h1 cor-0">{car?.brand} {car?.model}<span
                                         className="cor-l1">.</span>
                                     </h1>
                                 </div>
@@ -59,23 +58,29 @@ function CarDetails() {
                                     <Image
                                         preview={{visible: false}}
                                         onClick={() => setVisible(true)}
-                                        src={car?.imagem}
+                                        src={car?.images[0].urlImage}
                                     />
 
                                     <div style={{display: 'flex'}}>
                                         <Image.PreviewGroup
                                             preview={{visible, onVisibleChange: vis => setVisible(vis)}}>
-                                            <Image src={car?.imagem} style={{display: 'none'}}/>
-                                            <Image src="../img/carros/conversivel-1.jpg"/>
-                                            <Image src="../img/carros/conversivel-3.jpg"/>
-                                            <Image src="../img/carros/conversivel-1.jpg"/>
-                                            <Image src="../img/carros/conversivel-3.jpg"/>
+                                            {car?.images.map((img, key) => {
+                                                return (
+                                                    <React.Fragment key={key}>
+                                                        {(img.title === 'principal') ?
+                                                            <Image src={img.urlImage} style={{display: 'none'}}/>
+                                                            :
+                                                            <Image src={img.urlImage}/>
+                                                        }
+                                                    </React.Fragment>
+                                                )
+                                            })}
                                         </Image.PreviewGroup>
                                     </div>
                                 </div>
 
                                 <div className="carro-conteudo">
-                                    <p className="font-h3 cor-1">{car?.descricao}</p>
+                                    <p className="font-h3 cor-1">{car?.description}</p>
 
                                     <RateStars/>
 
@@ -86,16 +91,21 @@ function CarDetails() {
                                     <h2 className="font-text-2 cor-0">Características</h2>
                                     <ul className="carro-ficha font-text-1 cor-4">
                                         <li><p className="font-text-1 cor-1">Aceleração</p>
-                                            <span>{car?.aceleracao}</span></li>
-                                        <li><p className="font-text-1 cor-1">Câmbio</p> <span>{car?.cambio}</span></li>
+                                            <span>{car?.attribute.acceleration}</span></li>
+                                        <li><p className="font-text-1 cor-1">Câmbio</p>
+                                            <span>{car?.attribute.transmission}</span></li>
                                         <li><p className="font-text-1 cor-1">Combustível</p>
-                                            <span>{car?.combustivel}</span></li>
-                                        <li><p className="font-text-1 cor-1">Lugares</p>  <span>{car?.lugares}</span>
+                                            <span>{car?.attribute.gas}</span></li>
+                                        <li><p className="font-text-1 cor-1">Lugares</p>
+                                            <span>{car?.attribute.seats}</span>
                                         </li>
-                                        <li><p className="font-text-1 cor-1">Portas</p>  <span>{car?.portas}</span></li>
-                                        <li><p className="font-text-1 cor-1">Potência</p>  <span>{car?.potencia}</span>
+                                        <li><p className="font-text-1 cor-1">Portas</p>
+                                            <span>{car?.attribute.doors}</span></li>
+                                        <li><p className="font-text-1 cor-1">Potência</p>
+                                            <span>{car?.attribute.power}</span>
                                         </li>
-                                        <li><p className="font-text-1 cor-1">Tração</p>  <span>{car?.tracao}</span></li>
+                                        <li><p className="font-text-1 cor-1">Tração</p>
+                                            <span>{car?.attribute.tcs}</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -105,29 +115,31 @@ function CarDetails() {
 
                 <article className="container">
                     <div className="lojas">
-                        <h2 className="font-h1">lojas locais<span className="cor-l1">.</span></h2>
+                        <h2 className="font-h1">lojas locais<span
+                            className="cor-l1">.</span></h2>
                         <div className="lojas-item">
-                            <img src={car?.mapa}
-                                 alt="mapa"/>
+                            {/*<img src={car?.city.mapa}*/}
+                            {/*     alt="mapa"/>*/}
                             <div className="lojas-conteudo">
-                                <h3 className="font-h2">{car?.cidade}</h3>
+                                <h3 className="font-h2">{car?.city.name}</h3>
                                 <div className="lojas-dados font-text-1 cor-3">
-                                    <p>{car?.endereco} - {car?.bairro}</p>
-                                    <p>{car?.cidade} - {car?.estado}</p>
-                                    <p>CEP: {car?.cep}</p>
+                                    <p>{car?.city.address}</p>
+                                    <p>CEP: {car?.city.cep}</p>
                                 </div>
                                 {/*<div className="lojas-dados font-text-1 cor-3">*/}
                                 {/*    <a href="mailto:sp@digitalbooking.com">sp@digitalbooking.com</a>*/}
                                 {/*    <a href="tel:+551199999999">+55 11 9999-9999</a>*/}
                                 {/*</div>*/}
-                                <p className="lojas-tempo font-text-1"><img src="/img/icones/horario.svg" alt=""/>08-18h
+                                <p className="lojas-tempo font-text-1"><img
+                                    src="/img/icones/horario.svg" alt=""/>08-18h
                                     de
                                     seg à dom</p>
                             </div>
                         </div>
                     </div>
                 </article>
-                {/* Bloco de Reserva aqui */}
+                {/* Bloco de Reserva aqui */
+                }
 
                 <Reservation/>
                 <article>
@@ -137,29 +149,39 @@ function CarDetails() {
                         <Row>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3">Normas</h3>
-                                <p className="text-1">Garantimos o modelo proposto. Somente a cor ou a potência do motor
+                                <p className="text-1">Garantimos o modelo proposto. Somente a
+                                    cor ou a potência do motor
                                     podem variar, mas
-                                    enviaremos todas as especificações para confirmar o pedido. O preço o aluguel inclui
+                                    enviaremos todas as especificações para confirmar o pedido.
+                                    O preço o aluguel inclui
                                     milhas de 150 km por dia.</p>
                             </Col>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3">Segurança</h3>
-                                <p className="text-1">O carro pode ser entregue a seu pedido em qualquer lugar do
+                                <p className="text-1">O carro pode ser entregue a seu pedido em
+                                    qualquer lugar do
                                     Brasil. O custo da
                                     entrega
                                     depende da distância.</p>
                             </Col>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3">Cancelamento</h3>
-                                <p className="text-1">30 dias ou mais antes do dia do início do aluguel - multa de 20%
+                                <p className="text-1">30 dias ou mais antes do dia do início do
+                                    aluguel - multa de 20%
                                     do valor total
-                                    14 dias ou menos antes do início do aluguel - multa de 40% do valor total
-                                    7 dias antes do início do aluguel - multa de 60% do valor total
-                                    3 dias antes ou menos do início do aluguel - multa de 100% do valor total
-                                    Se você não comparecer na hora e data combinadas e/ou fornecer toda a documentação
-                                    necessária e/ou fornecer um cartão de crédito em nome do motorista principal com
+                                    14 dias ou menos antes do início do aluguel - multa de 40%
+                                    do valor total
+                                    7 dias antes do início do aluguel - multa de 60% do valor
+                                    total
+                                    3 dias antes ou menos do início do aluguel - multa de 100%
+                                    do valor total
+                                    Se você não comparecer na hora e data combinadas e/ou
+                                    fornecer toda a documentação
+                                    necessária e/ou fornecer um cartão de crédito em nome do
+                                    motorista principal com
                                     fundos
-                                    suficientes disponíveis para o depósito do carro, 100 % multa do valor total.</p>
+                                    suficientes disponíveis para o depósito do carro, 100 %
+                                    multa do valor total.</p>
                             </Col>
                         </Row>
                     </div>
@@ -169,7 +191,8 @@ function CarDetails() {
 
                 <article className="carros-lista">
                     <div className="container">
-                        <h2 className="font-h1">escolha outras categorias<span className="cor-l1">.</span></h2>
+                        <h2 className="font-h1">escolha outras categorias<span
+                            className="cor-l1">.</span></h2>
 
                         <ul>
                             <ListCategory/>
