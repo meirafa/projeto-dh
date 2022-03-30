@@ -3,17 +3,13 @@ import ListAllProducts from "./ListAllProducts";
 
 
 function ListProductsFilterCategory({cat, cars}) {
-
     return (
         cars.map((carCategory) => {
-            if (carCategory.category === cat) {
-                return carCategory.items.map((carItem) => {
-                    return <ListAllProducts {...carItem} key={carItem.id}/>
-                })
+            console.log(carCategory.category.title, cat)
+            if (carCategory.category.title === cat) {
+                    return <ListAllProducts {...carCategory} key={carCategory.id}/>
             } else if (cat === null) {
-                return carCategory.items.map((carItem) => {
-                    return <ListAllProducts {...carItem} key={carItem.id}/>
-                })
+                    return <ListAllProducts {...carCategory} key={carCategory.id}/>
             }
         })
 

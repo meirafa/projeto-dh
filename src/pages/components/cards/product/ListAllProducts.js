@@ -2,32 +2,34 @@ import React from 'react'
 import {Link} from "react-router-dom";
 
 function ListAllProducts(props) {
-    const {categoria, marca, modelo, imagem, descricao, link, localizacao, city} = props;
-
     return (
         <>
             <div className="frota">
                 <div className="frota-imagem">
-                    <img src={imagem} alt={categoria}/>
+                    {
+                        props.images.map((items) => {
+                            if (items.title === 'principal') return <img src={items.urlImage} alt={items.title}/>
+                        })
+                    }
                 </div>
                 <div className="frota-informacoes">
                     <div>
-                        <h3 className="font-h3 cor-0">{marca} {modelo}</h3>
+                        <h3 className="font-h3 cor-0">{props.brand} {props.model}</h3>
                         <ul className="font-text-1 cor-1">
                             <li>
                                 <img src="/img/icones/rastreador.svg"
                                      alt="icon local"/>
-                                {localizacao}
+                                {props.city.name}
                             </li>
                             <li>
                                 <img src="/img/icones/carro.png"
                                      alt="icon car model"/>
-                                {categoria}
+                                {props.category.title}
                             </li>
                         </ul>
-                        <p className="font-text-1 cor-1">{descricao}</p>
+                        <p className="font-text-1 cor-1">{props.description}</p>
                     </div>
-                    <Link className="botao" to={link}>Mais
+                    <Link className="botao" to={`/produtos/${props.id}`}>Mais
                         Sobre</Link>
                 </div>
             </div>

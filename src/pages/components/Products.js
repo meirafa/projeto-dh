@@ -5,7 +5,6 @@ import ListProductsFilterCategory from "./cards/product/ListProductsFilterCatego
 import {useParams, useNavigate} from "react-router";
 import {useApis} from "../../hooks/useApi";
 import Marca from "./Marca";
-import CityFilter from "./CityFilter";
 
 const {TabPane} = Tabs;
 
@@ -18,7 +17,7 @@ const categories = [
         key: 'suvs',
         title: 'SUVs'
     }, {
-        key: 'conversiveis',
+        key: 'conversíveis',
         title: 'Conversiveis'
     }, {
         key: 'esportivos',
@@ -34,10 +33,8 @@ function Products() {
     let {category = 'all'} = useParams();
     const navigate = useNavigate();
 
-    const [categoryResult, isLoading] = useApis('/jsons/bd_frota_specs.json');
-    const cars = categoryResult?.frotaList || [];
-
-    
+    const [categoryResult, isLoading] = useApis('/jsons/apiCars.json');
+    const cars = categoryResult?.carsList || [];
 
     const title = {span: "conheça nossa frota", title: "frota"};
 
@@ -68,8 +65,6 @@ function Products() {
                     </Tabs>
                 </div>
             </section>
-            {/* <CityFilter/> */}
-
             <Marca/>
         </>
     )

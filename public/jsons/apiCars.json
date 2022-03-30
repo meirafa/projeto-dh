@@ -6,7 +6,7 @@
       "brand": "BMW",
       "description": "Carros maiores, com belo design e conforto",
       "category": {
-        "title": "SUVs",
+        "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
         "urlImage": "/img/carros/suv-1.png",
         "link": "/categorias/suvs"
@@ -55,7 +55,7 @@
       "brand": "AUDI",
       "description": "Carros maiores, com belo design e conforto",
       "category": {
-        "title": "SUVs",
+        "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
         "urlImage": "/img/carros/suv-1.png",
         "link": "/categorias/suvs"
@@ -92,7 +92,7 @@
       "brand": "PORSCHE",
       "description": "Carros maiores, com belo design e conforto",
       "category": {
-        "title": "SUVs",
+        "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
         "urlImage": "/img/carros/suv-1.png",
         "link": "/categorias/suvs"
@@ -129,7 +129,7 @@
       "brand": "TESLA",
       "description": "Carros maiores, com belo design e conforto",
       "category": {
-        "title": "SUVs",
+        "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
         "urlImage": "/img/carros/suv-1.png",
         "link": "/categorias/suvs"
@@ -446,7 +446,7 @@
       },
       "images": [
         {
-          "title": "PRINCIPAL",
+          "title": "principal",
           "urlImage": "/img/carros/Ford-F-150-Raptor.jpg"
         },
         {

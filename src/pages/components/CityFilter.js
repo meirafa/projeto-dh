@@ -17,10 +17,10 @@ function CityFilter() {
     const title = {span: "conheça nossa frota", title: "frota"};
 
     // Bloco filtro por InputSelect
-    const [addressResult, isLoad] = useApis('/jsons/bd_frota_specs.json');
+    const [addressResult, isLoad] = useApis('/jsons/apiCars.json');
 
     //resultado pode ser nulo ou vazio ate carregar
-    const address = addressResult?.frotaList || [];
+    const address = addressResult?.carsList || [];
 
     function enviandoValor(value) {
         navigate(`/reserva/${value}`);
@@ -50,25 +50,24 @@ function CityFilter() {
                     >
                         {
                             address.map((addItem, key) => {
-                                return <Option value={addItem.city} key={key}>{addItem.city}</Option>
+                                console.log(addItem.city.name)
+                                return <Option value={addItem.city.name} key={key}>{addItem.city.name}</Option>
                             })
                         }
                     </Select>
                     <div className="produtos">
                         {address.map((addItems, key) => {
-                            if (addItems.city === city) {
+                            if (addItems.city.name === city) {
                                 return (
                                     <ListProductsFilterCity
-                                        address={addItems.items}
+                                        address={addItems}
                                         key={key}/>
                                 )
                             } else if (city === 'all') {
-                                return addItems.items.map((carItem) => {
                                     return (
-                                        <ListAllProducts {...carItem} key={carItem.id}/>
+                                        <ListAllProducts {...addItems} key={addItems.id}/>
                                     )
-                                })
-                            }
+                                }
                         })}
                     </div>
                 </div>
