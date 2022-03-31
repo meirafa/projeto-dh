@@ -26,6 +26,9 @@ function CityFilter() {
         navigate(`/reserva/${value}`);
     }
 
+    const set = new Set([]);
+    let newSet = [];
+
     return (
         <>
             {!!isLoad ? 'Carregando...' : null}
@@ -49,9 +52,14 @@ function CityFilter() {
                         onSelect={enviandoValor}
                     >
                         {
-                            address.map((addItem, key) => {
-                                console.log(addItem.city.name)
-                                return <Option value={addItem.city.name} key={key}>{addItem.city.name}</Option>
+                            address.map((addItem) => {
+                                set.add(addItem.city.name);
+                                return newSet = [...set];
+                            })
+                        }
+                        {
+                            newSet.map((item, key) => {
+                                return <Option value={item} key={key}>{item}</Option>
                             })
                         }
                     </Select>
@@ -64,10 +72,10 @@ function CityFilter() {
                                         key={key}/>
                                 )
                             } else if (city === 'all') {
-                                    return (
-                                        <ListAllProducts {...addItems} key={addItems.id}/>
-                                    )
-                                }
+                                return (
+                                    <ListAllProducts {...addItems} key={key}/>
+                                )
+                            }
                         })}
                     </div>
                 </div>

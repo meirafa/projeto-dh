@@ -1,8 +1,8 @@
 import React from "react";
 import ListAllProducts from "./ListAllProducts";
 
-function ListProductsFilterCity({address}) {
-            return <ListAllProducts {...address} key={address.id}/>
+function ListProductsFilterCity({address, id}) {
+            return <ListAllProducts {...address} key={id}/>
 }
 
 export default ListProductsFilterCity;
