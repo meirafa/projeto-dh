@@ -32,7 +32,6 @@ function Home() {
                     </div>
                 </article>
 
-
                 <Categoria/>
 
                 <Populars/>

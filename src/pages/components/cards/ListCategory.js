@@ -5,33 +5,37 @@ import CityFilter from "./../../components/CityFilter";
 
 
 function ListCategory() {
-    const [categoriesResult, isLoading] = useApis('/jsons/categoria.json');
+    const [categoriesResult, isLoading] = useApis('/jsons/apiCars.json');
 
     //resultado pode ser nulo ou vazio ate carregar
-    const categories = categoriesResult?.categories || [];
+    const categories = categoriesResult?.carsList || [];
     //carregando
     if (isLoading) return 'Loading';
+
+    const categoriesFilter = {};
 
     return (
         <>
             {
-                categories.map((categoriesItem, key) => {
+                categories.map((categoriesItem) => {
+                    categoriesFilter[categoriesItem.category.title] = categoriesItem.category;
+                })}
+
+            {
+                Object.values(categoriesFilter).map((categoriesItem, key) => {
                     return <React.Fragment key={key}>
                         <li>
                             <Link to={categoriesItem.link}>
-                                <img src={categoriesItem.img} alt={categoriesItem.category}/>
+                                <img src={categoriesItem.urlImage} alt={categoriesItem.title}/>
                                 <div className="carro-textos">
-                                    <h3 className="font-h2">{categoriesItem.category}</h3>
+                                    <h3 className="font-h2">{categoriesItem.title}</h3>
                                 </div>
                             </Link>
                         </li>
                     </React.Fragment>
-                    
+
                 })
-                
             }
-            
-            
         </>
     )
 }
