@@ -14,6 +14,7 @@ import Rodape from "../pages/components/global/Rodape";
 import Products from "../pages/components/Products";
 import PageNotFound from "../pages/PageNotFound";
 import CityFilter from '../pages/components/CityFilter';
+import ProdutoReserva from '../pages/ProdutoReserva';
 
 function RouteList() {
     return (
@@ -34,6 +35,8 @@ function RouteList() {
 
                         {/* Teste com o CityFilter */}
                         <Route path="reserva/:city" element={<CityFilter/>}/>
+
+                        <Route path="produto-reserva" element={<ProdutoReserva/>}/>
 
                         <Route path="*" element={<PageNotFound/>}/>
                     </Routes>
