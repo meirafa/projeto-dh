@@ -5,22 +5,21 @@ import Input from "./components/forms/Input";
 import useForm from "./../hooks/useForm";
 import {NavLink} from "react-router-dom";
 import {appConfig} from "../appConfig";
+import {loginToken} from "./Login";
 
 const errorMessage = "Infelizmente, você não pôde se registrar. Por favor, tente novamente mais tarde.";
 
 function saveUser(body) {
+    //salvando usuario na api
     return fetch(appConfig.apiUrl + '/users', {
         method: 'POST',
         body: JSON.stringify(body),
         headers: {
-            "Content-Type": "application/json;",
-            //Authorization: `Bearer ${token}`
+            "Content-Type": "application/json;"
         }
-    }).then(res => {
-        //res.status;
-        return res.json()
-    }).then(res => {
-        localStorage.setItem('token', res.token)
+    }).then(() => {
+        //enviar informações para cadastro do token que é criado no login
+        return loginToken(body);
     })
 }
 

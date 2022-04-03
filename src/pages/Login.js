@@ -2,9 +2,20 @@ import React from 'react';
 import {Helmet} from "react-helmet-async";
 import TitleBgBlack from "./components/titles/TitleBgBlack";
 import Input from "./components/forms/Input";
-//import useLocalStorage from "./../hooks/useLocalStorage";
 import useForm from "./../hooks/useForm";
 import {NavLink, useNavigate} from "react-router-dom";
+import {appConfig} from "../appConfig";
+
+export function loginToken(body) {
+    return fetch(appConfig.apiUrl + '/auth', {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json;"
+            //Authorization: `Bearer ${token}`
+        }
+    }).then(res => res.json()).then(res => localStorage.setItem('token', res.token));
+}
 
 const Login = () => {
 
