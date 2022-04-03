@@ -2,16 +2,31 @@ import React from 'react';
 import {Helmet} from "react-helmet-async";
 import TitleBgBlack from "./components/titles/TitleBgBlack";
 import Input from "./components/forms/Input";
-//import useLocalStorage from "./../hooks/useLocalStorage";
 import useForm from "./../hooks/useForm";
 import {NavLink} from "react-router-dom";
+import {appConfig} from "../appConfig";
+
+const errorMessage = "Infelizmente, você não pôde se registrar. Por favor, tente novamente mais tarde.";
+
+function saveUser(body) {
+    return fetch(appConfig.apiUrl + '/users', {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json;",
+            //Authorization: `Bearer ${token}`
+        }
+    }).then(res => {
+        //res.status;
+        return res.json()
+    }).then(res => {
+        localStorage.setItem('token', res.token)
+    })
+}
 
 function Cadastro() {
 
     const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"}
-
-    //localStorage:
-    //const [usercadastro, setUsercadastro] = useLocalStorage('nome', '');
 
     //form:
     const emailCad = useForm('email');
@@ -24,8 +39,15 @@ function Cadastro() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        if (email.validate() && password.validate() && nome.validate()) {
-            console.log("Enviar")
+        if (emailCad.validate() && passwordCad.validate() && nome.validate()) {
+            saveUser({
+                email: emailCad.value,
+                password: passwordCad.value,
+                name: nome.value,
+                lastName: sobrenome.value
+            }).catch(() => {
+                alert(errorMessage)
+            })
         } else {
             console.log("Não enviar")
         }
