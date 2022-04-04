@@ -48,7 +48,7 @@ const Login = () => {
 
     function redirectHome() {
         if (user === valueEmail && pass === valuePass) {
-            return navigate("/home-user")
+            return navigate("/")
         } else {
             alert("Por favor, tente novamente, suas credenciais são inválidas")
         }

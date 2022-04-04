@@ -3,29 +3,33 @@ import {Helmet} from "react-helmet-async";
 import TitleBgBlack from "./components/titles/TitleBgBlack";
 import Input from "./components/forms/Input";
 import useForm from "./../hooks/useForm";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import {appConfig} from "../appConfig";
 import {loginToken} from "./Login";
+import {useUser} from "./context/UserContext";
 
 const errorMessage = "Infelizmente, você não pôde se registrar. Por favor, tente novamente mais tarde.";
 
-function saveUser(body) {
+function saveUser(formData) {
+    localStorage.setItem('user', JSON.stringify(formData)); //FIXME pegar usuario da api
     //salvando usuario na api
     return fetch(appConfig.apiUrl + '/users', {
         method: 'POST',
-        body: JSON.stringify(body),
+        body: JSON.stringify(formData),
         headers: {
             "Content-Type": "application/json;"
         }
     }).then(() => {
         //enviar informações para cadastro do token que é criado no login
-        return loginToken(body);
+        return loginToken(formData);
     })
 }
 
 function Cadastro() {
 
-    const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"}
+    const userState = useUser();
+
+    const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"};
 
     //form:
     const emailCad = useForm('email');
@@ -46,6 +50,8 @@ function Cadastro() {
                 lastName: sobrenome.value
             }).catch(() => {
                 alert(errorMessage)
+            }).then(() => {
+                userState.loadUser();
             })
         } else {
             console.log("Não enviar")
