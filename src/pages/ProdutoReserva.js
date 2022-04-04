@@ -52,15 +52,15 @@ const ProdutoReserva = () => {
                                 <Form className="res-form form">
                                     <div>
                                         <label htmlFor="">Nome</label>
-                                        <Field name="name" type="text" disabled />
+                                        <Field name="name" type="text" placeholder="Nome Usuário" disabled />
                                     </div>
                                     <div>
                                         <label htmlFor="">Sobrenome</label>
-                                        <Field name="surname" type="text" disabled />
+                                        <Field name="surname" type="text" placeholder="Sobrenome Usuário" disabled />
                                     </div>
                                     <div>
                                         <label htmlFor="">E-mail</label>
-                                        <Field name="email" type="email" disabled />
+                                        <Field name="email" type="email" placeholder="Email Usuário" disabled />
                                     </div>
                                     <div>
                                         <label htmlFor="">Cidade</label>
@@ -88,20 +88,25 @@ const ProdutoReserva = () => {
 
                     <div className="res-card details">
                         <div className="res-details">
-                            <h2>Detalhes da reserva</h2>
-                            <img src="https://carroscomcamanzi.com.br/wp-content/uploads/2020/09/Audi-Q5_Sportback-2021-1600-2.jpg" width="70%" alt="" />
-                            <p>Categoria Exemplo</p>
-                            <h2>Audi Q5</h2>
-                            <p>Localização exemplo</p>
-                            <div className="res-check">
-                                <h3>Check in</h3>
-                                <h3>00/00/00</h3>
+                            <div className="info-1">
+                                
+                                <h2>Detalhes da reserva</h2>
+                                <img src="https://carroscomcamanzi.com.br/wp-content/uploads/2020/09/Audi-Q5_Sportback-2021-1600-2.jpg" width="70%" alt="" />
                             </div>
-                            <div className="res-check check2">
-                                <h3>Check out</h3>
-                                <h3>01/01/01</h3>
+                            <div className="info-2">
+                                <p>Categoria Exemplo</p>
+                                <h2>Audi Q5</h2>
+                                <p>Localização exemplo</p>
+                                <div className="res-check">
+                                    <h3>Check in</h3>
+                                    <h3>00/00/00</h3>
+                                </div>
+                                <div className="res-check check2">
+                                    <h3>Check out</h3>
+                                    <h3>01/01/01</h3>
+                                </div>
+                                <button type="submit" className="botao">Confirmar Reserva</button>
                             </div>
-                            <button type="submit" className="botao">Confirmar Reserva</button>
                         </div>
 
                     </div>
@@ -161,5 +166,4 @@ const ProdutoReserva = () => {
 }
 
 
-// comentário teste
 export default ProdutoReserva;

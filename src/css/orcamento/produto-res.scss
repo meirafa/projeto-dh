@@ -14,15 +14,16 @@
         box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
     }
 
-    .res-details{
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-    }
-
     .details{
         grid-column: 2;
         grid-row: 1 / 4;
+
+        .res-details{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
     }
 
     .card-title{
@@ -39,8 +40,6 @@
             border-bottom: 0.5px solid black;
         }
 
-        
-
     }
 
     .botao{
@@ -51,4 +50,59 @@
 
 .bg-black{
     color: white;
+}
+
+@media(max-width: 1090px){
+
+    .res-content{
+        grid-template-columns: 1fr;
+
+        .details{
+            grid-column: 1;
+            grid-row: 4;
+
+           .res-details{
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+
+            .info-1{
+                width: 50%;
+            }
+
+            .info-2{
+                width: 50%;
+            }
+
+           }
+
+        }
+
+    }
+}
+
+@media(max-width: 880px){
+
+    .res-content{
+        margin: 16px;
+    }
+
+}
+
+@media(max-width: 600px){
+
+    .res-details{
+        display: flex;
+        flex-direction: column !important;
+        padding: 0;
+
+        .info-1{
+            width: 100% !important;
+        }
+
+        .info-2{
+            width: 100% !important;
+        }
+
+       }
 }
