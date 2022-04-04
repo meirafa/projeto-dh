@@ -37,53 +37,50 @@ const ProdutoReserva = () => {
                 <div className="res-content">
 
 
-                    <div className="res-card" >
-                        <h2>Complete seus dados</h2>
-
-                        <Formik
-                            onSubmit={onSubmit}
-                            initialValues={{
-                                name: '',
-                                surname: '',
-                                email: '',
-                                city: ''
-                            }}
-                            render={({ values }) => (
-                                <Form className="res-form form">
-                                    <div>
-                                        <label htmlFor="">Nome</label>
-                                        <Field name="name" type="text" placeholder="Nome Usuário" disabled />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">Sobrenome</label>
-                                        <Field name="surname" type="text" placeholder="Sobrenome Usuário" disabled />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">E-mail</label>
-                                        <Field name="email" type="email" placeholder="Email Usuário" disabled />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="">Cidade</label>
-                                        <Field name="city" type="text" required />
-                                    </div>
-                                    {/* <button type="submit">Conferir</button> */}
-                                </Form>
-                            )}
-
-                        />
-                    </div>
-
-                    <div className="res-card">
-                        <h2>Selecione sua data de reserva</h2>
-
-                        {/* InputDate usado para fins de visualização apenas */}
-                        <InputDate />
-                    </div>
-
-                    <div className="res-card">
-                        <h2>O horário que deseja retirar o veículo</h2>
-                        <p>Seu carro estará estará esperando por você</p>
-                        <TimePicker size="large" onChange={value => console.log(value)} />
+                    <div className="res-content-1">
+                        <div className="res-card" >
+                            <h2>Complete seus dados</h2>
+                            <Formik
+                                onSubmit={onSubmit}
+                                initialValues={{
+                                    name: '',
+                                    surname: '',
+                                    email: '',
+                                    city: ''
+                                }}
+                                render={({ values }) => (
+                                    <Form className="res-form form">
+                                        <div>
+                                            <label htmlFor="">Nome</label>
+                                            <Field name="name" type="text" placeholder="Nome Usuário" disabled />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="">Sobrenome</label>
+                                            <Field name="surname" type="text" placeholder="Sobrenome Usuário" disabled />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="">E-mail</label>
+                                            <Field name="email" type="email" placeholder="Email Usuário" disabled />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="">Cidade</label>
+                                            <Field name="city" type="text" required />
+                                        </div>
+                                        {/* <button type="submit">Conferir</button> */}
+                                    </Form>
+                                )}
+                            />
+                        </div>
+                        <div className="res-card">
+                            <h2>Selecione sua data de reserva</h2>
+                            {/* InputDate usado para fins de visualização apenas */}
+                            <InputDate />
+                        </div>
+                        <div className="res-card">
+                            <h2>O horário que deseja retirar o veículo</h2>
+                            <p>Seu carro estará estará esperando por você</p>
+                            <TimePicker size="large" onChange={value => console.log(value)} />
+                        </div>
                     </div>
 
                     <div className="res-card details">
