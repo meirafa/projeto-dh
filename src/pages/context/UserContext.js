@@ -11,12 +11,12 @@ export const UserProvider = ({children}) => {
     const [state, setState] = React.useState(getInitialState());
 
     function setUser(user) {
-        localStorage.setItem('userDTO', user)
+        localStorage.setItem('user', JSON.stringify(user));
         setState(state => ({...state, user}))
     }
 
     function loadUser(token) {
-        setState(state => ({...state, user: JSON.parse(localStorage.getItem('userDTO'))}))
+        setState(state => ({...state, user: localStorage.getItem('user')}))
         // setState((state) => ({...state, isLoading: true}));
         // fetch(appConfig.apiUrl + '/users', {
         //     method: 'GET',
@@ -27,7 +27,7 @@ export const UserProvider = ({children}) => {
         // })
         //     // conventendo o http response em um objeto json
         //     .then(res => {
-        //         debugger
+        //
         //         if (res.ok) {
         //             return res.json()
         //         } else {
@@ -38,7 +38,7 @@ export const UserProvider = ({children}) => {
         //     })
         //     // recebendo o objeto json do "then" anterior e setando no context
         //     .then((user) => {
-        //         debugger
+        //
         //         setState((state) => ({...state, user, isLoading: false}))
         //     });
     }
@@ -61,7 +61,7 @@ function getInitialState() {
     return {
         user: null, isLoading: false, error: null, loadUser() {
             throw new Error('Não utilizar o UseProvider antes de chamar essa funcao') //esta funcao é declarada no corpo do user provider
-        }, setUser(){
+        }, setUser() {
 
         }
     }

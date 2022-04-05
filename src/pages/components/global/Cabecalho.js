@@ -6,7 +6,6 @@ import {useNavigate} from "react-router";
 function Cabecalho() {
     const userState = useUser();
 
-    console.log(userState);
     const [navSize, setnavSize] = useState("5rem");
     const [navColor, setnavColor] = useState("transparent");
     const listenScrollEvent = () => {
@@ -29,6 +28,8 @@ function Cabecalho() {
         localStorage.clear();
         window.location.href = '/';
     }
+
+    console.log(userState)
 
     return (
         <>

@@ -9,7 +9,7 @@ import {loginToken} from "./Login";
 import {useUser} from "./context/UserContext";
 
 function saveUser(formData) {
-    localStorage.setItem('user', JSON.stringify(formData)); //FIXME pegar usuario da api
+    localStorage.setItem('user', JSON.stringify(formData));
     //salvando usuario na api
     return fetch(appConfig.apiUrl + '/users', {
         method: 'POST',
@@ -19,11 +19,11 @@ function saveUser(formData) {
         }
     }).then((res) => {
         //enviar informações para cadastro do token que é criado no login
-        if(res.ok) {
-        return     loginToken(formData)
+        if (res.ok) {
+            return loginToken(formData)
         }
 
-        if(res.status === 422) {
+        if (res.status === 422) {
             throw new Error('Já tem registro com este usuario')
         }
 
@@ -65,8 +65,6 @@ function Cadastro() {
                 alert(err.message)
             });
 
-        } else {
-            console.log("Não enviar")
         }
     }
 

@@ -13,7 +13,6 @@ export function loginToken(body) {
         body: JSON.stringify(body),
         headers: {
             "Content-Type": "application/json;"
-            //Authorization: `Bearer ${token}`
         }
     }).then(res => {
         if (res.ok) {
@@ -28,10 +27,7 @@ export function loginToken(body) {
 
 const Login = () => {
 
-    const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"}
-
-    //localStorage:
-    //const [userLogin, setUserLogin] = useLocalStorage('nome', '');
+    const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"};
     const userState = useUser();
 
     //form:
@@ -39,8 +35,8 @@ const Login = () => {
     const password = useForm('password');
 
     //usuario registrado
-    const user = "laurasouza@digitalbooking.com";
-    const pass = "laurasouza123";
+    // const user = "laurasouza@digitalbooking.com";
+    // const pass = "laurasouza123";
     const valueEmail = email.value;
     const valuePass = password.value;
 
@@ -52,7 +48,6 @@ const Login = () => {
         if (email.validate() && password.validate()) {
             loginToken({email: valueEmail, password: valuePass}).then((res) => {
                 localStorage.setItem('token', res.token);
-                localStorage.setItem('userDTO', res.userDTO);
                 userState.setUser(res.userDTO);
                 return navigate("/");
             }).catch(() => {
