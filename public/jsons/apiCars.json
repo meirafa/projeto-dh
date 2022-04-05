@@ -12,9 +12,8 @@
         "link": "/categorias/suvs"
       },
       "city": {
-        "name": "Sao Paulo - SP",
-        "address": "Av. Europa, 725 - Jardins",
-        "cep": "01449-000"
+        "name": "Sao Paulo",
+        "address": "Av. Europa, 725 - Jardins, 01449-00 - SP"
       },
       "attribute": {
         "power": "394cv",
@@ -61,9 +60,8 @@
         "link": "/categorias/suvs"
       },
       "city": {
-        "name": "Sao Paulo - SP",
-        "address": "Av. Europa, 725 - Jardins",
-        "cep": "01449-000"
+        "name": "Sao Paulo",
+        "address": "Av. Europa, 725 - Jardins, 01449-00 - SP"
       },
       "attribute": {
         "power": "249cv",
@@ -110,9 +108,8 @@
         "link": "/categorias/suvs"
       },
       "city": {
-        "name": "Sao Paulo - SP",
-        "address": "Av. Europa, 725 - Jardins",
-        "cep": "01449-000"
+        "name": "Sao Paulo",
+        "address": "Av. Europa, 725 - Jardins, 01449-00 - SP"
       },
       "attribute": {
         "power": "462cv",
@@ -159,9 +156,8 @@
         "link": "/categorias/suvs"
       },
       "city": {
-        "name": "Sao Paulo - SP",
-        "address": "Av. Europa, 725 - Jardins",
-        "cep": "01449-000"
+        "name": "Sao Paulo",
+        "address": "Av. Europa, 725 - Jardins, 01449-00 - SP"
       },
       "attribute": {
         "power": "670cv",
@@ -208,9 +204,8 @@
         "link": "/categorias/conversiveis"
       },
       "city": {
-        "name": "Rio de Janeiro - RJ",
-        "address": "Av. das Américas, 645 - Barra da Tijuca",
-        "cep": "22640-100"
+        "name": "Rio de Janeiro",
+        "address": "Av. das Américas, 645, Barra da Tijuca, 22640-100 - RJ"
       },
       "attribute": {
         "power": "258cv",
@@ -257,9 +252,8 @@
         "link": "/categorias/conversiveis"
       },
       "city": {
-        "name": "Rio de Janeiro - RJ",
-        "address": "Av. das Américas, 645 - Barra da Tijuca",
-        "cep": "22640-100"
+        "name": "Rio de Janeiro",
+        "address": "Av. das Américas, 645, Barra da Tijuca, 22640-100 - RJ"
       },
       "attribute": {
         "power": "230cv",
@@ -306,9 +300,8 @@
         "link": "/categorias/conversiveis"
       },
       "city": {
-        "name": "Rio de Janeiro - RJ",
-        "address": "Av. das Américas, 645 - Barra da Tijuca",
-        "cep": "22640-100"
+        "name": "Rio de Janeiro",
+        "address": "Av. das Américas, 645, Barra da Tijuca, 22640-100 - RJ"
       },
       "attribute": {
         "power": "420cv",
@@ -355,9 +348,8 @@
         "link": "/categorias/conversiveis"
       },
       "city": {
-        "name": "Belo Horizonte - MG",
-        "address": "Av. do Contorno, 7315 - Lourdes",
-        "cep": "30110-047"
+        "name": "Belo Horizonte",
+        "address": "Av. do Contorno, 7315, Lourdes, 30110-047 - MG"
       },
       "attribute": {
         "power": "483cv",
@@ -404,9 +396,8 @@
         "link": "/categorias/picapes"
       },
       "city": {
-        "name": "Belo Horizonte - MG",
-        "address": "Av. do Contorno, 7315 - Lourdes",
-        "cep": "30110-047"
+        "name": "Belo Horizonte",
+        "address": "Av. do Contorno, 7315, Lourdes, 30110-047 - MG"
       },
       "attribute": {
         "power": "330cv",
@@ -453,9 +444,8 @@
         "link": "/categorias/picapes"
       },
       "city": {
-        "name": "Belo Horizonte - MG",
-        "address": "Av. do Contorno, 7315 - Lourdes",
-        "cep": "30110-047"
+        "name": "Belo Horizonte",
+        "address": "Av. do Contorno, 7315, Lourdes, 30110-047 - MG"
       },
       "attribute": {
         "power": "285cv",
@@ -502,9 +492,8 @@
         "link": "/categorias/picapes"
       },
       "city": {
-        "name": "Brasilia - DF",
-        "address": "SEPN 509, Loja 8 - Asa Norte",
-        "cep": "70750-502"
+        "name": "Brasilia",
+        "address": "SEPN 509, Loja 8, Asa Norte, 70750-502 - DF"
       },
       "attribute": {
         "power": "420cv",
@@ -551,9 +540,8 @@
         "link": "/categorias/picapes"
       },
       "city": {
-        "name": "Brasilia - DF",
-        "address": "SEPN 509, Loja 8 - Asa Norte",
-        "cep": "70750-502"
+        "name": "Brasilia",
+        "address": "SEPN 509, Loja 8, Asa Norte, 70750-502 - DF"
       },
       "attribute": {
         "power": "450cv",
@@ -600,9 +588,8 @@
         "link": "/categorias/esportivos"
       },
       "city": {
-        "name": "Brasilia - DF",
-        "address": "SEPN 509, Loja 8 - Asa Norte",
-        "cep": "70750-502"
+        "name": "Brasilia",
+        "address": "SEPN 509, Loja 8, Asa Norte, 70750-502 - DF"
       },
       "attribute": {
         "power": "660cv",
@@ -649,9 +636,8 @@
         "link": "/categorias/esportivos"
       },
       "city": {
-        "name": "Florianopolis - SC",
-        "address": "Rua Paschoal Apóstolo Pítsica, 4900 - Agronômica",
-        "cep": "88025-255"
+        "name": "Florianopolis",
+        "address": "Rua Paschoal Apóstolo Pítsica, 4900, Agronômica, 88025-255 - SC"
       },
       "attribute": {
         "power": "510cv",
@@ -698,9 +684,8 @@
         "link": "/categorias/esportivos"
       },
       "city": {
-        "name": "Florianopolis - SC",
-        "address": "Rua Paschoal Apóstolo Pítsica, 4900 - Agronômica",
-        "cep": "88025-255"
+        "name": "Florianopolis",
+        "address": "Rua Paschoal Apóstolo Pítsica, 4900, Agronômica, 88025-255 - SC"
       },
       "attribute": {
         "power": "610cv",
@@ -747,9 +732,8 @@
         "link": "/categorias/esportivos"
       },
       "city": {
-        "name": "Florianopolis - SC",
-        "address": "Rua Paschoal Apóstolo Pítsica, 4900 - Agronômica",
-        "cep": "88025-255"
+        "name": "Florianopolis",
+        "address": "Rua Paschoal Apóstolo Pítsica, 4900, Agronômica, 88025-255 - SC"
       },
       "attribute": {
         "power": "480cv",

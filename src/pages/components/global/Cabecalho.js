@@ -1,10 +1,12 @@
 import {Outlet, Link, NavLink} from "react-router-dom";
 import React, {useState, useEffect} from "react";
 import {useUser} from "../../context/UserContext";
+import {useNavigate} from "react-router";
 
 function Cabecalho() {
     const userState = useUser();
-    console.log(userState)
+
+    console.log(userState);
     const [navSize, setnavSize] = useState("5rem");
     const [navColor, setnavColor] = useState("transparent");
     const listenScrollEvent = () => {
@@ -21,6 +23,11 @@ function Cabecalho() {
     function toggleMenu() {
         const hmenu = document.getElementById('hmenu');
         hmenu.classList.toggle('active');
+    }
+
+    function userLogout() {
+        localStorage.clear();
+        window.location.href = '/';
     }
 
     return (
@@ -41,16 +48,19 @@ function Cabecalho() {
                             <li className="menu-item"><NavLink to="/reserva">Cidades</NavLink></li>
                             <li className="menu-item"><NavLink to="/contato">Contato</NavLink></li>
                             {
-                                (userState.token) ?
+                                (userState.user) ?
                                     <React.Fragment>
                                         <li className='menu-item'>
-                                            <div className='user-info'><img src="/img/icones/user.png"
-                                                                            style={{width: 32}}
-                                                                            alt="Iniciais do Usuário"/>
-                                                <p>Olá, {userState.user?.name}</p>
+                                            <div className='user-info'>
+                                                <img src="/img/icones/user.png"
+                                                     style={{width: 32}}
+                                                     alt="Iniciais do Usuário"/>
+                                                <span>Olá, {userState.user?.name}</span>
                                             </div>
                                         </li>
-                                        <li className='menu-item exit'><NavLink to="/">Sair</NavLink></li>
+                                        <li className='menu-item exit'>
+                                            <button onClick={userLogout}>Sair</button>
+                                        </li>
                                     </React.Fragment>
                                     :
                                     <React.Fragment>

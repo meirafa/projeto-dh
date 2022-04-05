@@ -1,4 +1,5 @@
 import React from "react";
+import {appConfig} from "../../appConfig";
 
 export const UserContext = React.createContext(getInitialState());
 
@@ -9,22 +10,48 @@ export function useUser() {
 export const UserProvider = ({children}) => {
     const [state, setState] = React.useState(getInitialState());
 
-    function loadUser() {
-        if (state.token) {
-            //     setUser((state) => ({...state, isLoading: true}));
-            //fetch() //FIXME quando tiver o metdo getUser utilizar pra pegar usuario logado
-            const userString = localStorage.getItem('user'); //TODO remover e pegar usuario da api utilizando token do localStorage
-            const user = userString ? JSON.parse(userString) : null;
-            setState((state) => ({...state, user}));
-        }
+    function setUser(user) {
+        localStorage.setItem('userDTO', user)
+        setState(state => ({...state, user}))
+    }
+
+    function loadUser(token) {
+        setState(state => ({...state, user: JSON.parse(localStorage.getItem('userDTO'))}))
+        // setState((state) => ({...state, isLoading: true}));
+        // fetch(appConfig.apiUrl + '/users', {
+        //     method: 'GET',
+        //     headers: {
+        //         "Content-Type": "application/json;",
+        //         Authorization: `Bearer ${token}`
+        //     }
+        // })
+        //     // conventendo o http response em um objeto json
+        //     .then(res => {
+        //         debugger
+        //         if (res.ok) {
+        //             return res.json()
+        //         } else {
+        //             localStorage.clear();
+        //             setState(() => ({...getInitialState(), error: res.statusText}));
+        //             alert('dados incorretos \n' + res.statusText);
+        //         }
+        //     })
+        //     // recebendo o objeto json do "then" anterior e setando no context
+        //     .then((user) => {
+        //         debugger
+        //         setState((state) => ({...state, user, isLoading: false}))
+        //     });
     }
 
     React.useEffect(() => {
-        loadUser()
+        const token = localStorage.getItem('token');
+        if (token) {
+            loadUser(token)
+        }
     }, []);
 
     return (
-        <UserContext.Provider value={{...state, loadUser}}>
+        <UserContext.Provider value={{...state, loadUser, setUser}}>
             {children}
         </UserContext.Provider>
     )
@@ -32,8 +59,10 @@ export const UserProvider = ({children}) => {
 
 function getInitialState() {
     return {
-        user: null, token: localStorage.getItem('token'), isLoading: false, error: null, loadUser() {
+        user: null, isLoading: false, error: null, loadUser() {
             throw new Error('Não utilizar o UseProvider antes de chamar essa funcao') //esta funcao é declarada no corpo do user provider
+        }, setUser(){
+
         }
     }
 }

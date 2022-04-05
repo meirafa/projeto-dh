@@ -8,8 +8,6 @@ import {appConfig} from "../appConfig";
 import {loginToken} from "./Login";
 import {useUser} from "./context/UserContext";
 
-const errorMessage = "Infelizmente, você não pôde se registrar. Por favor, tente novamente mais tarde.";
-
 function saveUser(formData) {
     localStorage.setItem('user', JSON.stringify(formData)); //FIXME pegar usuario da api
     //salvando usuario na api
@@ -19,15 +17,24 @@ function saveUser(formData) {
         headers: {
             "Content-Type": "application/json;"
         }
-    }).then(() => {
+    }).then((res) => {
         //enviar informações para cadastro do token que é criado no login
-        return loginToken(formData);
+        if(res.ok) {
+        return     loginToken(formData)
+        }
+
+        if(res.status === 422) {
+            throw new Error('Já tem registro com este usuario')
+        }
+
+        throw new Error("Infelizmente, você não pôde se registrar. Por favor, tente novamente mais tarde.")
     })
 }
 
 function Cadastro() {
 
     const userState = useUser();
+    const navigate = useNavigate();
 
     const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"};
 
@@ -43,16 +50,21 @@ function Cadastro() {
         event.preventDefault();
 
         if (emailCad.validate() && passwordCad.validate() && nome.validate()) {
-            saveUser({
+            const userData = {
                 email: emailCad.value,
                 password: passwordCad.value,
                 name: nome.value,
                 lastName: sobrenome.value
-            }).catch(() => {
-                alert(errorMessage)
-            }).then(() => {
-                userState.loadUser();
-            })
+            };
+
+            saveUser(userData).then(() => {
+                // userState.loadUser();
+                userState.setUser(userData);
+                navigate('/')
+            }).catch((err) => {
+                alert(err.message)
+            });
+
         } else {
             console.log("Não enviar")
         }
