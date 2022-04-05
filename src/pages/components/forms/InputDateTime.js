@@ -22,10 +22,13 @@ const InputDateTime = () => {
     }
 
     function onChangeDate(dates, dateStrings) {
-        console.log('From: ', dates[0], ', to: ', dates[1]);
+        // console.log('From: ', dates[0], ', to: ', dates[1]);
         console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
     }
 
+    function onChangeTime(times, timesStrings) {
+        console.log('Time: ', timesStrings)
+    }
 
     return (<>
         <ConfigProvider locale={locale}>
@@ -45,7 +48,7 @@ const InputDateTime = () => {
                     placeholder={placeholder}
                 />
             }
-            <TimePicker size="large" onChange={value => console.log(value)}/>
+            <TimePicker size="large" onChange={onChangeTime}/>
         </ConfigProvider>
     </>)
 };

@@ -29,8 +29,6 @@ function Cabecalho() {
         window.location.href = '/';
     }
 
-    console.log(userState)
-
     return (
         <>
             <header className="header-bg">

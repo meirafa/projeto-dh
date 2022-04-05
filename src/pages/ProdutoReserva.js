@@ -1,32 +1,30 @@
-import { Formik, Field, Form } from "formik";
-import { Helmet } from "react-helmet-async";
+import {Formik, Field, Form} from "formik";
+import {Helmet} from "react-helmet-async";
 import TitleBgBlack from "./components/titles/TitleBgBlack";
 import InputDate from "./components/forms/InputDate";
-import { useWidth } from "../hooks/useWidth";
+import {useWidth} from "../hooks/useWidth";
 import TimePicker from 'antd/lib/time-picker';
 import Row from "antd/lib/grid/row";
 import Col from "antd/lib/grid/col";
 import React from "react";
-import { useUser } from "./context/UserContext";
-import { useParams, useNavigate } from "react-router-dom";
-import { useSpecificCarId } from "../hooks/useSpecificCarId";
-
-
-
+import {useUser} from "./context/UserContext";
+import {useParams, useNavigate} from "react-router-dom";
+import {useSpecificCarId} from "../hooks/useSpecificCarId";
 
 
 const ProdutoReserva = () => {
 
-    const title = { span: "informações da sua reserva", title: "confirmação" }
-    const tituloPolitica = { span: "condições de aluguel", title: "política" }
+    const {scheduleDates} = useUser();
+    const title = {span: "informações da sua reserva", title: "confirmação"}
+    const tituloPolitica = {span: "condições de aluguel", title: "política"}
 
     const userState = useUser();
-    
-    const width = useWidth();
-    const { id } = useParams();
-    const { car, isLoading } = useSpecificCarId(id);
 
-    if (!car && !isLoading) return <PageNotFound />;
+    const width = useWidth();
+    const {id} = useParams();
+    const {car, isLoading} = useSpecificCarId(id);
+
+    if (!car && !isLoading) return <PageNotFound/>;
 
 
     function onSubmit(values, actions) {
@@ -35,15 +33,11 @@ const ProdutoReserva = () => {
 
     const navigate = useNavigate();
 
-    function resConfirm(){
+    function resConfirm() {
 
         return navigate("concluida");
-        
-    }
 
-   
-    const dataRetirada = localStorage.getItem("dataRetirada");
-    const dataDevolucao = localStorage.getItem("dataDevolucao");
+    }
 
     const placeholder = ["Retirada", "Devolução"];
 
@@ -62,7 +56,7 @@ const ProdutoReserva = () => {
 
 
                     <div className="res-content-1">
-                        <div className="res-card" >
+                        <div className="res-card">
                             <h2>Complete seus dados</h2>
                             <Formik
                                 onSubmit={onSubmit}
@@ -72,23 +66,25 @@ const ProdutoReserva = () => {
                                     email: '',
                                     city: ''
                                 }}
-                                render={({ values }) => (
+                                render={({values}) => (
                                     <Form className="res-form form">
                                         <div>
                                             <label htmlFor="">Nome</label>
-                                            <Field name="name" type="text" placeholder={userState.user?.name} disabled />
+                                            <Field name="name" type="text" placeholder={userState.user?.name} disabled/>
                                         </div>
                                         <div>
                                             <label htmlFor="">Sobrenome</label>
-                                            <Field name="surname" type="text" placeholder={userState.user?.lastName} disabled />
+                                            <Field name="surname" type="text" placeholder={userState.user?.lastName}
+                                                   disabled/>
                                         </div>
                                         <div>
                                             <label htmlFor="">E-mail</label>
-                                            <Field name="email" type="email" placeholder={userState.user?.email} disabled />
+                                            <Field name="email" type="email" placeholder={userState.user?.email}
+                                                   disabled/>
                                         </div>
                                         <div>
                                             <label htmlFor="">Cidade</label>
-                                            <Field name="city" type="text" required />
+                                            <Field name="city" type="text" required/>
                                         </div>
                                         {/* <button type="submit">Conferir</button> */}
                                     </Form>
@@ -98,12 +94,12 @@ const ProdutoReserva = () => {
                         <div className="res-card">
                             <h2>Selecione sua data de reserva</h2>
                             {/* InputDate usado para fins de visualização apenas */}
-                            <InputDate />
+                            <InputDate/>
                         </div>
                         <div className="res-card">
                             <h2>O horário que deseja retirar o veículo</h2>
                             <p>Seu carro estará estará esperando por você</p>
-                            <TimePicker size="large" onChange={value => console.log(value)} />
+                            <TimePicker size="large" onChange={value => console.log(value)}/>
                         </div>
                     </div>
 
@@ -112,23 +108,23 @@ const ProdutoReserva = () => {
                             <div className="info-1">
 
                                 <h2>Detalhes da reserva</h2>
-                                <img src={car?.images[0].urlImage} width="100%" alt="" />
+                                <img src={car?.images[0].urlImage} width="100%" alt=""/>
                             </div>
                             <div className="info-2">
                                 <p className="font-h3">{car?.category.title}</p>
                                 <h2 className="font-h1">{car?.brand} {car?.model}</h2>
                                 <div className="info-local">
-                                    <img width="25px" src="/img/icones/rastreador.svg" alt="icon local" />
+                                    <img width="25px" src="/img/icones/rastreador.svg" alt="icon local"/>
                                     <p>{car?.city.address}, {car?.city.name}</p>
                                 </div>
 
                                 <div className="res-check">
                                     <h3>Retirada</h3>
-                                    <h3 id="txt-ret">{dataRetirada}</h3>
+                                    <h3 id="txt-ret">{scheduleDates[0]?.format('DD/MM/YYYY')}</h3>
                                 </div>
                                 <div className="res-check check2">
                                     <h3>Devolução</h3>
-                                    <h3>{dataDevolucao}</h3>
+                                    <h3>{scheduleDates[1]?.format('DD/MM/YYYY')}</h3>
                                 </div>
                                 <button type="submit" onClick={resConfirm} className="botao">Confirmar Reserva</button>
                             </div>
@@ -138,7 +134,7 @@ const ProdutoReserva = () => {
                 </div>
 
                 <article className="bg-black">
-                    <div className="container" >
+                    <div className="container">
                         <TitleBgBlack {...tituloPolitica} />
 
                         <Row>

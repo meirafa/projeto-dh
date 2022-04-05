@@ -7,24 +7,34 @@ import DatePicker from 'antd/lib/date-picker';
 import ConfigProvider from "antd/lib/config-provider";
 import {useWidth} from "../../../hooks/useWidth";
 import DateResponsive from "../forms/DateResponsive";
+import {useUser} from "../../context/UserContext";
 
 const {RangePicker} = DatePicker;
 
 const InputDateTime = () => {
+    const {scheduleDates, setScheduleDates} = useUser();
 
-    const [dateRetState, setDateRetState] = React.useState(localStorage.getItem("dataRetirada"));
+    const [dateRetState, setDateRetState] = React.useState(() => {
+        const dataRetirada = localStorage.getItem("dataRetirada")
+        if (!dataRetirada) return;
+        return moment(dataRetirada);
+    });
 
     React.useEffect(() => {
-        localStorage.setItem( "dataRetirada", dateRetState)
+        localStorage.setItem("dataRetirada", dateRetState?.startOf('day').toISOString())
     }, [dateRetState])
 
-    const [dateDevoState, setDateDevoState] = React.useState(localStorage.getItem("dataDevolucao"));
+    const [dateDevoState, setDateDevoState] = React.useState(() => {
+        const dataDevolucao = localStorage.getItem("dataDevolucao")
+        if (!dataDevolucao) return;
+        return moment(dataDevolucao);
+    });
 
     React.useEffect(() => {
-        localStorage.setItem( "dataDevolucao", dateDevoState)
+        localStorage.setItem("dataDevolucao", dateDevoState?.endOf('day').toISOString())
     }, [dateDevoState])
 
-    
+
     const placeholder = ["Retirada", "Devolução"];
     const width = useWidth();
 
@@ -33,16 +43,17 @@ const InputDateTime = () => {
         return current && current < moment().startOf('day');
     }
 
-    
+
     function onChangeDate(dates, dateStrings) {
+        setScheduleDates(dates);
         console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
-        
+
         setDateRetState(dates[0]);
         setDateDevoState(dates[1]);
         console.log()
         /* localStorage.setItem("dataRetirada",dateStrings[0])
         localStorage.setItem("dataDevolucao", dateStrings[1]) */
-        
+
     }
 
     return (<>
@@ -61,7 +72,7 @@ const InputDateTime = () => {
                     //separator="to"
                     size="large"
                     placeholder={placeholder}
-                    value={[moment(dateRetState), moment(dateDevoState)]}                    
+                    value={scheduleDates}
                 />
             }
         </ConfigProvider>
