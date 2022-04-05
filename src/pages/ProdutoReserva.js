@@ -22,7 +22,8 @@ const ProdutoReserva = () => {
     const tituloPolitica = { span: "condições de aluguel", title: "política" }
 
     const userState = useUser();
-
+    
+    const width = useWidth();
     const { id } = useParams();
     const { car, isLoading } = useSpecificCarId(id);
 
@@ -33,10 +34,14 @@ const ProdutoReserva = () => {
         console.log('SUBMIT', values)
     }
 
+    const dataRetirada = localStorage.getItem("dataRetirada")
+    const dataDevolucao = localStorage.getItem("dataDevolucao")
+    
+
+
 
 
     const placeholder = ["Retirada", "Devolução"];
-    const width = useWidth();
 
     return (
         <>
@@ -114,12 +119,12 @@ const ProdutoReserva = () => {
                                 </div>
 
                                 <div className="res-check">
-                                    <h3>Check in</h3>
-                                    <h3>00/00/00</h3>
+                                    <h3>Retirada</h3>
+                                    <h3>{dataRetirada}</h3>
                                 </div>
                                 <div className="res-check check2">
-                                    <h3>Check out</h3>
-                                    <h3>01/01/01</h3>
+                                    <h3>Devolução</h3>
+                                    <h3>{dataDevolucao}</h3>
                                 </div>
                                 <button type="submit" className="botao">Confirmar Reserva</button>
                             </div>

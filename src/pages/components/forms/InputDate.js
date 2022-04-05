@@ -1,59 +1,65 @@
-import * as React from 'react';
-import ptLocale from 'date-fns/locale/pt-BR/index';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import addWeeks from 'date-fns/addWeeks';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import MobileDateRangePicker from '@mui/lab/MobileDateRangePicker';
-import DesktopDateRangePicker from '@mui/lab/DesktopDateRangePicker';
+import React from 'react';
+import 'antd/dist/antd.css';
+import moment from 'moment';
+import 'moment/locale/pt-br';
+import locale from 'antd/lib/locale/pt_BR';
+import DatePicker from 'antd/lib/date-picker';
+import ConfigProvider from "antd/lib/config-provider";
 import {useWidth} from "../../../hooks/useWidth";
-import TextField from '@mui/material/TextField';
+import DateResponsive from "../forms/DateResponsive";
 
-export default function InputDate() {
-    const [value, setValue] = React.useState([null, null]);
+const {RangePicker} = DatePicker;
+
+const InputDateTime = () => {
+
+    const [dateState, setDateState] = React.useState(localStorage.getItem("data"));
+
+    React.useEffect(() => {
+        localStorage.setItem("data", dateState)
+    }, [dateState])
+
+    
+    const placeholder = ["Retirada", "Devolução"];
     const width = useWidth();
 
-    function getWeeksAfter(date, amount) {
-        return date ? addWeeks(date, amount) : undefined;
+    function disabledDate(current) {
+        // Can not select days before today and today
+        return current && current < moment().startOf('day');
     }
 
-    return (
-        <LocalizationProvider dateAdapter={AdapterDateFns} locale={ptLocale}>
-            <Stack spacing={3}>
-                {(width < 830) ?
-                    <MobileDateRangePicker
-                        value={value}
-                        disablePast
-                        maxDate={getWeeksAfter(value[0], 4)}
-                        onChange={(newValue) => {
-                            setValue(newValue);
-                        }}
-                        renderInput={(startProps, endProps) => (
-                            <>
-                                <TextField {...startProps} id="filled-basic" label="Retirada" variant="filled"/>
-                                <Box sx={{mx: 1}}/>
-                                <TextField {...endProps} id="filled-basic" label="Devolução" variant="filled"/>
-                            </>
-                        )}/>
-                    :
-                    <DesktopDateRangePicker
-                        value={value}
-                        disablePast
-                        maxDate={getWeeksAfter(value[0], 4)}
-                        onChange={(newValue) => {
-                            setValue(newValue);
-                        }}
-                        renderInput={(startProps, endProps) => (
-                            <>
-                                <TextField {...startProps} id="filled-basic" label="Retirada" variant="filled"/>
-                                <Box sx={{mx: 1}}/>
-                                <TextField {...endProps} id="filled-basic" label="Devolução" variant="filled"/>
-                            </>
-                        )}
-                    />
-                }
-            </Stack>
-        </LocalizationProvider>
-    );
-}
+
+
+    
+    function onChangeDate(dates, dateStrings) {
+        console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
+
+        
+        localStorage.setItem("dataRetirada",dateStrings[0])
+        localStorage.setItem("dataDevolucao", dateStrings[1])
+        
+    }
+    
+
+    return (<>
+        <ConfigProvider locale={locale}>
+            {(width < 830) ?
+                <DateResponsive/>
+                :
+                <RangePicker
+                    format="DD/MM/YYYY"
+                    disabledDate={disabledDate}
+                    ranges={{
+                        'Hoje': [moment(), moment()],
+                        'Este mês': [moment().startOf('day'), moment().endOf('month')],
+                    }}
+                    onChange={onChangeDate}
+                    //separator="to"
+                    size="large"
+                    placeholder={placeholder}
+                />
+            }
+        </ConfigProvider>
+    </>)
+};
+
+export default InputDateTime;
