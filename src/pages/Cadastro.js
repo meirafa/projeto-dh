@@ -11,6 +11,7 @@ import {useUser} from "./context/UserContext";
 function saveUser(formData) {
     localStorage.setItem('user', JSON.stringify(formData));
     //salvando usuario na api
+    console.log(formData);
     return fetch(appConfig.apiUrl + '/users', {
         method: 'POST',
         body: JSON.stringify(formData),
@@ -54,6 +55,7 @@ function Cadastro() {
                 email: emailCad.value,
                 password: passwordCad.value,
                 name: nome.value,
+
                 lastName: sobrenome.value
             };
 
