@@ -9,16 +9,31 @@ import TimePicker from 'antd/lib/time-picker';
 import Row from "antd/lib/grid/row";
 import Col from "antd/lib/grid/col";
 import React from "react";
+import { useUser } from "./context/UserContext";
+import { useParams } from "react-router-dom";
+import { useSpecificCarId } from "../hooks/useSpecificCarId";
+
 
 
 
 const ProdutoReserva = () => {
+
     const title = { span: "informações da sua reserva", title: "confirmação" }
     const tituloPolitica = { span: "condições de aluguel", title: "política" }
+
+    const userState = useUser();
+
+    const { id } = useParams();
+    const { car, isLoading } = useSpecificCarId(id);
+
+    if (!car && !isLoading) return <PageNotFound />;
+
 
     function onSubmit(values, actions) {
         console.log('SUBMIT', values)
     }
+
+
 
     const placeholder = ["Retirada", "Devolução"];
     const width = useWidth();
@@ -52,15 +67,15 @@ const ProdutoReserva = () => {
                                     <Form className="res-form form">
                                         <div>
                                             <label htmlFor="">Nome</label>
-                                            <Field name="name" type="text" placeholder="Nome Usuário" disabled />
+                                            <Field name="name" type="text" placeholder={userState.user?.name} disabled />
                                         </div>
                                         <div>
                                             <label htmlFor="">Sobrenome</label>
-                                            <Field name="surname" type="text" placeholder="Sobrenome Usuário" disabled />
+                                            <Field name="surname" type="text" placeholder={userState.user?.lastName} disabled />
                                         </div>
                                         <div>
                                             <label htmlFor="">E-mail</label>
-                                            <Field name="email" type="email" placeholder="Email Usuário" disabled />
+                                            <Field name="email" type="email" placeholder={userState.user?.email} disabled />
                                         </div>
                                         <div>
                                             <label htmlFor="">Cidade</label>
@@ -86,14 +101,18 @@ const ProdutoReserva = () => {
                     <div className="res-card details">
                         <div className="res-details">
                             <div className="info-1">
-                                
+
                                 <h2>Detalhes da reserva</h2>
-                                <img src="https://carroscomcamanzi.com.br/wp-content/uploads/2020/09/Audi-Q5_Sportback-2021-1600-2.jpg" width="70%" alt="" />
+                                <img src={car?.images[0].urlImage} width="100%" alt="" />
                             </div>
                             <div className="info-2">
-                                <p>Categoria Exemplo</p>
-                                <h2>Audi Q5</h2>
-                                <p>Localização exemplo</p>
+                                <p className="font-h3">{car?.category.title}</p>
+                                <h2 className="font-h1">{car?.brand} {car?.model}</h2>
+                                <div className="info-local">
+                                    <img width="25px" src="/img/icones/rastreador.svg" alt="icon local" />
+                                    <p>{car?.city.address}, {car?.city.name}</p>
+                                </div>
+
                                 <div className="res-check">
                                     <h3>Check in</h3>
                                     <h3>00/00/00</h3>

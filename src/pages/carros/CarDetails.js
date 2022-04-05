@@ -85,7 +85,7 @@ function CarDetails() {
                                     <RateStars/>
 
                                     <div className="carro-comprar">
-                                        <Link className="botao" to="/reserva">Alugar Agora</Link>
+                                        <Link className="botao" to="reserva">Alugar Agora</Link>
                                     </div>
 
                                     <h2 className="font-text-2 cor-0">Características</h2>

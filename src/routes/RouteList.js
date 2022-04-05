@@ -30,6 +30,7 @@ function RouteList() {
                         <Route path="login" element={<Login/>}/>
                         <Route path="termos" element={<Termos/>}/>
                         <Route path="produtos/:id" element={<CarDetails/>}/>
+                        <Route path="produtos/:id/reserva" element={<ProdutoReserva/>}/>
                         <Route path="cadastro" element={<Cadastro/>}/>
                         <Route path="categorias/:category" element={<Products/>}/>
 

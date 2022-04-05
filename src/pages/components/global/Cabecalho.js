@@ -4,7 +4,6 @@ import {useUser} from "../../context/UserContext";
 
 function Cabecalho() {
     const userState = useUser();
-    console.log(userState)
     const [navSize, setnavSize] = useState("5rem");
     const [navColor, setnavColor] = useState("transparent");
     const listenScrollEvent = () => {
