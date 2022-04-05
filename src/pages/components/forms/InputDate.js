@@ -37,8 +37,8 @@ const InputDateTime = () => {
     function onChangeDate(dates, dateStrings) {
         console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
         
-        setDateRetState(dateStrings[0]);
-        setDateDevoState(dateStrings[1]);
+        setDateRetState(dates[0]);
+        setDateDevoState(dates[1]);
         console.log()
         /* localStorage.setItem("dataRetirada",dateStrings[0])
         localStorage.setItem("dataDevolucao", dateStrings[1]) */
@@ -61,6 +61,7 @@ const InputDateTime = () => {
                     //separator="to"
                     size="large"
                     placeholder={placeholder}
+                    value={[moment(dateRetState), moment(dateDevoState)]}                    
                 />
             }
         </ConfigProvider>
