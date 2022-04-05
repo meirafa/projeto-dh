@@ -1,0 +1,39 @@
+#res-conc-main{
+    height: 90vh;
+    background-color: var(--cor-1);
+}
+
+.res-concluida{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .res-modal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border: 10px solid white;
+        border-radius: 17px;
+        background-color: var(--cor-l1);
+        box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
+
+        .title-seta{
+
+            width: 100%;
+            a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+            }
+            p{
+                margin: 0;
+                color: black;
+            }
+        }
+    }
+
+}

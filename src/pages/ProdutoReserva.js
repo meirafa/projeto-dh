@@ -1,17 +1,16 @@
 import { Formik, Field, Form } from "formik";
 import { Helmet } from "react-helmet-async";
 import TitleBgBlack from "./components/titles/TitleBgBlack";
-import TitleBgWhite from "./components/titles/TitleBgWhite";
 import InputDate from "./components/forms/InputDate";
 import { useWidth } from "../hooks/useWidth";
-import DatePicker from 'antd/lib/date-picker';
 import TimePicker from 'antd/lib/time-picker';
 import Row from "antd/lib/grid/row";
 import Col from "antd/lib/grid/col";
 import React from "react";
 import { useUser } from "./context/UserContext";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useSpecificCarId } from "../hooks/useSpecificCarId";
+
 
 
 
@@ -34,12 +33,17 @@ const ProdutoReserva = () => {
         console.log('SUBMIT', values)
     }
 
-    const dataRetirada = localStorage.getItem("dataRetirada")
-    const dataDevolucao = localStorage.getItem("dataDevolucao")
-    
+    const navigate = useNavigate();
 
+    function resConfirm(){
 
+        return navigate("concluida");
+        
+    }
 
+   
+    const dataRetirada = localStorage.getItem("dataRetirada");
+    const dataDevolucao = localStorage.getItem("dataDevolucao");
 
     const placeholder = ["Retirada", "Devolução"];
 
@@ -120,13 +124,13 @@ const ProdutoReserva = () => {
 
                                 <div className="res-check">
                                     <h3>Retirada</h3>
-                                    <h3>{dataRetirada}</h3>
+                                    <h3 id="txt-ret">{dataRetirada}</h3>
                                 </div>
                                 <div className="res-check check2">
                                     <h3>Devolução</h3>
                                     <h3>{dataDevolucao}</h3>
                                 </div>
-                                <button type="submit" className="botao">Confirmar Reserva</button>
+                                <button type="submit" onClick={resConfirm} className="botao">Confirmar Reserva</button>
                             </div>
                         </div>
 

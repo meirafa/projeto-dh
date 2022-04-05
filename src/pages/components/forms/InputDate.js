@@ -12,11 +12,17 @@ const {RangePicker} = DatePicker;
 
 const InputDateTime = () => {
 
-    const [dateState, setDateState] = React.useState(localStorage.getItem("data"));
+    const [dateRetState, setDateRetState] = React.useState(localStorage.getItem("dataRetirada"));
 
     React.useEffect(() => {
-        localStorage.setItem("data", dateState)
-    }, [dateState])
+        localStorage.setItem( "dataRetirada", dateRetState)
+    }, [dateRetState])
+
+    const [dateDevoState, setDateDevoState] = React.useState(localStorage.getItem("dataDevolucao"));
+
+    React.useEffect(() => {
+        localStorage.setItem( "dataDevolucao", dateDevoState)
+    }, [dateDevoState])
 
     
     const placeholder = ["Retirada", "Devolução"];
@@ -27,18 +33,17 @@ const InputDateTime = () => {
         return current && current < moment().startOf('day');
     }
 
-
-
     
     function onChangeDate(dates, dateStrings) {
         console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
-
         
-        localStorage.setItem("dataRetirada",dateStrings[0])
-        localStorage.setItem("dataDevolucao", dateStrings[1])
+        setDateRetState(dateStrings[0]);
+        setDateDevoState(dateStrings[1]);
+        console.log()
+        /* localStorage.setItem("dataRetirada",dateStrings[0])
+        localStorage.setItem("dataDevolucao", dateStrings[1]) */
         
     }
-    
 
     return (<>
         <ConfigProvider locale={locale}>

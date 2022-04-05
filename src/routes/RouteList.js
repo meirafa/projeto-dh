@@ -15,6 +15,7 @@ import Products from "../pages/components/Products";
 import PageNotFound from "../pages/PageNotFound";
 import CityFilter from '../pages/components/CityFilter';
 import ProdutoReserva from '../pages/ProdutoReserva';
+import ReservaConcluida from '../pages/ReservaConcluida';
 
 function RouteList() {
     return (
@@ -31,6 +32,7 @@ function RouteList() {
                         <Route path="termos" element={<Termos/>}/>
                         <Route path="produtos/:id" element={<CarDetails/>}/>
                         <Route path="produtos/:id/reserva" element={<ProdutoReserva/>}/>
+                        <Route path="produtos/:id/reserva/concluida" element={<ReservaConcluida/>}/>
                         <Route path="cadastro" element={<Cadastro/>}/>
                         <Route path="categorias/:category" element={<Products/>}/>
 
