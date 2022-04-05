@@ -124,7 +124,6 @@ function CarDetails() {
                                 <h3 className="font-h2">{car?.city.name}</h3>
                                 <div className="lojas-dados font-text-1 cor-3">
                                     <p>{car?.city.address}</p>
-                                    <p>CEP: {car?.city.cep}</p>
                                 </div>
                                 {/*<div className="lojas-dados font-text-1 cor-3">*/}
                                 {/*    <a href="mailto:sp@digitalbooking.com">sp@digitalbooking.com</a>*/}

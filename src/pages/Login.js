@@ -5,6 +5,7 @@ import Input from "./components/forms/Input";
 import useForm from "./../hooks/useForm";
 import {NavLink, useNavigate} from "react-router-dom";
 import {appConfig} from "../appConfig";
+import {useUser} from "./context/UserContext";
 
 export function loginToken(body) {
     return fetch(appConfig.apiUrl + '/auth', {
@@ -12,25 +13,30 @@ export function loginToken(body) {
         body: JSON.stringify(body),
         headers: {
             "Content-Type": "application/json;"
-            //Authorization: `Bearer ${token}`
         }
-    }).then(res => res.json()).then(res => localStorage.setItem('token', res.token));
+    }).then(res => {
+        if (res.ok) {
+            return res.json()
+        } else {
+            return res.text().then(txt => {
+                throw new Error(txt)
+            })
+        }
+    });
 }
 
 const Login = () => {
 
-    const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"}
-
-    //localStorage:
-    //const [userLogin, setUserLogin] = useLocalStorage('nome', '');
+    const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"};
+    const userState = useUser();
 
     //form:
     const email = useForm('email');
     const password = useForm('password');
 
     //usuario registrado
-    const user = "laurasouza@digitalbooking.com";
-    const pass = "laurasouza123";
+    // const user = "laurasouza@digitalbooking.com";
+    // const pass = "laurasouza123";
     const valueEmail = email.value;
     const valuePass = password.value;
 
@@ -40,19 +46,17 @@ const Login = () => {
         event.preventDefault();
 
         if (email.validate() && password.validate()) {
-            redirectHome();
+            loginToken({email: valueEmail, password: valuePass}).then((res) => {
+                localStorage.setItem('token', res.token);
+                userState.setUser(res.userDTO);
+                return navigate("/");
+            }).catch(() => {
+                alert("Por favor, tente novamente, suas credenciais são inválidas")
+            })
         } else {
             alert("Corrija seus dados")
         }
     };
-
-    function redirectHome() {
-        if (user === valueEmail && pass === valuePass) {
-            return navigate("/")
-        } else {
-            alert("Por favor, tente novamente, suas credenciais são inválidas")
-        }
-    }
 
     return (
         <>
