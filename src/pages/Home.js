@@ -1,14 +1,10 @@
 import Categoria from "./components/Categoria";
 import {Helmet} from "react-helmet-async";
 import Populars from "./components/Populars";
-import TitleBgBlack from "./components/titles/TitleBgBlack";
 import Marca from "./components/Marca";
-import InputDate from "./components/forms/InputDate";
-import InputDateTime from "./components/forms/InputDateTime";
-import InputSelect from "./components/forms/InputSelect";
+import {ComponentInputHome} from "./components/forms/ComponentInputHome";
 
 function Home() {
-    const title = {span: "a melhor experiência de luxo de aluguel de carros", title: "faça já sua reserva"}
     return (
         <>
             <Helmet>
@@ -18,19 +14,7 @@ function Home() {
                 <div className="introducao-bg">
                 </div>
 
-                <article className="bg-black">
-                    <div className="container">
-                        <TitleBgBlack {...title}/>
-                        <div className="form form-home">
-                            <InputSelect/>
-                            {/*<input type="text" id="local" name="local" placeholder="Local"/>*/}
-                            <InputDateTime/>
-                            {/*<InputDate/>*/}
-                            <input type="submit" className="botao" value="CONSULTAR"/>
-                        </div>
-
-                    </div>
-                </article>
+                <ComponentInputHome/>
 
                 <Categoria/>
 

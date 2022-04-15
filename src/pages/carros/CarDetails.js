@@ -12,6 +12,7 @@ import Row from "antd/lib/grid/row";
 import Col from "antd/lib/grid/col";
 import TitleBgWhite from "../components/titles/TitleBgWhite";
 import PageNotFound from "../PageNotFound";
+import {InputCalendar} from "../components/forms/InputCalendar";
 
 function CarDetails() {
     const tituloPolitica = {span: "condições de aluguel", title: "política"}
@@ -140,7 +141,13 @@ function CarDetails() {
                 {/* Bloco de Reserva aqui */
                 }
 
-                <Reservation/>
+                <article className="bg-black">
+                    <div className="container inputcalendar">
+                        <InputCalendar/>
+                    </div>
+                </article>
+                {/*<Reservation/>*/}
+
                 <article>
                     <div className="container">
                         <TitleBgWhite {...tituloPolitica}/>

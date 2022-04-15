@@ -11,49 +11,42 @@ import {useUser} from "../../context/UserContext";
 
 const {RangePicker} = DatePicker;
 
-const InputDateTime = () => {
+const InputDate = () => {
     const {scheduleDates, setScheduleDates} = useUser();
+    const width = useWidth();
 
     const [dateRetState, setDateRetState] = React.useState(() => {
-        const dataRetirada = localStorage.getItem("dataRetirada")
+        const dataRetirada = localStorage.getItem("dataRetirada");
         if (!dataRetirada) return;
         return moment(dataRetirada);
     });
 
     React.useEffect(() => {
         localStorage.setItem("dataRetirada", dateRetState?.startOf('day').toISOString())
-    }, [dateRetState])
+    }, [dateRetState]);
 
     const [dateDevoState, setDateDevoState] = React.useState(() => {
-        const dataDevolucao = localStorage.getItem("dataDevolucao")
+        const dataDevolucao = localStorage.getItem("dataDevolucao");
         if (!dataDevolucao) return;
         return moment(dataDevolucao);
     });
 
     React.useEffect(() => {
         localStorage.setItem("dataDevolucao", dateDevoState?.endOf('day').toISOString())
-    }, [dateDevoState])
-
+    }, [dateDevoState]);
 
     const placeholder = ["Retirada", "Devolução"];
-    const width = useWidth();
 
     function disabledDate(current) {
         // Can not select days before today and today
         return current && current < moment().startOf('day');
     }
 
-
-    function onChangeDate(dates, dateStrings) {
+    function onChangeDate(dates) {
         setScheduleDates(dates);
-        console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
 
         setDateRetState(dates[0]);
         setDateDevoState(dates[1]);
-        console.log()
-        /* localStorage.setItem("dataRetirada",dateStrings[0])
-        localStorage.setItem("dataDevolucao", dateStrings[1]) */
-
     }
 
     return (<>
@@ -69,7 +62,6 @@ const InputDateTime = () => {
                         'Este mês': [moment().startOf('day'), moment().endOf('month')],
                     }}
                     onChange={onChangeDate}
-                    //separator="to"
                     size="large"
                     placeholder={placeholder}
                     value={scheduleDates}
@@ -79,4 +71,4 @@ const InputDateTime = () => {
     </>)
 };
 
-export default InputDateTime;
+export default InputDate;

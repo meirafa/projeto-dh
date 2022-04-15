@@ -15,6 +15,10 @@ section {
   background-color: var(--cor-3);
 }
 
+.bg-input-home{
+  background-color: var(--cor-4);
+}
+
 .titulo-bg {
   background: linear-gradient(var(--cor-3) 300px, var(--cor-0) 0px);
 }
@@ -128,4 +132,15 @@ section {
 .ant-select-selector{
   height: 48px!important;
   align-items: center;
+}
+
+//react-date-range
+.inputcalendar {
+  text-align: center;
+}
+
+@media (max-width: 285px) {
+  .rdrCalendarWrapper {
+    font-size: 9px!important;
+  }
 }
