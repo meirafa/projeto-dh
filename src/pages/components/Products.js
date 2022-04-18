@@ -5,6 +5,7 @@ import ListProductsFilterCategory from "./cards/product/ListProductsFilterCatego
 import {useParams, useNavigate} from "react-router";
 import {useApis} from "../../hooks/useApi";
 import Marca from "./Marca";
+import {ComponentInputHome} from "./forms/ComponentInputHome";
 
 const {TabPane} = Tabs;
 
@@ -42,7 +43,11 @@ function Products() {
         <>
             {!!isLoading ? 'Carregando...' : null}
 
-            <section className="bg-black">
+            <section className="bg-input-home">
+                <ComponentInputHome/>
+            </section>
+
+            <article className="bg-black">
                 <div className="container">
                     <TitleBgBlack {...title}/>
                     <Tabs defaultActiveKey={category} onChange={(key) => {
@@ -64,7 +69,7 @@ function Products() {
                         })}
                     </Tabs>
                 </div>
-            </section>
+            </article>
             <Marca/>
         </>
     )

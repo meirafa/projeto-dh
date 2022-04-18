@@ -1,30 +1,12 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import moment from 'moment';
 import 'moment/locale/pt-br';
 import locale from 'antd/lib/locale/pt_BR';
-import DatePicker from 'antd/lib/date-picker';
 import TimePicker from 'antd/lib/time-picker';
 import ConfigProvider from "antd/lib/config-provider";
-import {useWidth} from "../../../hooks/useWidth";
-import DateResponsive from "../forms/DateResponsive";
-
-const {RangePicker} = DatePicker;
+import InputDate from "./InputDate";
 
 const InputDateTime = () => {
-
-    const placeholder = ["Retirada", "Devolução"];
-    const width = useWidth();
-
-    function disabledDate(current) {
-        // Can not select days before today and today
-        return current && current < moment().startOf('day');
-    }
-
-    function onChangeDate(dates, dateStrings) {
-        // console.log('From: ', dates[0], ', to: ', dates[1]);
-        console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
-    }
 
     function onChangeTime(times, timesStrings) {
         console.log('Time: ', timesStrings)
@@ -32,22 +14,7 @@ const InputDateTime = () => {
 
     return (<>
         <ConfigProvider locale={locale}>
-            {(width < 830) ?
-                <DateResponsive/>
-                :
-                <RangePicker
-                    format="DD/MM/YYYY"
-                    disabledDate={disabledDate}
-                    ranges={{
-                        'Hoje': [moment(), moment()],
-                        'Este mês': [moment().startOf('day'), moment().endOf('month')],
-                    }}
-                    onChange={onChangeDate}
-                    //separator="to"
-                    size="large"
-                    placeholder={placeholder}
-                />
-            }
+            <InputDate/>
             <TimePicker size="large" onChange={onChangeTime}/>
         </ConfigProvider>
     </>)
