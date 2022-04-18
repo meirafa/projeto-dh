@@ -15,7 +15,7 @@ section {
   background-color: var(--cor-3);
 }
 
-.bg-input-home{
+.bg-input-home {
   background-color: var(--cor-4);
 }
 
@@ -26,10 +26,10 @@ section {
 .titulo {
   padding-bottom: 1.5rem;
 
-/*   h1 {
-   padding-left: 2rem;
-  }
- */
+  /*   h1 {
+     padding-left: 2rem;
+    }
+   */
   p {
     margin-bottom: 4px;
   }
@@ -122,15 +122,15 @@ section {
 
 //antd design
 .ant-tabs {
-  color: white!important;
+  color: white !important;
 }
 
-.ant-image{
+.ant-image {
   margin-left: 5px;
 }
 
-.ant-select-selector{
-  height: 48px!important;
+.ant-select-selector {
+  height: 48px !important;
   align-items: center;
 }
 
@@ -139,8 +139,17 @@ section {
   text-align: center;
 }
 
+@media (min-width: 1020px) {
+  .inputcalendar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
 @media (max-width: 285px) {
   .rdrCalendarWrapper {
-    font-size: 9px!important;
+    font-size: 9px !important;
   }
 }

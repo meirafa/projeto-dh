@@ -85,10 +85,6 @@ function CarDetails() {
 
                                     <RateStars/>
 
-                                    <div className="carro-comprar">
-                                        <Link className="botao" to="reserva">Alugar Agora</Link>
-                                    </div>
-
                                     <h2 className="font-text-2 cor-0">Características</h2>
                                     <ul className="carro-ficha font-text-1 cor-4">
                                         <li><p className="font-text-1 cor-1">Aceleração</p>
@@ -144,6 +140,10 @@ function CarDetails() {
                 <article className="bg-black">
                     <div className="container inputcalendar">
                         <InputCalendar/>
+                        <div className="carro-comprar">
+                            <Link className="botao" to="reserva">Alugar Agora</Link>
+                        </div>
+
                     </div>
                 </article>
                 {/*<Reservation/>*/}
