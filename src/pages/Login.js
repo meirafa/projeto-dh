@@ -82,7 +82,10 @@ const Login = () => {
                                                    {...password}/>
                                         </div>
                                         <button className="botao" type="submit">Iniciar Sessão</button>
-                                        <NavLink to="/cadastro" className="col-2">Cadastro</NavLink>
+                                        <div className='col-2'>
+                                            <p className="font-text-1">Não possui conta? </p>
+                                            <NavLink to="/cadastro" className="font-text-1">Fazer Cadastro</NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

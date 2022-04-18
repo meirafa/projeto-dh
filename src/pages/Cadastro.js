@@ -1,12 +1,12 @@
 import React from 'react';
-import {Helmet} from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import TitleBgBlack from "./components/titles/TitleBgBlack";
 import Input from "./components/forms/Input";
 import useForm from "./../hooks/useForm";
-import {NavLink, useNavigate} from "react-router-dom";
-import {appConfig} from "../appConfig";
-import {loginToken} from "./Login";
-import {useUser} from "./context/UserContext";
+import { NavLink, useNavigate } from "react-router-dom";
+import { appConfig } from "../appConfig";
+import { loginToken } from "./Login";
+import { useUser } from "./context/UserContext";
 
 function saveUser(formData) {
     localStorage.setItem('user', JSON.stringify(formData));
@@ -37,7 +37,7 @@ function Cadastro() {
     const userState = useUser();
     const navigate = useNavigate();
 
-    const title = {span: "sua experiência começa aqui!", title: "acesse sua área exclusiva"};
+    const title = { span: "sua experiência começa aqui!", title: "acesse sua área exclusiva" };
 
     //form:
     const emailCad = useForm('email');
@@ -79,7 +79,7 @@ function Cadastro() {
                 <section className="titulo-bg">
 
                     <div className="container">
-                        <TitleBgBlack {...title}/>
+                        <TitleBgBlack {...title} />
 
                         <form className="cadastro" onSubmit={handleSubmit}>
                             <div className="cadastro-produto">
@@ -88,26 +88,29 @@ function Cadastro() {
                                         <h2 className="font-text-2 cor-2 col-2">Cadastre-se</h2>
                                         <div>
                                             <Input label="Nome" type="text" id="nome"
-                                                   {...nome}/>
+                                                {...nome} />
                                         </div>
                                         <div>
                                             <Input label="Sobrenome" type="text" id="sobrenome"
-                                                   {...sobrenome}/>
+                                                {...sobrenome} />
                                         </div>
                                         <div>
                                             <Input label="Email" type="email" id="emailCad"
-                                                   placeholder="exemplo@.com" {...emailCad}/>
+                                                placeholder="exemplo@.com" {...emailCad} />
                                         </div>
                                         <div>
                                             <Input label="Repetir Email" type="email" id="isEmail"
-                                                   placeholder="exemplo@.com" {...isEmail}/>
+                                                placeholder="exemplo@.com" {...isEmail} />
                                         </div>
                                         <div className="col-2">
                                             <Input label="Password" type="password" id="passwordCad"
-                                                   {...passwordCad}/>
+                                                {...passwordCad} />
                                         </div>
                                         <button className="botao">Registrar</button>
-                                        <NavLink to="/login" className="col-2">Login</NavLink>
+                                        <div className='col-2'>
+                                            <p className="font-text-1">Já possui conta? </p>
+                                            <NavLink to="/login" className="font-text-1">Fazer Login</NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
