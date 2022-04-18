@@ -43,10 +43,12 @@ section {
   max-width: max-content;
   border: none;
   cursor: pointer;
+  transition: all 0.15s;
 
   &:hover {
     background: var(--cor-l2);
-  }
+    color: white !important;
+    }
 
   &.secundario {
     background: var(--cor-2);
