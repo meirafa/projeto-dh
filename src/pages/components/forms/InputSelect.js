@@ -2,9 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import Select from 'antd/lib/select';
 import {useApis} from "../../../hooks/useApi";
-import {useNavigate, useParams} from "react-router";
 import {useUser} from "../../context/UserContext";
-import moment from "moment";
 
 const {Option} = Select;
 
@@ -19,7 +17,6 @@ function InputSelect() {
 
     function enviandoValor(value) {
         setScheduleLocal(value);
-        //navigate(`/reserva/${value}`);
     }
 
     const set = new Set([]);
@@ -41,6 +38,7 @@ function InputSelect() {
                 }
                 size="large"
                 onSelect={enviandoValor}
+                defaultValue={scheduleLocal}
             >
                 {
                     address.map((addItem) => {

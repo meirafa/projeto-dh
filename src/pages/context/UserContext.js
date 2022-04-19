@@ -10,7 +10,7 @@ export function useUser() {
 export const UserProvider = ({children}) => {
     const [state, setState] = React.useState(getInitialState());
     const [scheduleDates, setScheduleDates] = React.useState([undefined, undefined]);
-    const [scheduleLocal, setScheduleLocal] = React.useState([undefined, undefined]);
+    const [scheduleLocal, setScheduleLocal] = React.useState(undefined);
 
     function setUser(user) {
         localStorage.setItem('user', JSON.stringify(user));
