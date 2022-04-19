@@ -34,9 +34,8 @@ function RouteList() {
                         <Route path="produtos/:id/reserva" element={<ProdutoReserva/>}/>
                         <Route path="produtos/:id/reserva/concluida" element={<ReservaConcluida/>}/>
                         <Route path="cadastro" element={<Cadastro/>}/>
-                        <Route path="reserva/:category" element={<CityFilter/>}/>
+                        {/*<Route path="reserva/:category" element={<CityFilter/>}/>*/}
 
-                        {/* Teste com o CityFilter */}
                         <Route path="categorias/:category/:city" element={<Products/>}/>
 
                         <Route path="produto-reserva" element={<ProdutoReserva/>}/>

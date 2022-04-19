@@ -44,7 +44,6 @@ function Cabecalho() {
 
                         <ul className="header-menu font-h4 cor-0">
                             <li className="menu-item"><NavLink to="/categorias">Categorias</NavLink></li>
-                            <li className="menu-item"><NavLink to="/reserva">Cidades</NavLink></li>
                             <li className="menu-item"><NavLink to="/contato">Contato</NavLink></li>
                             {
                                 (userState.user) ?
