@@ -2,7 +2,8 @@ import DatePicker from 'antd/lib/date-picker';
 import React from 'react';
 import moment from "moment";
 
-function DateResponsive() {
+function DateResponsive(props) {
+
     const [startValue, setStartValue] = React.useState(null);
     const [endValue, setEndValue] = React.useState(null);
     const [endOpen, setEndOpen] = React.useState(false);
@@ -35,6 +36,7 @@ function DateResponsive() {
         setEndOpen(open);
     }
 
+
     return (
         <>
             <DatePicker
@@ -48,6 +50,8 @@ function DateResponsive() {
                 }}
                 size="large"
                 placeholder="Retirada"
+                {...props}
+
             />
             <DatePicker
                 disabledDate={disabledEndDate}
@@ -58,6 +62,7 @@ function DateResponsive() {
                 onOpenChange={handleEndOpenChange}
                 size="large"
                 placeholder="Devolução"
+                {...props}
             />
         </>
     );

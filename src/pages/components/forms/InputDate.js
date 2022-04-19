@@ -12,7 +12,7 @@ import {useUser} from "../../context/UserContext";
 const {RangePicker} = DatePicker;
 
 const InputDate = () => {
-    const {scheduleDates, setScheduleDates} = useUser();
+    const {scheduleLocal, scheduleDates, setScheduleDates} = useUser();
     const width = useWidth();
 
     const [dateRetState, setDateRetState] = React.useState(() => {
@@ -49,10 +49,14 @@ const InputDate = () => {
         setDateDevoState(dates[1]);
     }
 
+    //disabled
+    const extraProps = {};
+    (scheduleLocal) ? extraProps.disabled = false : extraProps.disabled = true;
+
     return (<>
         <ConfigProvider locale={locale}>
             {(width < 830) ?
-                <DateResponsive/>
+                <DateResponsive {...extraProps}/>
                 :
                 <RangePicker
                     format="DD/MM/YYYY"
@@ -65,6 +69,7 @@ const InputDate = () => {
                     size="large"
                     placeholder={placeholder}
                     value={scheduleDates}
+                    {...extraProps}
                 />
             }
         </ConfigProvider>
