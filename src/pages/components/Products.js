@@ -68,6 +68,15 @@ function Products() {
 
                                 <div className="produtos">
                                     {address.map((addItems, key) => {
+                                        if(category === 'all'){
+                                            if(addItems.city.name === city){
+                                                return (
+                                                    <ListProductsFilterCity
+                                                        address={addItems}
+                                                        key={key}/>
+                                                )
+                                            }
+                                        }
                                         if (addItems.city.name === city && addItems.category.title === category) {
                                             return (
                                                 <ListProductsFilterCity
