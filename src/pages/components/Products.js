@@ -6,6 +6,8 @@ import {useParams, useNavigate} from "react-router";
 import {useApis} from "../../hooks/useApi";
 import Marca from "./Marca";
 import {ComponentInputHome} from "./forms/ComponentInputHome";
+import ListProductsFilterCity from "./cards/product/ListProductsFilterCity";
+import ListAllProducts from "./cards/product/ListAllProducts";
 
 const {TabPane} = Tabs;
 
@@ -18,8 +20,8 @@ const categories = [
         key: 'suvs',
         title: 'SUVs'
     }, {
-        key: 'conversíveis',
-        title: 'Conversiveis'
+        key: 'conversiveis',
+        title: 'Conversíveis'
     }, {
         key: 'esportivos',
         title: 'Esportivos'
@@ -32,10 +34,16 @@ const categories = [
 
 function Products() {
     let {category = 'all'} = useParams();
+    let {city = 'all'} = useParams();
+
     const navigate = useNavigate();
 
-    const [categoryResult, isLoading] = useApis('/jsons/apiCars.json');
-    const cars = categoryResult?.carsList || [];
+    const [addressResult, isLoading] = useApis('/jsons/apiCars.json');
+    const address = addressResult?.carsList || [];
+
+    function tabsModified(key) {
+        navigate(`/categorias/${key}/${city}`)
+    }
 
     const title = {span: "conheça nossa frota", title: "frota"};
 
@@ -50,9 +58,8 @@ function Products() {
             <article className="bg-black">
                 <div className="container">
                     <TitleBgBlack {...title}/>
-                    <Tabs defaultActiveKey={category} onChange={(key) => {
-                        navigate(`/categorias/${key}`)
-                    }}>
+
+                    <Tabs defaultActiveKey={category} onChange={tabsModified}>
                         {categories.map(item => {
                             return <TabPane
                                 tab={<span>{item.title}</span>}
@@ -60,10 +67,19 @@ function Products() {
                             >
 
                                 <div className="produtos">
-                                    <ListProductsFilterCategory
-                                        cars={cars}
-                                        cat={item.key === 'all' ? null : item.key}
-                                    />
+                                    {address.map((addItems, key) => {
+                                        if (addItems.city.name === city && addItems.category.title === category) {
+                                            return (
+                                                <ListProductsFilterCity
+                                                    address={addItems}
+                                                    key={key}/>
+                                            )
+                                        } else if (city === 'all') {
+                                            return (
+                                                <ListAllProducts {...addItems} key={key}/>
+                                            )
+                                        }
+                                    })}
                                 </div>
                             </TabPane>
                         })}

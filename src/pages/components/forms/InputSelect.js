@@ -2,19 +2,32 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import Select from 'antd/lib/select';
 import {useApis} from "../../../hooks/useApi";
+import {useNavigate, useParams} from "react-router";
+import {useUser} from "../../context/UserContext";
+import moment from "moment";
 
 const {Option} = Select;
 
 function InputSelect() {
-    const [addressResult, isLoading] = useApis('/jsons/address.json');
+    const {scheduleLocal, setScheduleLocal} = useUser();
+
+// Bloco filtro por InputSelect
+    const [addressResult, isLoad] = useApis('/jsons/apiCars.json');
 
     //resultado pode ser nulo ou vazio ate carregar
-    const address = addressResult?.addressList || [];
-    //carregando
-    if (isLoading) return 'Loading';
+    const address = addressResult?.carsList || [];
+
+    function enviandoValor(value) {
+        setScheduleLocal(value);
+        //navigate(`/reserva/${value}`);
+    }
+
+    const set = new Set([]);
+    let newSet = [];
 
     return (
         <>
+            {!!isLoad ? 'Carregando...' : null}
             <Select
                 showSearch
                 style={{minWidth: 250}}
@@ -27,12 +40,19 @@ function InputSelect() {
                     optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
                 }
                 size="large"
+                onSelect={enviandoValor}
             >
                 {
-                    address.map((addItem, key) => {
-                        return (<React.Fragment key={key}>
-                            <Option value={addItem.id}>{addItem.cidade}</Option>
-                        </React.Fragment>)
+                    address.map((addItem) => {
+                        set.add(addItem.city.name);
+                        return newSet = [...set];
+                    })
+                }
+                {
+                    newSet.map((item, key) => {
+                        return <Option
+                            value={item}
+                            key={key}>{item}</Option>
                     })
                 }
             </Select>

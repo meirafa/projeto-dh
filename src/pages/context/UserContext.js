@@ -10,6 +10,7 @@ export function useUser() {
 export const UserProvider = ({children}) => {
     const [state, setState] = React.useState(getInitialState());
     const [scheduleDates, setScheduleDates] = React.useState([undefined, undefined]);
+    const [scheduleLocal, setScheduleLocal] = React.useState([undefined, undefined]);
 
     function setUser(user) {
         localStorage.setItem('user', JSON.stringify(user));
@@ -18,6 +19,7 @@ export const UserProvider = ({children}) => {
 
     function loadUser(token) {
         setState(state => ({...state, user: JSON.parse(localStorage.getItem('user'))}))
+
         // setState((state) => ({...state, isLoading: true}));
         // fetch(appConfig.apiUrl + '/users', {
         //     method: 'GET',
@@ -52,7 +54,7 @@ export const UserProvider = ({children}) => {
     }, []);
 
     return (
-        <UserContext.Provider value={{...state, loadUser, setUser, scheduleDates, setScheduleDates}}>
+        <UserContext.Provider value={{...state, loadUser, setUser, scheduleDates, setScheduleDates, scheduleLocal, setScheduleLocal}}>
             {children}
         </UserContext.Provider>
     )

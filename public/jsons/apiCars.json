@@ -9,7 +9,7 @@
         "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
         "urlImage": "/img/carros/suv-1.png",
-        "link": "/categorias/suvs"
+        "link": "/categorias/suvs/all"
       },
       "city": {
         "name": "Sao Paulo",
@@ -57,7 +57,7 @@
         "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
         "urlImage": "/img/carros/suv-1.png",
-        "link": "/categorias/suvs"
+        "link": "/categorias/suvs/all"
       },
       "city": {
         "name": "Sao Paulo",
@@ -105,7 +105,7 @@
         "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
         "urlImage": "/img/carros/suv-1.png",
-        "link": "/categorias/suvs"
+        "link": "/categorias/suvs/all"
       },
       "city": {
         "name": "Sao Paulo",
@@ -153,7 +153,7 @@
         "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
         "urlImage": "/img/carros/suv-1.png",
-        "link": "/categorias/suvs"
+        "link": "/categorias/suvs/all"
       },
       "city": {
         "name": "Sao Paulo",
@@ -198,10 +198,10 @@
       "brand": "BMW",
       "description": "Carros com estilo e sensação de liberdade inigualáveis.",
       "category": {
-        "title": "conversíveis",
+        "title": "conversiveis",
         "description": "Carros que prezam pelo conforto e luxo.",
         "urlImage": "/img/carros/conversivel-1.png",
-        "link": "/categorias/conversiveis"
+        "link": "/categorias/conversiveis/all"
       },
       "city": {
         "name": "Rio de Janeiro",
@@ -246,10 +246,10 @@
       "brand": "AUDI",
       "description": "Carros com estilo e sensação de liberdade inigualáveis.",
       "category": {
-        "title": "conversíveis",
+        "title": "conversiveis",
         "description": "Carros que prezam pelo conforto e luxo.",
         "urlImage": "/img/carros/conversivel-1.png",
-        "link": "/categorias/conversiveis"
+        "link": "/categorias/conversiveis/all"
       },
       "city": {
         "name": "Rio de Janeiro",
@@ -294,10 +294,10 @@
       "brand": "PORSCHE",
       "description": "Carros com estilo e sensação de liberdade inigualáveis.",
       "category": {
-        "title": "conversíveis",
+        "title": "conversiveis",
         "description": "Carros que prezam pelo conforto e luxo.",
         "urlImage": "/img/carros/conversivel-1.png",
-        "link": "/categorias/conversiveis"
+        "link": "/categorias/conversiveis/all"
       },
       "city": {
         "name": "Rio de Janeiro",
@@ -342,10 +342,10 @@
       "brand": "FORD",
       "description": "Carros com estilo e sensação de liberdade inigualáveis.",
       "category": {
-        "title": "conversíveis",
+        "title": "conversiveis",
         "description": "Carros que prezam pelo conforto e luxo.",
         "urlImage": "/img/carros/conversivel-1.png",
-        "link": "/categorias/conversiveis"
+        "link": "/categorias/conversiveis/all"
       },
       "city": {
         "name": "Belo Horizonte",
@@ -393,7 +393,7 @@
         "title": "picapes",
         "description": "Carros ideais para quem curte aventura.",
         "urlImage": "/img/carros/picape-1.png",
-        "link": "/categorias/picapes"
+        "link": "/categorias/picapes/all"
       },
       "city": {
         "name": "Belo Horizonte",
@@ -441,7 +441,7 @@
         "title": "picapes",
         "description": "Carros ideais para quem curte aventura.",
         "urlImage": "/img/carros/picape-1.png",
-        "link": "/categorias/picapes"
+        "link": "/categorias/picapes/all"
       },
       "city": {
         "name": "Belo Horizonte",
@@ -489,7 +489,7 @@
         "title": "picapes",
         "description": "Carros ideais para quem curte aventura.",
         "urlImage": "/img/carros/picape-1.png",
-        "link": "/categorias/picapes"
+        "link": "/categorias/picapes/all"
       },
       "city": {
         "name": "Brasilia",
@@ -537,7 +537,7 @@
         "title": "picapes",
         "description": "Carros ideais para quem curte aventura.",
         "urlImage": "/img/carros/picape-1.png",
-        "link": "/categorias/picapes"
+        "link": "/categorias/picapes/all"
       },
       "city": {
         "name": "Brasilia",
@@ -585,7 +585,7 @@
         "title": "esportivos",
         "description": "Carros cheios de estilo, que garantem maior velocidade.",
         "urlImage": "/img/carros/esportivo-1.png",
-        "link": "/categorias/esportivos"
+        "link": "/categorias/esportivos/all"
       },
       "city": {
         "name": "Brasilia",
@@ -633,7 +633,7 @@
         "title": "esportivos",
         "description": "Carros cheios de estilo, que garantem maior velocidade.",
         "urlImage": "/img/carros/esportivo-1.png",
-        "link": "/categorias/esportivos"
+        "link": "/categorias/esportivos/all"
       },
       "city": {
         "name": "Florianopolis",
@@ -681,7 +681,7 @@
         "title": "esportivos",
         "description": "Carros cheios de estilo, que garantem maior velocidade.",
         "urlImage": "/img/carros/esportivo-1.png",
-        "link": "/categorias/esportivos"
+        "link": "/categorias/esportivos/all"
       },
       "city": {
         "name": "Florianopolis",
@@ -729,7 +729,7 @@
         "title": "esportivos",
         "description": "Carros cheios de estilo, que garantem maior velocidade.",
         "urlImage": "/img/carros/esportivo-1.png",
-        "link": "/categorias/esportivos"
+        "link": "/categorias/esportivos/all"
       },
       "city": {
         "name": "Florianopolis",

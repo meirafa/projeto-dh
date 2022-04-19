@@ -97,11 +97,19 @@
   }
 }
 
-@media (max-width: 820px) {
-  .produtos {
+@media (min-width: 1020px){
+  .frota-informacoes ul{
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 913px) {
   .frota {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 820px) {
+  .produtos {
     grid-template-columns: 1fr;
   }
 }
