@@ -44,6 +44,7 @@ export const InputCalendar = () => {
                 moveRangeOnFirstSelection={false}
                 months={2}
                 locale={locales[pt]}
+                minDate={new Date()}
                 ranges={[selectionRange]}
                 onChange={handleSelect}
                 direction="horizontal"
@@ -54,6 +55,7 @@ export const InputCalendar = () => {
                 moveRangeOnFirstSelection={false}
                 months={2}
                 locale={locales[pt]}
+                minDate={new Date()}
                 ranges={[selectionRange]}
                 onChange={handleSelect}
             />
