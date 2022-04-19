@@ -68,25 +68,31 @@ function Products() {
 
                                 <div className="produtos">
                                     {address.map((addItems, key) => {
-                                        if(category === 'all'){
-                                            if(addItems.city.name === city){
+                                        if (category === 'all') {
+                                            if (addItems.city.name === city) {
                                                 return (
                                                     <ListProductsFilterCity
                                                         address={addItems}
                                                         key={key}/>
                                                 )
+                                            } else if (city === 'all') {
+                                                return (
+                                                    <ListAllProducts {...addItems} key={key}/>
+                                                )
                                             }
                                         }
-                                        if (addItems.city.name === city && addItems.category.title === category) {
-                                            return (
-                                                <ListProductsFilterCity
-                                                    address={addItems}
-                                                    key={key}/>
-                                            )
-                                        } else if (city === 'all') {
-                                            return (
-                                                <ListAllProducts {...addItems} key={key}/>
-                                            )
+                                        if (addItems.category.title === category) {
+                                            if (addItems.city.name === city) {
+                                                return (
+                                                    <ListProductsFilterCity
+                                                        address={addItems}
+                                                        key={key}/>
+                                                )
+                                            } else if (city === 'all') {
+                                                return (
+                                                    <ListAllProducts {...addItems} key={key}/>
+                                                )
+                                            }
                                         }
                                     })}
                                 </div>
