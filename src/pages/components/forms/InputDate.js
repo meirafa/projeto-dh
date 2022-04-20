@@ -16,8 +16,8 @@ const InputDate = () => {
     const {scheduleLocal, scheduleDates, setScheduleDates} = useUser();
     const width = useWidth();
 
-    const [startValue, setStartValue] = useLocalStorage("dataRetirada", scheduleDates[0]?.toDate());
-    const [endValue, setEndValue] = useLocalStorage("dataDevolucao", scheduleDates[1]?.toDate());
+    const [startValue, setStartValue] = useLocalStorage("dataRetirada", scheduleDates?.[0]);
+    const [endValue, setEndValue] = useLocalStorage("dataDevolucao", scheduleDates?.[1]);
 
     const placeholder = ["Retirada", "Devolução"];
 
@@ -35,7 +35,6 @@ const InputDate = () => {
     //disabled
     const extraProps = {};
     (scheduleLocal) ? extraProps.disabled = false : extraProps.disabled = true;
-    (scheduleDates) ? extraProps.dates = scheduleDates : [startValue, setScheduleDates];
 
     return (<>
         <ConfigProvider locale={locale}>

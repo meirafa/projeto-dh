@@ -8,7 +8,7 @@ export const useLocalStorage = (key, inicial) => {
 
     React.useEffect(() => {
         localStorage.setItem(key, state);
-    }, [state]);
+    }, [setState]);
 
     return [state, setState];
 };
