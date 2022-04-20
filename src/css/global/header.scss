@@ -35,6 +35,7 @@ nav {
   flex-wrap: wrap;
   gap: 40px;
   font-size: 1rem;
+  align-items: center;
 
   a {
     display: inline-block;
@@ -48,6 +49,34 @@ nav {
   a:hover{
     color: var(--cor-l2) ;
   }
+
+  .user-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3.5px;
+    height: 32px;
+    color: var(--cor-l1);
+    }
+
+    .exit{
+
+     button{
+        width: 60px;
+        height: 30px;
+        background-color: var(--cor-l1);
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+
+      button:hover{
+        background: var(--cor-l2);
+        color: white !important;
+      }
+      
+    }
 
 }
  
@@ -63,7 +92,7 @@ nav {
   position: absolute;
 
   .exit{
-    background: red;
+    background: red !important;
 
   }
 }
@@ -74,7 +103,7 @@ nav {
 }
 
 
-@media(max-width: 880px){
+@media(max-width: 955px){
   .header {
     padding: 1rem 1rem;
   }
@@ -109,18 +138,30 @@ nav {
       margin: 0 1rem;
       // color: $white-main !important;
       border-bottom: 2px solid var(--cor-3) ;
+
+      .user-info{
+        height: 53px;
+      }
+
+      .exit{
+       
+        button{
+          background-color: transparent !important;
+        }
+        height: 53px;
+      }
       
   }
 
   
 
-  #user-info{
+  .user-info{
     display: flex;
     height: 32px;
     align-items: center;
     justify-content: flex-start;
-  }
-  
+    }
+
   .menu-item:hover{
       background-color: #cad1e0;
   }

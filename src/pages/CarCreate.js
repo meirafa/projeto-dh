@@ -99,7 +99,7 @@ const CarCreate = () => {
                             </div>
                             <div>
                                 <label htmlFor="">Custo de Locação</label>
-                                <Field name="cost" type="number" placeholder="" required />
+                                <Field name="cost" type="number" placeholder="" required className="cost-field" />
                             </div>
                             <div>
                                 <label htmlFor="">Categoria</label>

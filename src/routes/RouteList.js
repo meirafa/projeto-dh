@@ -39,7 +39,7 @@ function RouteList() {
 
                         <Route path="categorias/:category/:city" element={<Products/>}/>
 
-                        <Route path="criar-carro" element={<CarCreate/>}/>
+                        <Route path="administracao" element={<CarCreate/>}/>
 
                         <Route path="*" element={<PageNotFound/>}/>
                     </Routes>
