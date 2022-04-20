@@ -1,0 +1,33 @@
+.title-details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+}
+
+.title-details .title-seta {
+  text-align: end;
+}
+
+.title-details .title-seta a {
+  margin: 0 10px;
+  padding: 0.5em 0.8em;
+  text-decoration: none;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+  cursor: pointer;
+}
+
+.title-details .title-seta a svg > polyline {
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+.title-details .title-seta a:hover {
+  color: var(--cor-0);
+}
+
+.title-details .title-seta a:hover svg > polyline {
+  stroke: var(--cor-0);
+}
+/*# sourceMappingURL=cardetails.css.map */

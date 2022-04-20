@@ -14,7 +14,7 @@ export const ComponentInputHome = () => {
         navigate(`/categorias/${category}/${scheduleLocal}`);
     }
 
-    const title = {span: "a melhor experiência de luxo de aluguel de carros", title: "faça já sua reserva"};
+    const title = {span: "a melhor experiência de luxo em aluguel de carros", title: "faça já sua reserva"};
     return (
         <>
             <article className="bg-input-home">

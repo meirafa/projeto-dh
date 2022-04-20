@@ -1,21 +1,23 @@
 .form {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
 
-  label {
-    display: block;
-    font: 500 14px "Roboto", sans-serif;
-    margin-bottom: 4px;
-  }
+.form label {
+  display: block;
+  font: 500 14px "Roboto", sans-serif;
+  margin-bottom: 4px;
+}
 
-  .col-2 {
-    grid-column: span 2;
-  }
+.form .col-2 {
+  grid-column: span 2;
+}
 
-  p{
-    margin: 0;
-  }
+.form p {
+  margin: 0;
 }
 
 .form input[type="text"],
@@ -32,7 +34,8 @@
   padding: 12px;
   border-radius: 4px;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .form input[type="text"]:focus,
@@ -42,15 +45,18 @@
   outline: none;
   border-color: var(--cor-p1);
   background: var(--cor-0);
-  box-shadow: 0 0 0 2px #F0572D;
+  -webkit-box-shadow: 0 0 0 2px #F0572D;
+          box-shadow: 0 0 0 2px #F0572D;
 }
 
 @media (max-width: 600px) {
   .form {
-    grid-template-columns: 1fr;
-
-    .col-2 {
-      grid-column: 1;
-    }
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .form .col-2 {
+    -ms-grid-column: 1;
+    grid-column: 1;
   }
 }
+/*# sourceMappingURL=formulario.css.map */

@@ -1,0 +1,26 @@
+.font-text-2 {
+  font: 500 12px "Roboto", sans-serif;
+}
+
+.font-text-1 {
+  font: 500 14px "Roboto", sans-serif;
+}
+
+.font-h4 {
+  font: 600 14px "Roboto", sans-serif;
+}
+
+.font-h3 {
+  font: 600 16px "Roboto", sans-serif;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+.font-h2 {
+  font: 600 20px "Roboto", sans-serif;
+}
+
+.font-h1 {
+  font: 600 24px "Roboto", sans-serif;
+}
+/*# sourceMappingURL=tipografia.css.map */
