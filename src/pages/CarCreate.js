@@ -142,10 +142,12 @@ const CarCreate = () => {
                                 <label htmlFor="">Atributos</label>
                                 <Field name="attribute" type="text" required />
                             </div> */}
-                                <div>
+                            
+                                {/* <div>
                                     <label htmlFor="">Imagens</label>
-                                    {/* <Field name="images" type="text" required /> */}
-                                </div>
+                                    <Field name="images" type="text" required />
+                                </div> */}
+                                
                                 <button className="botao" type="submit">Criar Produto</button>
                             </Form>
                         )}

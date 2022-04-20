@@ -1,0 +1,101 @@
+.notfound {
+  background: var(--cor-4);
+}
+
+.notfound div {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  padding: 0 4rem 3rem 4rem;
+}
+
+.notfound div .background-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 90%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background-image: url("../../../public/img/fotos/notfound.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.notfound div .background-wrapper h1 {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  font-size: 6vmax;
+  color: var(--cor-1);
+  letter-spacing: 0.025em;
+  margin: 0;
+  -webkit-transition: 750ms ease-in-out;
+  transition: 750ms ease-in-out;
+}
+
+.notfound div .background-wrapper p {
+  position: relative;
+  color: var(--cor-1);
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -webkit-transition: 750ms ease-in-out;
+  transition: 750ms ease-in-out;
+  letter-spacing: 0.025em;
+}
+
+.notfound div a {
+  margin: 0 10px;
+  border: 2px solid var(--cor-2);
+  padding: 0.5em 0.8em;
+  position: relative;
+  z-index: 1;
+  color: #777777;
+  text-decoration: none;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+  cursor: pointer;
+  top: 90%;
+}
+
+.notfound div a svg > polyline {
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+.notfound div a:hover {
+  color: var(--cor-0);
+  background: var(--cor-2);
+  border-color: transparent;
+}
+
+.notfound div a:hover svg > polyline {
+  stroke: var(--cor-0);
+}
+
+.notfound div a:hover + .background-wrapper > p, .notfound div a:hover + .background-wrapper > h1 {
+  color: var(--cor-2);
+}
+
+@media (max-width: 880px) {
+  .notfound div {
+    padding: 0 1rem 2rem 1rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .notfound div .background-wrapper {
+    background-position: center;
+  }
+}
+/*# sourceMappingURL=notfound.css.map */
