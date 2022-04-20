@@ -8,6 +8,7 @@ import ConfigProvider from "antd/lib/config-provider";
 import {useWidth} from "../../../hooks/useWidth";
 import DateResponsive from "../forms/DateResponsive";
 import {useUser} from "../../context/UserContext";
+import {useLocalStorage} from "../../../hooks/useLocalStorage";
 
 const {RangePicker} = DatePicker;
 
@@ -15,25 +16,8 @@ const InputDate = () => {
     const {scheduleLocal, scheduleDates, setScheduleDates} = useUser();
     const width = useWidth();
 
-    const [dateRetState, setDateRetState] = React.useState(() => {
-        const dataRetirada = localStorage.getItem("dataRetirada");
-        if (!dataRetirada) return;
-        return moment(dataRetirada);
-    });
-
-    React.useEffect(() => {
-        localStorage.setItem("dataRetirada", dateRetState?.startOf('day').toISOString())
-    }, [dateRetState]);
-
-    const [dateDevoState, setDateDevoState] = React.useState(() => {
-        const dataDevolucao = localStorage.getItem("dataDevolucao");
-        if (!dataDevolucao) return;
-        return moment(dataDevolucao);
-    });
-
-    React.useEffect(() => {
-        localStorage.setItem("dataDevolucao", dateDevoState?.endOf('day').toISOString())
-    }, [dateDevoState]);
+    const [startValue, setStartValue] = useLocalStorage("dataRetirada", scheduleDates[0]?.toDate());
+    const [endValue, setEndValue] = useLocalStorage("dataDevolucao", scheduleDates[1]?.toDate());
 
     const placeholder = ["Retirada", "Devolução"];
 
@@ -44,9 +28,8 @@ const InputDate = () => {
 
     function onChangeDate(dates) {
         setScheduleDates(dates);
-
-        setDateRetState(dates[0]);
-        setDateDevoState(dates[1]);
+        setStartValue(dates[0]);
+        setEndValue(dates[1]);
     }
 
     //disabled
@@ -68,7 +51,8 @@ const InputDate = () => {
                     onChange={onChangeDate}
                     size="large"
                     placeholder={placeholder}
-                    value={scheduleDates}
+                    value={[moment(startValue), moment(endValue)]}
+                    //value={scheduleDates}
                     {...extraProps}
                 />
             }

@@ -1,11 +1,14 @@
 import DatePicker from 'antd/lib/date-picker';
 import React from 'react';
 import moment from "moment";
+import {useLocalStorage} from "../../../hooks/useLocalStorage";
+import {useUser} from "../../context/UserContext";
 
 function DateResponsive(props) {
+    const {scheduleDates, setScheduleDates} = useUser();
+    const [startValue, setStartValue] = useLocalStorage("dataRetirada", scheduleDates[0]?.toDate());
+    const [endValue, setEndValue] = useLocalStorage("dataDevolucao", scheduleDates[1]?.toDate());
 
-    const [startValue, setStartValue] = React.useState(null);
-    const [endValue, setEndValue] = React.useState(null);
     const [endOpen, setEndOpen] = React.useState(false);
 
     function disabledStartDate(current) {
@@ -24,6 +27,7 @@ function DateResponsive(props) {
 
     function onEndChange(value) {
         setEndValue(value);
+        setScheduleDates([moment(startValue), moment(endValue)])
     }
 
     function handleStartOpenChange(open) {
@@ -36,13 +40,12 @@ function DateResponsive(props) {
         setEndOpen(open);
     }
 
-
     return (
         <>
             <DatePicker
                 disabledDate={disabledStartDate}
                 format="DD-MM-YYYY"
-                value={startValue}
+                value={moment(startValue)}
                 onChange={onStartChange}
                 onOpenChange={handleStartOpenChange}
                 ranges={{
@@ -56,7 +59,7 @@ function DateResponsive(props) {
             <DatePicker
                 disabledDate={disabledEndDate}
                 format="DD-MM-YYYY"
-                value={endValue}
+                value={moment(endValue)}
                 onChange={onEndChange}
                 open={endOpen}
                 onOpenChange={handleEndOpenChange}
