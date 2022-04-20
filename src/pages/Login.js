@@ -17,7 +17,7 @@ export function loginToken(body) {
     }).then(res => {
         if (res.ok) {
             return res.json()
-        } else {
+            } else {
             return res.text().then(txt => {
                 throw new Error(txt)
             })

@@ -16,6 +16,7 @@ import PageNotFound from "../pages/PageNotFound";
 import CityFilter from '../pages/components/CityFilter';
 import ProdutoReserva from '../pages/ProdutoReserva';
 import ReservaConcluida from '../pages/ReservaConcluida';
+import CarCreate from '../pages/CarCreate';
 
 function RouteList() {
     return (
@@ -38,7 +39,7 @@ function RouteList() {
 
                         <Route path="categorias/:category/:city" element={<Products/>}/>
 
-                        <Route path="produto-reserva" element={<ProdutoReserva/>}/>
+                        <Route path="criar-carro" element={<CarCreate/>}/>
 
                         <Route path="*" element={<PageNotFound/>}/>
                     </Routes>
