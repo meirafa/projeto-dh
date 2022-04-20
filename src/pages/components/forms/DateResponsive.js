@@ -2,15 +2,16 @@ import DatePicker from 'antd/lib/date-picker';
 import React from 'react';
 import moment from "moment";
 import {useLocalStorage} from "../../../hooks/useLocalStorage";
-import {useUser} from "../../context/UserContext";
 
 function DateResponsive(props) {
-    const {scheduleDates, setScheduleDates} = useUser();
-    const [startValue, setStartValue] = useLocalStorage("dataRetirada", scheduleDates[0]?.toDate());
-    const [endValue, setEndValue] = useLocalStorage("dataDevolucao", scheduleDates[1]?.toDate());
+    const {dates} = props;
 
+    const [startValue, setStartValue] = useLocalStorage("dataRetirada", dates?.[0]);
+    const [endValue, setEndValue] = useLocalStorage("dataDevolucao", dates?.[1]);
     const [endOpen, setEndOpen] = React.useState(false);
-
+    console.log(dates)
+    console.log(startValue)
+    console.log(moment(startValue))
     function disabledStartDate(current) {
         // Can not select days before today and today
         return current && current < moment().startOf('day');
@@ -21,13 +22,12 @@ function DateResponsive(props) {
     }
 
     function onStartChange(value) {
-        setEndValue(null);
-        setStartValue(value);
+        setEndValue(undefined);
+        setStartValue(value.toDate());
     }
 
     function onEndChange(value) {
-        setEndValue(value);
-        setScheduleDates([moment(startValue), moment(endValue)])
+        setEndValue(value.toDate());
     }
 
     function handleStartOpenChange(open) {
@@ -45,7 +45,6 @@ function DateResponsive(props) {
             <DatePicker
                 disabledDate={disabledStartDate}
                 format="DD-MM-YYYY"
-                value={moment(startValue)}
                 onChange={onStartChange}
                 onOpenChange={handleStartOpenChange}
                 ranges={{
@@ -53,8 +52,8 @@ function DateResponsive(props) {
                 }}
                 size="large"
                 placeholder="Retirada"
-                {...props}
-
+                value={moment(startValue)}
+                {...props.disabled}
             />
             <DatePicker
                 disabledDate={disabledEndDate}
@@ -65,7 +64,7 @@ function DateResponsive(props) {
                 onOpenChange={handleEndOpenChange}
                 size="large"
                 placeholder="Devolução"
-                {...props}
+                {...props.disabled}
             />
         </>
     );

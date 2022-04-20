@@ -35,6 +35,7 @@ const InputDate = () => {
     //disabled
     const extraProps = {};
     (scheduleLocal) ? extraProps.disabled = false : extraProps.disabled = true;
+    (scheduleDates) ? extraProps.dates = scheduleDates : [startValue, setScheduleDates];
 
     return (<>
         <ConfigProvider locale={locale}>
