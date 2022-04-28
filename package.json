@@ -2,6 +2,7 @@
   "name": "digitalbooking-car",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://digitalbooking-cars.herokuapp.com",
   "dependencies": {
     "antd": "^4.19.2",
     "date-fns": "^2.28.0",
