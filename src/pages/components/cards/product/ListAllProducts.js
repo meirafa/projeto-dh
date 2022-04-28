@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from "react-router-dom";
 
 function ListAllProducts(props) {
+    console.log(props)
     return (
         <>
             <div className="frota">

@@ -16,11 +16,11 @@ function Contato() {
 
                         <div className="contato">
                             <div className="contato-dados" aria-label="Endereço">
-                                <h2 className="font-h4 cor-0">Loja Online</h2>
+                                <h2 className="font-h4 cor-0">Nossa sede</h2>
                                 <div className="contato-endereco font-text-1 cor-0">
-                                    <p>Rua Ali Perto, 35</p>
-                                    <p>Rio de Janeiro - RJ</p>
-                                    <p>Brasil - Terra - Vita Láctea</p>
+                                    <p>Av. Europa, 725 - Jardins</p>
+                                    <p>São Paulo - SP</p>
+                                    <p>Brasil</p>
                                 </div>
                                 <address className="contato-meios font-text-1 cor-0">
                                     <a href="mailto:contato@digitalbooking.com">contato@digitalbooking.com</a>

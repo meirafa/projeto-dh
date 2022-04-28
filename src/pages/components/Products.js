@@ -2,14 +2,15 @@ import TitleBgBlack from "./titles/TitleBgBlack";
 import React from "react";
 import Tabs from 'antd/lib/tabs';
 import ListProductsFilterCategory from "./cards/product/ListProductsFilterCategory";
-import {useParams, useNavigate} from "react-router";
-import {useApis} from "../../hooks/useApi";
+import { useParams, useNavigate } from "react-router";
+import { useApis } from "../../hooks/useApi";
 import Marca from "./Marca";
-import {ComponentInputHome} from "./forms/ComponentInputHome";
+import { ComponentInputHome } from "./forms/ComponentInputHome";
 import ListProductsFilterCity from "./cards/product/ListProductsFilterCity";
 import ListAllProducts from "./cards/product/ListAllProducts";
+import { appConfig } from "../../appConfig";
 
-const {TabPane} = Tabs;
+const { TabPane } = Tabs;
 
 const categories = [
     {
@@ -33,31 +34,34 @@ const categories = [
 
 
 function Products() {
-    let {category = 'all'} = useParams();
-    let {city = 'all'} = useParams();
+    let { category = 'all' } = useParams();
+    let { city = 'all' } = useParams();
 
     const navigate = useNavigate();
 
     const [addressResult, isLoading] = useApis('/jsons/apiCars.json');
     const address = addressResult?.carsList || [];
 
+    const [cardResult, isLoad] = useApis(appConfig.apiUrl + '/products')
+    const card = cardResult || [];
+
     function tabsModified(key) {
         navigate(`/categorias/${key}/${city}`)
     }
 
-    const title = {span: "conheça nossa frota", title: "frota"};
+    const title = { span: "conheça nossa frota", title: "frota" };
 
     return (
         <>
             {!!isLoading ? 'Carregando...' : null}
 
             <section className="bg-input-home">
-                <ComponentInputHome/>
+                <ComponentInputHome />
             </section>
 
             <article className="bg-black">
                 <div className="container">
-                    <TitleBgBlack {...title}/>
+                    <TitleBgBlack {...title} />
 
                     <Tabs defaultActiveKey={category} onChange={tabsModified}>
                         {categories.map(item => {
@@ -73,11 +77,11 @@ function Products() {
                                                 return (
                                                     <ListProductsFilterCity
                                                         address={addItems}
-                                                        key={key}/>
+                                                        key={key} />
                                                 )
                                             } else if (city === 'all') {
                                                 return (
-                                                    <ListAllProducts {...addItems} key={key}/>
+                                                    <ListAllProducts {...addItems} key={key} />
                                                 )
                                             }
                                         }
@@ -86,11 +90,41 @@ function Products() {
                                                 return (
                                                     <ListProductsFilterCity
                                                         address={addItems}
-                                                        key={key}/>
+                                                        key={key} />
                                                 )
                                             } else if (city === 'all') {
                                                 return (
-                                                    <ListAllProducts {...addItems} key={key}/>
+                                                    <ListAllProducts {...addItems} key={key} />
+                                                )
+                                            }
+                                        }
+                                    })}
+                                    {card.map((addItems, key) => {
+                                        // console.log(addItems)
+                                        if (category === 'all') {
+                                            // console.log(addItems)
+                                            if (addItems.city.name === city) {
+                                                return (
+                                                    <ListProductsFilterCity
+                                                        address={addItems}
+                                                        key={key} />
+                                                )
+                                            } else if (city === 'all') {
+                                                return (
+                                                    <ListAllProducts {...addItems} key={key} />
+                                                )
+                                            }
+                                        }
+                                        if (addItems.category.title === category) {
+                                            if (addItems.city.name === city) {
+                                                return (
+                                                    <ListProductsFilterCity
+                                                        address={addItems}
+                                                        key={key} />
+                                                )
+                                            } else if (city === 'all') {
+                                                return (
+                                                    <ListAllProducts {...addItems} key={key} />
                                                 )
                                             }
                                         }
@@ -101,7 +135,7 @@ function Products() {
                     </Tabs>
                 </div>
             </article>
-            <Marca/>
+            <Marca />
         </>
     )
 }

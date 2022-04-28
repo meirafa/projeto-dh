@@ -46,7 +46,7 @@
           "urlImage": "/img/carros/4-BMW-X5-xDrive40-Li.jpeg"
         }
       ],
-      "value": "R$ 299.9"
+      "cost": "R$ 299.9"
     },
     {
       "id": "002",
@@ -94,7 +94,7 @@
           "urlImage": "/img/carros/4-Audi-SQ5-TDI-7.jpeg"
         }
       ],
-      "value": "R$ 299.9"
+      "cost": "R$ 299.9"
     },
     {
       "id": "003",
@@ -142,7 +142,7 @@
           "urlImage": "/img/carros/4- Porsche-Cayenne-GTS-Coupe.jpeg"
         }
       ],
-      "value": "R$ 299.9"
+      "cost": "R$ 299.9"
     },
     {
       "id": "004",
@@ -190,7 +190,7 @@
           "urlImage": "/img/carros/4- Tesla-Model-X.jpeg"
         }
       ],
-      "value": "R$ 299.9"
+      "cost": "R$ 299.9"
     },
     {
       "id": "005",
@@ -238,7 +238,7 @@
           "urlImage": "/img/carros/4-BMW-M440i-Convertible.jpeg"
         }
       ],
-      "value": "R$ 499.9"
+      "cost": "R$ 499.9"
     },
     {
       "id": "006",
@@ -286,7 +286,7 @@
           "urlImage": "/img/carros/4-Audi-TT-RS-Roadster-18.jpeg"
         }
       ],
-      "value": "R$ 499.9"
+      "cost": "R$ 499.9"
     },
     {
       "id": "007",
@@ -334,7 +334,7 @@
           "urlImage": "/img/carros/4-Porsche-718-Spyder.jpeg"
         }
       ],
-      "value": "R$ 499.9"
+      "cost": "R$ 499.9"
     },
     {
       "id": "008",
@@ -382,7 +382,7 @@
           "urlImage": "/img/carros/4 -Ford-Mustang-GT-Convertible.jpeg"
         }
       ],
-      "value": "R$ 499.9"
+      "cost": "R$ 499.9"
     },
     {
       "id": "009",
@@ -430,7 +430,7 @@
           "urlImage": "/img/carros/4-Ram-1500-TRX.jpeg"
         }
       ],
-      "value": "R$ 399.9"
+      "cost": "R$ 399.9"
     },
     {
       "id": "010",
@@ -478,7 +478,7 @@
           "urlImage": "/img/carros/4-Jeep-Gladiator.jpeg"
         }
       ],
-      "value": "R$ 399.9"
+      "cost": "R$ 399.9"
     },
     {
       "id": "011",
@@ -526,7 +526,7 @@
           "urlImage": "/img/carros/4-GMC-Sierra.jpeg"
         }
       ],
-      "value": "R$ 399.9"
+      "cost": "R$ 399.9"
     },
     {
       "id": "012",
@@ -574,7 +574,7 @@
           "urlImage": "/img/carros/4-Ford-Ranger-Raptor.jpeg"
         }
       ],
-      "value": "R$ 399.9"
+      "cost": "R$ 399.9"
     },
     {
       "id": "013",
@@ -622,7 +622,7 @@
           "urlImage": "/img/carros/4-Ford-GT-Heritage-Edition-7.jpeg"
         }
       ],
-      "value": "R$ 399.9"
+      "cost": "R$ 399.9"
     },
     {
       "id": "014",
@@ -670,7 +670,7 @@
           "urlImage": "/img/carros/4-BMW-M3-Competition-Sedan-M-xDrive-20.jpeg"
         }
       ],
-      "value": "R$ 399.9"
+      "cost": "R$ 399.9"
     },
     {
       "id": "015",
@@ -718,7 +718,7 @@
           "urlImage": "/img/carros/4- Audi-R8-Coupe-US-26-1.jpeg"
         }
       ],
-      "value": "R$ 399.9"
+      "cost": "R$ 399.9"
     },
     {
       "id": "016",
@@ -766,7 +766,7 @@
           "urlImage": "/img/carros/4-Porsche-911-GT3.jpeg"
         }
       ],
-      "value": "R$ 399.9"
+      "cost": "R$ 399.9"
     }
   ]
 }
