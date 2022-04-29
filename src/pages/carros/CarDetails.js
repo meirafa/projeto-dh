@@ -19,9 +19,9 @@ function CarDetails() {
 
     const [visible, setVisible] = React.useState(false);
     const {id} = useParams();
-    const {car, isLoading} = useSpecificCarId(id);
+    const {car, isLoading, isLoad} = useSpecificCarId(id);
 
-    if (!car && !isLoading) return <PageNotFound/>;
+    if (!car && !isLoading && !isLoad) return <PageNotFound/>;
 
     return (
         <>
@@ -59,7 +59,7 @@ function CarDetails() {
                                     <Image
                                         preview={{visible: false}}
                                         onClick={() => setVisible(true)}
-                                        src={car?.images[0].urlImage}
+                                        src={car?.images[0]?.urlImage}
                                     />
 
                                     <div style={{display: 'flex'}}>
@@ -90,21 +90,21 @@ function CarDetails() {
                                     <h2 className="font-text-2 cor-0">Características</h2>
                                     <ul className="carro-ficha font-text-1 cor-4">
                                         <li><p className="font-text-1 cor-1">Aceleração</p>
-                                            <span>{car?.attribute.acceleration}</span></li>
+                                            <span>{car?.attribute?.acceleration}</span></li>
                                         <li><p className="font-text-1 cor-1">Câmbio</p>
-                                            <span>{car?.attribute.transmission}</span></li>
+                                            <span>{car?.attribute?.transmission}</span></li>
                                         <li><p className="font-text-1 cor-1">Combustível</p>
-                                            <span>{car?.attribute.gas}</span></li>
+                                            <span>{car?.attribute?.gas}</span></li>
                                         <li><p className="font-text-1 cor-1">Lugares</p>
-                                            <span>{car?.attribute.seats}</span>
+                                            <span>{car?.attribute?.seats}</span>
                                         </li>
                                         <li><p className="font-text-1 cor-1">Portas</p>
-                                            <span>{car?.attribute.doors}</span></li>
+                                            <span>{car?.attribute?.doors}</span></li>
                                         <li><p className="font-text-1 cor-1">Potência</p>
-                                            <span>{car?.attribute.power}</span>
+                                            <span>{car?.attribute?.power}</span>
                                         </li>
                                         <li><p className="font-text-1 cor-1">Tração</p>
-                                            <span>{car?.attribute.tcs}</span></li>
+                                            <span>{car?.attribute?.tcs}</span></li>
                                     </ul>
                                 </div>
                             </div>
