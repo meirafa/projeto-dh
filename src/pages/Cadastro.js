@@ -88,25 +88,25 @@ function Cadastro() {
                                         <h2 className="font-text-2 cor-2 col-2">Cadastre-se</h2>
                                         <div>
                                             <Input label="Nome" type="text" id="nome"
-                                                {...nome} />
+                                                placeholder="Digite seu nome" {...nome} required/>
                                         </div>
                                         <div>
                                             <Input label="Sobrenome" type="text" id="sobrenome"
-                                                {...sobrenome} />
+                                                placeholder="Digite seu sobrenome" {...sobrenome} required/>
                                         </div>
                                         <div>
                                             <Input label="Email" type="email" id="emailCad"
-                                                placeholder="exemplo@.com" {...emailCad} />
+                                                placeholder="exemplo@.com" {...emailCad} required/>
                                         </div>
                                         <div>
                                             <Input label="Repetir Email" type="email" id="isEmail"
-                                                placeholder="exemplo@.com" {...isEmail} />
+                                                placeholder="exemplo@.com" {...isEmail} required/>
                                         </div>
                                         <div className="col-2">
                                             <Input label="Password" type="password" id="passwordCad"
-                                                {...passwordCad} />
+                                              placeholder="Crie sua senha"  {...passwordCad} />
                                         </div>
-                                        <button className="botao">Registrar</button>
+                                        <button className="botao" type='submit'>Registrar</button>
                                         <div className='col-2'>
                                             <p className="font-text-1">Já possui conta? </p>
                                             <NavLink to="/login" className="font-text-1">Fazer Login</NavLink>
