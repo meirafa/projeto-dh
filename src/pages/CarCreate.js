@@ -49,6 +49,9 @@ const CarCreate = () => {
         console.log('SUBMIT', values)
         const token = localStorage.getItem('token')
         console.log(token)
+        values.images = values.images.map((image, index) =>{
+            return{urlImage:image, title:index ? "" : "principal"}
+        })
         fetch(appConfig.apiUrl + '/products', {
             method: 'POST',
             headers: {
@@ -92,26 +95,28 @@ const CarCreate = () => {
                             idCategory: '',
                             idCity: '',
                             description: '',
-                            // attribute: '',
-                            // images: ''
+                            images: ['','','','',''],
+                            // attribute: ''
                         }}
                         render={({ values }) => (
-                            <Form className="res-form form">
-                                <div>
+                            <Form className="res-form form form-create">
+                                <div className="create-container">
+                                <div className="create-item">
                                     <label htmlFor="">Marca do Veículo</label>
-                                    <Field name="brand" type="text" placeholder="" required />
+                                    <Field name="brand" type="text" placeholder="Digite a marca do veículo" required />
                                 </div>
-                                <div>
+                                <div className="create-item">
                                     <label htmlFor="">Modelo do Veículo</label>
-                                    <Field name="model" type="text" placeholder="" required />
+                                    <Field name="model" type="text" placeholder="Digite o modelo do veículo" required />
                                 </div>
-                                <div>
+                                <div className="create-item">
                                     <label htmlFor="">Custo de Locação</label>
-                                    <Field name="cost" type="number" placeholder="" required className="cost-field" />
+                                    <Field name="cost" type="number" placeholder="Digite o custo de locação" required className="cost-field" />
                                 </div>
-                                <div>
+                                <div className="create-item">
                                     <label htmlFor="">Categoria</label>
                                     <Field as="select" name="idCategory">
+                                    <option defaultValue>Selecione a categoria</option>
                                         {
                                             category.map((addItem) => {
                                                 return <option value={addItem.id} key={addItem.id}>
@@ -121,9 +126,10 @@ const CarCreate = () => {
                                         }
                                     </Field>
                                 </div>
-                                <div>
-                                    <label htmlFor="">Cidades</label>
+                                <div className="create-item">
+                                    <label htmlFor="">Cidade</label>
                                     <Field as="select" name="idCity">
+                                    <option defaultValue>Selecione a cidade</option>
                                         {
                                             city.map((addItem) => {
                                                 return <option value={addItem.id} key={addItem.id}>
@@ -133,9 +139,9 @@ const CarCreate = () => {
                                         }
                                     </Field>
                                 </div>
-                                <div>
+                                <div className="create-item">
                                     <label htmlFor="">Descrição</label>
-                                    <Field name="description" type="text" required />
+                                    <Field name="description" type="text" placeholder="Digite a descrição do veículo" required />
                                 </div>
                                 {/* 
                             <div>
@@ -143,12 +149,17 @@ const CarCreate = () => {
                                 <Field name="attribute" type="text" required />
                             </div> */}
                             
-                                {/* <div>
-                                    <label htmlFor="">Imagens</label>
-                                    <Field name="images" type="text" required />
-                                </div> */}
-                                
-                                <button className="botao" type="submit">Criar Produto</button>
+                                </div>
+                                <div className="create-imgs">
+                                    <label htmlFor="">Imagens (insira os links)</label>
+                                    <Field name="images[0]" type="text" required />
+                                    <Field name="images[1]" type="text" required />
+                                    <Field name="images[2]" type="text" required />
+                                    <Field name="images[3]" type="text" required />
+                                    <Field name="images[4]" type="text" required />
+                                    {console.log(values)}
+                                </div>
+                                <button className="botao btn-create" type="submit">Criar Produto</button>
                             </Form>
                         )}
                     />

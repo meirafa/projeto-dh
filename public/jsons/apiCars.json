@@ -46,7 +46,7 @@
           "urlImage": "/img/carros/4-BMW-X5-xDrive40-Li.jpeg"
         }
       ],
-      "cost": "R$ 299.9"
+      "cost": "R$ 1.000"
     },
     {
       "id": "002",
@@ -94,7 +94,7 @@
           "urlImage": "/img/carros/4-Audi-SQ5-TDI-7.jpeg"
         }
       ],
-      "cost": "R$ 299.9"
+      "cost": "R$ 1.000"
     },
     {
       "id": "003",
@@ -142,7 +142,7 @@
           "urlImage": "/img/carros/4- Porsche-Cayenne-GTS-Coupe.jpeg"
         }
       ],
-      "cost": "R$ 299.9"
+      "cost": "R$ 1.000"
     },
     {
       "id": "004",
@@ -190,7 +190,7 @@
           "urlImage": "/img/carros/4- Tesla-Model-X.jpeg"
         }
       ],
-      "cost": "R$ 299.9"
+      "cost": "R$ 1.000"
     },
     {
       "id": "005",
@@ -200,7 +200,7 @@
       "category": {
         "title": "conversiveis",
         "description": "Carros que prezam pelo conforto e luxo.",
-        "urlImage": "/img/carros/conversivel-1.png",
+        "urlImage": "/img/carros/Porsche718Spyder.jpg",
         "link": "/categorias/conversiveis/all"
       },
       "city": {
@@ -238,7 +238,7 @@
           "urlImage": "/img/carros/4-BMW-M440i-Convertible.jpeg"
         }
       ],
-      "cost": "R$ 499.9"
+      "cost": "R$ 1.475"
     },
     {
       "id": "006",
@@ -248,7 +248,7 @@
       "category": {
         "title": "conversiveis",
         "description": "Carros que prezam pelo conforto e luxo.",
-        "urlImage": "/img/carros/conversivel-1.png",
+        "urlImage": "/img/carros/Porsche718Spyder.jpg",
         "link": "/categorias/conversiveis/all"
       },
       "city": {
@@ -286,7 +286,7 @@
           "urlImage": "/img/carros/4-Audi-TT-RS-Roadster-18.jpeg"
         }
       ],
-      "cost": "R$ 499.9"
+      "cost": "R$ 1.475"
     },
     {
       "id": "007",
@@ -296,7 +296,7 @@
       "category": {
         "title": "conversiveis",
         "description": "Carros que prezam pelo conforto e luxo.",
-        "urlImage": "/img/carros/conversivel-1.png",
+        "urlImage": "/img/carros/Porsche718Spyder.jpg",
         "link": "/categorias/conversiveis/all"
       },
       "city": {
@@ -334,7 +334,7 @@
           "urlImage": "/img/carros/4-Porsche-718-Spyder.jpeg"
         }
       ],
-      "cost": "R$ 499.9"
+      "cost": "R$ 1.475"
     },
     {
       "id": "008",
@@ -344,7 +344,7 @@
       "category": {
         "title": "conversiveis",
         "description": "Carros que prezam pelo conforto e luxo.",
-        "urlImage": "/img/carros/conversivel-1.png",
+        "urlImage": "/img/carros/Porsche718Spyder.jpg",
         "link": "/categorias/conversiveis/all"
       },
       "city": {
@@ -382,7 +382,7 @@
           "urlImage": "/img/carros/4-Ford-Mustang-GT-Convertible.jpeg"
         }
       ],
-      "cost": "R$ 499.9"
+      "cost": "R$ 1.475"
     },
     {
       "id": "009",
@@ -430,7 +430,7 @@
           "urlImage": "/img/carros/4-Ram-1500-TRX.jpeg"
         }
       ],
-      "cost": "R$ 399.9"
+      "cost": "R$ 1.250"
     },
     {
       "id": "010",
@@ -478,7 +478,7 @@
           "urlImage": "/img/carros/4-Jeep-Gladiator.jpeg"
         }
       ],
-      "cost": "R$ 399.9"
+      "cost": "R$ 1.250"
     },
     {
       "id": "011",
@@ -526,7 +526,7 @@
           "urlImage": "/img/carros/4-GMC-Sierra.jpeg"
         }
       ],
-      "cost": "R$ 399.9"
+      "cost": "R$ 1.250"
     },
     {
       "id": "012",
@@ -574,7 +574,7 @@
           "urlImage": "/img/carros/4-Ford-Ranger-Raptor.jpeg"
         }
       ],
-      "cost": "R$ 399.9"
+      "cost": "R$ 1.250"
     },
     {
       "id": "013",
@@ -584,7 +584,7 @@
       "category": {
         "title": "esportivos",
         "description": "Carros cheios de estilo, que garantem maior velocidade.",
-        "urlImage": "/img/carros/esportivo-1.png",
+        "urlImage": "/img/carros/AudiR8V10.jpg",
         "link": "/categorias/esportivos/all"
       },
       "city": {
@@ -622,7 +622,7 @@
           "urlImage": "/img/carros/4-Ford-GT-Heritage-Edition-7.jpeg"
         }
       ],
-      "cost": "R$ 399.9"
+      "cost": "R$ 1.825"
     },
     {
       "id": "014",
@@ -632,7 +632,7 @@
       "category": {
         "title": "esportivos",
         "description": "Carros cheios de estilo, que garantem maior velocidade.",
-        "urlImage": "/img/carros/esportivo-1.png",
+        "urlImage": "/img/carros/AudiR8V10.jpg",
         "link": "/categorias/esportivos/all"
       },
       "city": {
@@ -670,7 +670,7 @@
           "urlImage": "/img/carros/4-BMW-M3-Competition-Sedan-M-xDrive-20.jpeg"
         }
       ],
-      "cost": "R$ 399.9"
+      "cost": "R$ 1.825"
     },
     {
       "id": "015",
@@ -680,7 +680,7 @@
       "category": {
         "title": "esportivos",
         "description": "Carros cheios de estilo, que garantem maior velocidade.",
-        "urlImage": "/img/carros/esportivo-1.png",
+        "urlImage": "/img/carros/AudiR8V10.jpg",
         "link": "/categorias/esportivos/all"
       },
       "city": {
@@ -718,7 +718,7 @@
           "urlImage": "/img/carros/4- Audi-R8-Coupe-US-26-1.jpeg"
         }
       ],
-      "cost": "R$ 399.9"
+      "cost": "R$ 1.825"
     },
     {
       "id": "016",
@@ -728,7 +728,7 @@
       "category": {
         "title": "esportivos",
         "description": "Carros cheios de estilo, que garantem maior velocidade.",
-        "urlImage": "/img/carros/esportivo-1.png",
+        "urlImage": "/img/carros/AudiR8V10.jpg",
         "link": "/categorias/esportivos/all"
       },
       "city": {
@@ -766,7 +766,7 @@
           "urlImage": "/img/carros/4-Porsche-911-GT3.jpeg"
         }
       ],
-      "cost": "R$ 399.9"
+      "cost": "R$ 1.825"
     }
   ]
 }

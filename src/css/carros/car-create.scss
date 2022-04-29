@@ -1,0 +1,36 @@
+.form-create{
+    display: grid;
+    grid-template-columns: 1fr !important;
+
+    .create-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .create-imgs{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.btn-create{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media (max-width: 600px) {
+    .btn-create{
+        display: block !important;
+        height: auto !important;
+        width: 100%;
+    }
+    
+  }
+
+@media(max-width: 980px){
+    .create-container{
+        grid-template-columns: 1fr !important;
+    }
+}

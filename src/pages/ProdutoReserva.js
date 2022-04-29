@@ -140,7 +140,7 @@ const ProdutoReserva = () => {
                         <Row>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3 cor-1">Normas</h3>
-                                <p className="text-1">Garantimos o modelo proposto. Somente a
+                                <p className="text-1 cor-0">Garantimos o modelo proposto. Somente a
                                     cor ou a potência do motor
                                     podem variar, mas
                                     enviaremos todas as especificações para confirmar o pedido.
@@ -149,7 +149,7 @@ const ProdutoReserva = () => {
                             </Col>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3 cor-1">Segurança</h3>
-                                <p className="text-1">O carro pode ser entregue a seu pedido em
+                                <p className="text-1 cor-0">O carro pode ser entregue a seu pedido em
                                     qualquer lugar do
                                     Brasil. O custo da
                                     entrega
@@ -157,7 +157,7 @@ const ProdutoReserva = () => {
                             </Col>
                             <Col xs={20} md={12} lg={8}>
                                 <h3 className="font-h3 cor-1">Cancelamento</h3>
-                                <p className="text-1">30 dias ou mais antes do dia do início do
+                                <p className="text-1 cor-0">30 dias ou mais antes do dia do início do
                                     aluguel - multa de 20%
                                     do valor total
                                     14 dias ou menos antes do início do aluguel - multa de 40%
