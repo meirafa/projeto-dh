@@ -4,7 +4,7 @@
       "id": "001",
       "model": "X5",
       "brand": "BMW",
-      "description": "Carros maiores, com belo design e conforto",
+      "description": "Carros maiores, com belo design e conforto.",
       "category": {
         "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
@@ -52,7 +52,7 @@
       "id": "002",
       "model": "Q5",
       "brand": "AUDI",
-      "description": "Carros maiores, com belo design e conforto",
+      "description": "Carros maiores, com belo design e conforto.",
       "category": {
         "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
@@ -100,7 +100,7 @@
       "id": "003",
       "model": "CAYENNE",
       "brand": "PORSCHE",
-      "description": "Carros maiores, com belo design e conforto",
+      "description": "Carros maiores, com belo design e conforto.",
       "category": {
         "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
@@ -148,7 +148,7 @@
       "id": "004",
       "model": "MODEL X",
       "brand": "TESLA",
-      "description": "Carros maiores, com belo design e conforto",
+      "description": "Carros maiores, com belo design e conforto.",
       "category": {
         "title": "suvs",
         "description": "Carros maiores, com belo design e imponência.",
@@ -367,19 +367,19 @@
         },
         {
           "title": "foto1",
-          "urlImage": "/img/carros/1 -Ford-Mustang-GT-Convertible.jpeg"
+          "urlImage": "/img/carros/1-Ford-Mustang-GT-Convertible.jpeg"
         },
         {
           "title": "foto2",
-          "urlImage": "/img/carros/2 -Ford-Mustang-GT-Convertible.jpeg"
+          "urlImage": "/img/carros/2-Ford-Mustang-GT-Convertible.jpeg"
         },
         {
           "title": "foto3",
-          "urlImage": "/img/carros/3 -Ford-Mustang-GT-Convertible.jpeg"
+          "urlImage": "/img/carros/3-Ford-Mustang-GT-Convertible.jpeg"
         },
         {
           "title": "foto4",
-          "urlImage": "/img/carros/4 -Ford-Mustang-GT-Convertible.jpeg"
+          "urlImage": "/img/carros/4-Ford-Mustang-GT-Convertible.jpeg"
         }
       ],
       "cost": "R$ 499.9"
@@ -388,7 +388,7 @@
       "id": "009",
       "model": "Ram",
       "brand": "Dodge",
-      "description": "Carros maiores, com belo design e imponência",
+      "description": "Carros maiores, com belo design e imponência.",
       "category": {
         "title": "picapes",
         "description": "Carros ideais para quem curte aventura.",
@@ -436,7 +436,7 @@
       "id": "010",
       "model": "Gladiator",
       "brand": "Jeep",
-      "description": "Carros maiores, com belo design e imponência",
+      "description": "Carros maiores, com belo design e imponência.",
       "category": {
         "title": "picapes",
         "description": "Carros ideais para quem curte aventura.",
@@ -484,7 +484,7 @@
       "id": "011",
       "model": "SIERRA 1500 LIMITED DENALI",
       "brand": "GMC",
-      "description": "Carros maiores, com belo design e imponência",
+      "description": "Carros maiores, com belo design e imponência.",
       "category": {
         "title": "picapes",
         "description": "Carros ideais para quem curte aventura.",
@@ -532,7 +532,7 @@
       "id": "012",
       "model": "F-150 Velociraptor",
       "brand": "FORD",
-      "description": "Carros maiores, com belo design e imponência",
+      "description": "Carros maiores, com belo design e imponência.",
       "category": {
         "title": "picapes",
         "description": "Carros ideais para quem curte aventura.",

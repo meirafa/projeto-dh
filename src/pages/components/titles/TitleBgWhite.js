@@ -4,7 +4,7 @@ function TitleBgWhite(props) {
         <>
             <div className="titulo">
                 <p className="font-h3 cor-1">{span}</p>
-                <h1 className="font-h1">{title}<span className="cor-l1">.</span></h1>
+                <h1 className="font-h1 upper-0">{title}<span className="cor-l1">:</span></h1>
             </div>
         </>
     )
