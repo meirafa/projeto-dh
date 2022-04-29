@@ -23,3 +23,7 @@
 .font-h1 {
   font: 600 24px "Roboto", sans-serif;
 }
+
+.upper-0::first-letter{
+  text-transform: uppercase;
+}
